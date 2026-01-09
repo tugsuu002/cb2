@@ -1,0 +1,209 @@
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/chatbot-logo_white.png";
+import turshih from "../assets/turshih.png";
+import { useTranslation } from "react-i18next";
+import { HashLink } from "react-router-hash-link";
+import computer from "../assets/com.png";
+import Youtube from "../assets/youtube.svg";
+import instagram from "../assets/instagram.svg";
+import facebook from "../assets/facebook.svg";
+import mail from "../assets/mail.svg";
+import phone from "../assets/phone.svg";
+import cbicon from "../assets/BotIcon.svg";
+import arrow from "../assets/arrow.png";
+
+function Footer() {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+
+  
+  return (
+    <>
+      <div className=" text-white flex flex-col justify-between bg-black">
+        <div className="mx-auto w-full max-w-[1320px] px-4  sm:px-2 lg:px-1  py-8 lg:py-16">
+          <div
+            className="relative w-full h-auto lg:h-[352px] rounded-[20px] flex flex-col  justify-items-center lg:flex-row items-center justify-between
+text-center text-white
+[background:radial-gradient(circle_at_top_left,_rgba(255,255,255,0.1)_25%,_rgba(255,255,255,0)_50%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.1)_16%,_rgba(255,255,255,0)_75%),radial-gradient(ellipse_at_center,_rgba(0,0,0,0.45)_100%,_rgba(0,0,0,0.75)_100%)]"
+          >
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start px-4 lg:px-0 pt-12 lg:pl-20 z-10  justify-start text-center lg:text-left">
+              <p className="text-[50px] md:text-[64px] font-pro font-semibold mb-4 text-[#FFFFFF]">
+                ЧАТБОТ ТУРШИХ
+              </p>
+
+              <p className="text-sm sm:text-base md:text-[17px] font-pro font-normal mb-6 text-[#FFFFFF]">
+                Xялбар бөгөөд эх хэл дээрээ чатботоо эхлүүлцгээе!
+              </p>
+
+              <button className="flex border-[#484848] w-[185px] h-[48px] gap-2 justify-center justify-items-center text-sm md:text-[17px] font-medium rounded-[40px]  bg-gray transition bg-[#FFFFFF]">
+                <div className="flex space-x-2 justify-center items-center">
+                  <img src={cbicon} alt="chatbot icon" className="w-6 h-6" />
+                  {/* <p className="">Туршиж үзэх</p> */}
+                  <button
+              className="text-black text-[13px]"
+              onClick={() => navigate("/signup")}
+            >
+              {t("button.free")}
+            </button>
+                </div>
+              </button>
+            </div>
+
+            {/* image */}
+            <div className="w-full lg:w-1/2 flex items-stretch justify-center mt-8 lg:mt-0 z-10">
+              <img
+                src={computer}
+                alt="computer illustration"
+                className="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-full object-contain "
+              />
+            </div>
+            <img
+              src={turshih}
+              className="w-full h-full absolute top-0 left-0 rounded-[30px]"
+            />
+          </div>
+        </div>
+
+        <footer className="mx-auto w-full max-w-[1320px] text-gray-300 px-2 lg:px-1 py-14">
+          <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0 px-4">
+            <div className="flex flex-col justify-between h-full">
+              <div className="flex items-center gap-2 mb-4">
+                <img src={logo} className="w-36 h-auto" />
+              </div>
+              <p className="text-sm text-gray-400 max-w-sm mb-6">
+                Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг
+                арга.
+              </p>
+              <div className="flex gap-4 mt-6 lg:mt-0 lg:justify-start">
+                <img src={facebook} alt="facebook"
+                  className="  cursor-pointer
+      transition-transform
+      duration-500
+      ease-in-out
+      hover:[transform:rotateY(180deg)]" />
+                <img src={instagram} alt="instagram" />
+                <img src={Youtube} alt="youtube" />
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-white font-pro font-semibold mb-4">ЧАТБОТ</h4>
+              <ul className="space-y-2 text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px]">
+                  {t("footer.row1")}
+                </li>
+                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px]">
+                  <HashLink smooth to="/pricing#faq">
+                    {t("footer.row2")}
+                  </HashLink>
+                </li>
+                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px] hover:underline">
+                  <HashLink smooth to="/pricing#top"> 
+                    {t("footer.row7")}
+                    </HashLink>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-white font-pro font-semibold mb-4">
+                ХОЛБОО БАРИХ
+              </h4>
+              <div className="max-w-[320px] ">
+                <p className="font-pro font-normal text-[16px] text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-4">
+                  Монгол улс, Улаанбаатар хот,
+                  <br />
+                  Сүхбаатар дүүрэг, 1-р хороо,
+                  <br />
+                  Ambassador office, 1-р давхар, 104 тоот
+                </p>
+
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center bg-[#171C1F] rounded-[7px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[110px]">
+                    <img src={phone} alt="phone" className="w-4 h-4 mr-3" />
+                    <p className="truncate">7744-1616</p>
+                  </div>
+                  <div className="flex items-center bg-[#171C1F] rounded-[7px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[170px]">
+                    <img src={mail} alt="mail" className="w-4 h-4 mr-3" />
+                    <a href="mailto:info@example.com" className="truncate"></a>
+                    <a
+                      href="mailto:info@example.com"
+                      className="hover:underline"
+                    >
+                      info@example.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <Link
+                  to="/terms"
+                  className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] hover:border-[#E91E63]"
+                >
+                  <span>Үйлчилгээний нөхцөл</span>
+                  <img
+                    src={arrow}
+                    alt="arrow"
+                    className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
+                  />
+                </Link>
+              </div>
+              <div className="mt-3">
+                <Link
+                  to="/privacy"
+                  className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px]"
+                >
+                  <span>Нууцын бодлого</span>
+                  <img
+                    src={arrow}
+                    alt="arrow"
+                    className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
+                  />
+                </Link>
+              </div>
+              <div className="mt-3">
+                <Link
+                  to="/privacy"
+                  className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px]"
+                >
+                  <span>Санал хүсэлт</span>
+                  <img
+                    src={arrow}
+                    alt="arrow"
+                    className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 w-full">
+            <div
+              className="w-full border-t border-gray-800/40 mb-6"
+              aria-hidden="true"
+            />
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex-1">
+                <p className="cursor-pointer font-pro font-normal text-[16px] text-center sm:text-left text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                  Бүх эрх хуулиар хамгаалагдсан {new Date().getFullYear()} он
+                </p>
+              </div>
+
+              <div className="flex-1 text-center sm:text-right">
+                <p className="cursor-pointer font-pro font-normal text-[16px] text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                  © Chatbot XXK {new Date().getFullYear()}
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+}
+
+export default Footer;
