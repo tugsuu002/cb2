@@ -48,11 +48,28 @@ body {
   *::after {
     border-width: 0;
   }
+
+  /* Remove autofill gray background */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: inherit !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
 
 @layer base {
   html {
     @apply text-[#031555] xl:text-[12px] 2xl:text-[14px];
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
@@ -85,191 +102,6 @@ body {
   }
 }
 
-@keyframes rotateEarth {
-  from {
-    transform: rotate(deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.earth-rotate {
-  animation: rotateEarth 60s linear infinite;
-}
-
-/* Animated gradient background used by FeaturedSkills */
-.animated-gradient {
-  background: linear-gradient(120deg, #7dd3fc, #60a5fa, #a78bfa, #f472b6);
-  background-size: 300% 300%;
-  animation: gradientShift 12s ease infinite;
-  position: relative;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* floating bubbles */
-.bubble {
-  position: absolute;
-  border-radius: 9999px;
-  background: rgba(255,255,255,0.06);
-  box-shadow: 0 8px 24px rgba(2,6,23,0.4) inset;
-  transform: translate3d(0,0,0);
-  /* make bubbles static/anchored to the div (no float animation) */
-  animation: none !important;
-}
-
-@keyframes floatBubble {
-  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.9 }
-  50% { transform: translateY(-24px) translateX(12px) scale(1.03); opacity: 0.7 }
-  100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.9 }
-}
-
-/* Vertical dark stripe columns (repeat) */
-.strip-columns {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(0,0,0,0.85) 0 6%,
-    rgba(0,0,0,0.6) 6% 12%,
-    rgba(0,0,0,0.85) 12% 18%
-  );
-  mix-blend-mode: multiply;
-  opacity: 0.8;
-}
-
-/* Warm moving wave overlay to emulate glowing band */
-.warm-wave {
-  position: absolute;
-  left: -40%;
-  top: 10%;
-  width: 180%;
-  height: 60%;
-  pointer-events: none;
-  background: radial-gradient(closest-side at 50% 50%, rgba(255,150,50,0.95) 0%, rgba(255,110,30,0.7) 12%, rgba(255,60,0,0.55) 20%, rgba(0,0,0,0) 45%);
-  filter: blur(36px) saturate(140%);
-  mix-blend-mode: screen;
-  opacity: 0.95;
-  animation: waveMove 9s linear infinite;
-}
-
-/* Moving light band: full-width horizontal band that moves vertically and varies length */
-.moving-light {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 40%;
-  height: 28vh;
-  pointer-events: none;
-  transform-origin: center;
-  filter: blur(28px) saturate(150%);
-  mix-blend-mode: screen;
-  opacity: 0.95;
-  /* keep the light band behind main content */
-  z-index: 0;
-  background: radial-gradient(closest-side at 50% 50%,
-    rgba(255,230,160,0.95) 0%,
-    rgba(255,180,70,0.9) 25%,
-    rgba(255,110,30,0.75) 45%,
-    rgba(0,0,0,0) 70%);
-  animation: lightFlow 10s ease-in-out infinite;
-}
-
-.moving-light::before {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; top: 50%;
-  height: 100%;
-  transform: translateY(-50%);
-  background: radial-gradient(closest-side at 50% 50%,
-    rgba(255,250,220,1) 0%,
-    rgba(255,200,120,0.9) 20%,
-    rgba(255,140,60,0.7) 40%,
-    rgba(0,0,0,0) 70%);
-  filter: blur(28px) saturate(160%);
-  mix-blend-mode: screen;
-  opacity: 0.98;
-}
-
-.moving-light::after {
-  content: "";
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  top: 0;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.0) 100%);
-  filter: blur(8px);
-  opacity: 0.25;
-  mix-blend-mode: screen;
-}
-
-@keyframes lightFlow {
-  0% { transform: translateY(-28%) scaleY(0.6); opacity: 0.85; }
-  18% { transform: translateY(-10%) scaleY(1.05); opacity: 1; }
-  36% { transform: translateY(6%)  scaleY(0.78); opacity: 0.95; }
-  58% { transform: translateY(28%) scaleY(1.18); opacity: 1; }
-  76% { transform: translateY(8%)  scaleY(0.9); opacity: 0.96; }
-  100%{ transform: translateY(-20%) scaleY(0.7); opacity: 0.9; }
-}
-
-/* inner core glow */
-.light-core {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 55%;
-  height: 70%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(closest-side at 50% 50%, rgba(255,250,220,0.95) 0%, rgba(255,200,120,0.85) 20%, rgba(255,140,60,0.6) 40%, rgba(0,0,0,0) 75%);
-  filter: blur(40px) saturate(150%);
-  mix-blend-mode: screen;
-  opacity: 1;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* container for per-slice vertical strips */
-.light-bands {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.light-slice {
-  position: absolute;
-  bottom: 0;
-  height: 80%;
-  border-radius: 6px 6px 0 0;
-  transform-origin: center bottom;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,200,110,0.95) 20%, rgba(255,120,40,0.85) 45%, rgba(0,0,0,0) 85%);
-  filter: blur(10px) saturate(140%);
-  mix-blend-mode: screen;
-  opacity: 0.95;
-  transition: opacity 300ms ease;
-  animation-name: sliceFlow;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes sliceFlow {
-  0% { transform: translateY(8%) scaleY(0.6); opacity: 0.85; }
-  25% { transform: translateY(-6%) scaleY(1.05); opacity: 1; }
-  50% { transform: translateY(12%) scaleY(0.8); opacity: 0.95; }
-  75% { transform: translateY(-8%) scaleY(1.12); opacity: 1; }
-  100%{ transform: translateY(6%) scaleY(0.72); opacity: 0.9; }
-}
-
-
 .gradient-blinds-container {
   /* position: relative; */
   width: 100%;
@@ -281,8 +113,8 @@ body {
 .card-spotlight {
   position: relative;
   /* border-radius: 1.5rem; */
-  border: 1px solid white;
-  background-color: #fff;
+  /* border: 1px solid white; */
+
   /* padding: 2rem; */
   overflow: hidden;
   --mouse-x: 50%;
@@ -297,7 +129,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+  background: var(--spotlight-color, radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.05), transparent 80%));
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -306,4 +138,81 @@ body {
 .card-spotlight:hover::before,
 .card-spotlight:focus-within::before {
   opacity: 0.6;
+}
+
+.gradient-border-bottom {
+  position: relative;
+}
+
+.gradient-border-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+background: linear-gradient(
+  to right,
+  #261852 5%,
+  #0066FF 95%
+);
+  border-radius: 0 0 20px 20px;
+}
+
+.gradient-border-instagram {
+  position: relative;
+}
+
+.gradient-border-instagram::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #FFD600, #E90097, #7638FA);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Orbit ring for customer logos */
+.orbit-tilt {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  pointer-events: none;
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  animation: orbit-spin 32s linear infinite;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.orbit-item {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotateX(var(--orbit-tilt, 0deg)) rotateZ(var(--orbit-yaw, 0deg)) rotate(0deg);
+  }
+  to {
+    transform: rotateX(var(--orbit-tilt, 0deg)) rotateZ(var(--orbit-yaw, 0deg)) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring {
+    animation: none;
+  }
 }

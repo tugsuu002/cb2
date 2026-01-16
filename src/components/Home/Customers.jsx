@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import world from "../../assets/earth_sphere.png";
 import tdb from "../../assets/tdb.png";
 import tdb1 from "../../assets/tdb.png";
@@ -13,6 +13,7 @@ import mak from "../../assets/mak.png";
 import tawanbogd from "../../assets/tawanbogd.png";
 import nomin from "../../assets/nomin.png";
 import apu from "../../assets/apu.png";
+import  {Globe}  from "./Globe.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Navigation arrows removed — keep autoplay only
@@ -27,6 +28,26 @@ const Customers = () => {
   const angleRef = useRef(0);
   const rafIdRef = useRef(null);
   const pausedRef = useRef(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Intersection observer for animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Update ref directly on scroll (passive listener) to avoid frequent React renders
   useEffect(() => {
@@ -73,23 +94,27 @@ const Customers = () => {
   }, []);
 
   return (
-    <section className="relative">
+    <section ref={sectionRef} className="relative">
       <div className="h-[70vh] md:h-screen flex flex-col items-center justify-center px-4">
-        <img
-          // ref={imgRef}
+        {/* <img
+          ref={imgRef}
           src={world}
           alt="Earth globe"
           className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[820px] h-auto max-h-[70vh] sm:max-h-[80vh] object-contain"
-          // style={{ willChange: 'transform', WebkitBackfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
-          // onMouseEnter={() => (pausedRef.current = true)}
-          // onMouseLeave={() => (pausedRef.current = false)}
-          // onTouchStart={() => (pausedRef.current = true)}
-          // onTouchEnd={() => (pausedRef.current = false)}
-        />
+          style={{ willChange: 'transform', WebkitBackfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+          onMouseEnter={() => (pausedRef.current = true)}
+          onMouseLeave={() => (pausedRef.current = false)}
+          onTouchStart={() => (pausedRef.current = true)}
+          onTouchEnd={() => (pausedRef.current = false)}
+        /> */}
+
+        <Globe />
       </div>
 
       <div
-        className="absolute top-[220px] sm:top-[260px] md:top-[300px] left-1/2 -translate-x-1/2  w-[400px] md:w-full max-w-[1000px]"
+        className={`absolute top-[220px] sm:top-[260px] md:top-[300px] left-1/2 -translate-x-1/2  w-[400px] md:w-full max-w-[1000px] transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
       >
         <Swiper
           modules={[Autoplay]}

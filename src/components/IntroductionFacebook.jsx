@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
 import HowItWorks from "./HowItWorks";
@@ -18,29 +19,49 @@ export default function IntroductionFacebook() {
     <>
       <Hero />
       <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
-        <p className="text-[70px] text-[#0D0D0D] font-pro font-normal text-center">
+        <motion.p 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-[40px] md:text-[70px] text-[#0D0D0D] font-pro font-normal text-center"
+        >
           Үндсэн үйлчилгээ
-        </p>
-        <p className="text-[18px] text-[#707082] font-pro font-normal text-center mb-8 sm:mb-12">
+        </motion.p>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-[18px] text-[#707082] font-pro font-normal text-center mb-8 sm:mb-12"
+        >
           Бидний системийн боломжууд
-        </p>
-        <div className="bg-[#EDF2FB]/80 p-6 sm:p-[50px] lg:p-[75px] rounded-[40px] mb-20 shadow-inner">
+        </motion.p>
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+          className="bg-[#EDF2FB]/80 p-6 sm:p-[50px] lg:p-[75px] rounded-[40px] mb-20 shadow-inner"
+        >
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[41px]">
             {fbCardList.map((item, index) => {
               if (!checkList && index > 7) return null;
 
               return (
-                <SpotlightCard
-                  // className="custom-spotlight-card"
-                  spotlightColor="rgba(55, 155, 255, 0.5)"
-                > 
-                  <div
-                    key={index}
-                    className="rounded-[20px] py-5 px-4 transition-all duration-300"
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <SpotlightCard
+                    className="rounded-[20px] bg-white h-full gradient-border-bottom duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    spotlightColor="rgba(0, 102, 255, 0.4)"
                   >
-                    <div
-                      className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-10 h-10 flex items-center justify-center mb-3"
-                    >
+                  <div className="py-5 px-4 transition-all duration-300 h-full w-full">
+                    <div className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-10 h-10 flex items-center justify-center mb-3">
                       <img src={item?.icon} alt="" className="w-5 h-5" />
                     </div>
 
@@ -53,6 +74,7 @@ export default function IntroductionFacebook() {
                     </p>
                   </div>
                 </SpotlightCard>
+                </motion.div>
               );
             })}
           </div>
@@ -83,9 +105,13 @@ export default function IntroductionFacebook() {
               />
             </button>
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
           className="
     relative
     grid grid-cols-2
@@ -103,36 +129,60 @@ export default function IntroductionFacebook() {
           <div className="absolute inset-y-0 left-1/2 w-px bg-gray-200 md:hidden" />
 
           {/* Item 1 */}
-          <div className="flex items-center gap-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex items-center gap-4"
+          >
             <img src={oper} className="w-[32px] h-[29px]" />
             <p className="text-sm">24/7 автоматжуулалт</p>
-          </div>
+          </motion.div>
 
           {/* Desktop separator */}
           <div className="hidden md:block h-10 w-px bg-gray-200" />
 
           {/* Item 2 */}
-          <div className="flex items-center gap-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex items-center gap-4"
+          >
             <img src={mess} className="w-[32px] h-[29px]" />
             <p className="text-sm">Чадавхжуулах сургалт</p>
-          </div>
+          </motion.div>
 
           <div className="hidden md:block h-10 w-px bg-gray-200" />
 
           {/* Item 3 */}
-          <div className="flex items-center gap-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex items-center gap-4"
+          >
             <img src={cus} className="w-[32px] h-[29px]" />
             <p className="text-sm">Хариуцсан менежер</p>
-          </div>
+          </motion.div>
 
           <div className="hidden md:block h-10 w-px bg-gray-200" />
 
           {/* Item 4 */}
-          <div className="flex items-center gap-4">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex items-center gap-4"
+          >
             <img src={like} className="w-[32px] h-[29px]" />
             <p className="text-sm">Хялбар үйлчилгээ</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <HowItWorks />
         <ChatbotSteps />
       </section>

@@ -49,7 +49,6 @@ function Navbar() {
     };
 
       checkAuth();
-      console.info('helloooooo');
     }, []);
   
   useEffect(() => {
@@ -114,6 +113,7 @@ function Navbar() {
                     <Link
                       key={e.id}
                       to={e.route}
+                      onClick={scrollToTop}
                       className="block p-2 hover:bg-[rgba(255,255,255,0.08)] rounded-lg"
                     >
                       {e.type}
@@ -123,7 +123,7 @@ function Navbar() {
               )}
             </AnimatePresence>
           </li>
-          <Link to="/pricing" className="flex items-center">
+          <Link to="/pricing" onClick={scrollToTop} className="flex items-center">
             {t("nav.li2")}
           </Link>
 
@@ -220,13 +220,13 @@ function Navbar() {
                 <ul className="pl-4 space-y-3">
                   {introList.map((e) => (
                     <li key={e.id}>
-                      <Link to={e.route}>{e.type}</Link>
+                      <Link to={e.route} onClick={() => { setOpen(false); scrollToTop(); }}>{e.type}</Link>
                     </li>
                   ))}
                 </ul>
               )}
               <li className="flex justify-between">
-                <Link to="/pricing">{t("nav.li2")}</Link>
+                <Link to="/pricing" onClick={() => { setOpen(false); scrollToTop(); }}>{t("nav.li2")}</Link>
               </li>
               <li className="flex justify-between">
                 <Link to="/">{t("nav.li3")}</Link>

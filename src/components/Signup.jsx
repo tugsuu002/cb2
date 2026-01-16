@@ -195,10 +195,10 @@ console.info("formData==>", formData);
                   <label className="text-sm text-gray-600">
                     {t("input.fName")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-4">
-                    <img src={user} alt="logo" className="h-5 w-5" />
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                    <img src={user} alt="logo" className="h-5 w-5 flex-shrink-0" />
                     <input
-                      className="w-full mt-1 px-4 py-3  outline-none border-none focus:ring-0"
+                      className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                       placeholder={t("input.fName")}
                       name="firstname"
                       onChange={(e) => {
@@ -213,10 +213,10 @@ console.info("formData==>", formData);
                   <label className="text-sm text-gray-600">
                     {t("input.lName")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-4">
-                    <img src={user} alt="logo" className="h-5 w-5" />
+ <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                    <img src={user} alt="logo" className="h-5 w-5 flex-shrink-0" />
                     <input
-                      className="w-full mt-1 px-4 py-3  outline-none border-none focus:ring-0"
+                      className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                       placeholder={t("input.lName")}
                       name="lastname"
                       onChange={(e) => {
@@ -231,11 +231,11 @@ console.info("formData==>", formData);
                   <label className="text-sm text-gray-600">
                     {t("input.email")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-4">
-                    <img src={logEmail} alt="logo" className="h-5 w-5" />
+                 <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                    <img src={logEmail} alt="logo" className="h-5 w-5 flex-shrink-0" />
                     <input
                       name="email"
-                      className="w-full mt-1 px-4 py-3 outline-none border-none focus:ring-0"
+                      className=" w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                       placeholder={t("input.email")}
                       onChange={handleChange}
                     />
@@ -247,11 +247,11 @@ console.info("formData==>", formData);
                   <label className="text-sm text-gray-600">
                     {t("input.phone")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-4">
-                    <img src={call} alt="logo" className="h-5 w-5" />
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                    <img src={call} alt="logo" className="h-5 w-5 flex-shrink-0" />
                     <input
                       name="phone"
-                      className="w-full mt-1 px-4 py-3  outline-none border-none focus:ring-0"
+                      className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                       placeholder={t("input.phone")}
                       type="tel"
                       inputMode="numeric"
@@ -273,7 +273,7 @@ console.info("formData==>", formData);
                 <label className="text-sm text-gray-600">
                   {t("input.pwd")}
                 </label>
-                <div className="relative mt-1 border rounded-xl flex items-center px-4">
+                <div className="relative mt-1 border rounded-xl flex items-center px-4 focus-within:ring-2 focus-within:ring-[#E91E63]">
                   <img src={key} alt="logo" className="h-5 w-5" />
                   <input
                     name="password"
@@ -337,7 +337,7 @@ console.info("formData==>", formData);
                 <label className="text-sm text-gray-600">
                   {t("input.pwdCheck")}
                 </label>
-                <div className="relative mt-1 border rounded-xl flex items-center px-4">
+                <div className="relative mt-1 border rounded-xl flex items-center px-4 focus-within:ring-2 focus-within:ring-[#E91E63]">
                   <img src={key} alt="logo" className="h-5 w-5" />
                   <input
                     name="passwordConfirm"

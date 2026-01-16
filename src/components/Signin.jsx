@@ -136,8 +136,8 @@ export default function LoginPage() {
                 <label className="text-sm text-[#a3aed0] block mb-1">
                   {t("input.email")}
                 </label>
-                <div className="border rounded-xl flex items-center px-4 focus:outline-none focus:ring-2 focus:ring-[#E91E63]">
-                  <img src={mail} alt="logo" className="h-5 w-5" />
+                 <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                  <img src={mail} alt="logo" className="h-5 w-5 flex-shrink-0" />
                   
                 <input
                   type="email"
@@ -148,7 +148,8 @@ export default function LoginPage() {
                   }
                   placeholder={t("input.email")}
                   required
-                  className="w-full px-4 py-3  outline-none border-none focus:ring-0"
+                    // className="w-full px-4 py-3  outline-none border-none focus:ring-0"
+                    className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                   />
                   </div>
               </div>
@@ -160,8 +161,8 @@ export default function LoginPage() {
                 </label>
 
 
-                  <div className="border relative rounded-xl flex items-center px-4 focus:outline-none focus:ring-2 focus:ring-[#E91E63]">
-                  <img src={key} alt="logo" className="h-5 w-5" />
+                <div className="border relative rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                  <img src={key} alt="logo" className="h-5 w-5 flex-shrink-0" />
                   <input
                     type={showPassword ? "text" : "password"}
                     value={formData?.password}
@@ -174,13 +175,15 @@ export default function LoginPage() {
                     placeholder={t("input.pwd")}
                     required
                     minLength={8}
-                    className="w-full  px-4 py-3 pr-12 outline-none border-none focus:ring-0"
+                    // className="w-full  px-4 py-3 pr-12 outline-none border-none focus:ring-0"
+                    className="flex-1 px-3 py-3 pr-10 text-base outline-none border-none focus:ring-0"
                   />
 
                   <button
                     type="button"
                     onClick={() => setShowPassword((s) => !s)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-md hover:bg-gray-100"
+                    // className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-md hover:bg-gray-100"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-md hover:bg-gray-100 flex-shrink-0"
                     aria-label={showPassword ? "Нууц үг нуух" : "Нууц үг харах"}
                   >
                      {showPassword ? (

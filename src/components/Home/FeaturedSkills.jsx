@@ -8,7 +8,7 @@ export default function FeaturedSkills() {
   console.log("🚀 ~ FeaturedSkills ~ stasticList:", stasticList);
   return (
     <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
-      <h2 className="text-[55px] font-pro font-semibold text-center mb-8 sm:mb-12">
+      <h2 className="text-[40px] md:text-[55px] font-pro font-semibold text-center mb-8 sm:mb-12">
         ОНЦЛОХ ЧАДВАР
       </h2>
 
@@ -47,56 +47,6 @@ export default function FeaturedSkills() {
             ))}
           </div>
         </div>
-
-
-
-        {/* Togloom */}
-        {/* <div className="relative w-full h-screen bg-black overflow-hidden">
-        <div className="moving-light" aria-hidden="true">
-          <div className="light-core" />
-          <div className="light-bands" aria-hidden="true">
-            {Array.from({ length: 12 }).map((_, idx) => (
-              <div
-                key={idx}
-                className="light-slice"
-                style={{
-                  left: `${(idx / 12) * 100}%`,
-                  width: `${100 / 12}%`,
-                  animationDelay: `${(idx % 6) * 0.18}s`,
-                  animationDuration: `${2.4 + (idx % 5) * 0.6}s`,
-                }}
-              />
-            ))}
-          </div>
-        </div>
-        {bars.map((_, i) => (
-        <div
-          key={i}
-          className="wave-bar"
-          style={{
-            left: `${i * 10}%`,
-            animationDelay: `${i * 0.3}s`,
-          }}
-        />
-      ))}
-
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-10 text-white px-6">
-        <h1 className="text-4xl md:text-6xl font-bold text-center">
-          Meet! Recognito
-        </h1>
-        <p className="mt-4 text-center max-w-xl">
-          Built for a secure Web3 future. Empowering blockchain networks with top-tier validation, RPC, and IBC relayers.
-        </p>
-        <div className="mt-6 flex gap-4">
-          <button className="bg-white text-black px-6 py-2 rounded-full shadow-lg hover:scale-105 transition">
-            Apply for Beta
-          </button>
-          <button className="bg-gray-700 text-white px-6 py-2 rounded-full hover:scale-105 transition">
-            Learn more
-          </button>
-        </div>
-      </div>
-    </div> */}
       </div>
     </section>
   );

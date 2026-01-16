@@ -16,8 +16,6 @@ function Footer() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-
-  
   return (
     <>
       <div className=" text-white flex flex-col justify-between bg-black">
@@ -28,7 +26,7 @@ text-center text-white
 [background:radial-gradient(circle_at_top_left,_rgba(255,255,255,0.1)_25%,_rgba(255,255,255,0)_50%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.1)_16%,_rgba(255,255,255,0)_75%),radial-gradient(ellipse_at_center,_rgba(0,0,0,0.45)_100%,_rgba(0,0,0,0.75)_100%)]"
           >
             <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start px-4 lg:px-0 pt-12 lg:pl-20 z-10  justify-start text-center lg:text-left">
-              <p className="text-[50px] md:text-[64px] font-pro font-semibold mb-4 text-[#FFFFFF]">
+              <p className=" text-[40px] md:text-[64px] font-pro font-semibold mb-4 text-[#FFFFFF]">
                 ЧАТБОТ ТУРШИХ
               </p>
 
@@ -36,17 +34,14 @@ text-center text-white
                 Xялбар бөгөөд эх хэл дээрээ чатботоо эхлүүлцгээе!
               </p>
 
-              <button className="flex border-[#484848] w-[185px] h-[48px] gap-2 justify-center justify-items-center text-sm md:text-[17px] font-medium rounded-[40px]  bg-gray transition bg-[#FFFFFF]">
-                <div className="flex space-x-2 justify-center items-center">
-                  <img src={cbicon} alt="chatbot icon" className="w-6 h-6" />
-                  {/* <p className="">Туршиж үзэх</p> */}
-                  <button
-              className="text-black text-[13px]"
-              onClick={() => navigate("/signup")}
-            >
-              {t("button.free")}
-            </button>
-                </div>
+              <button
+                className="flex border-[#484848] w-[185px] h-[48px] gap-2 justify-center justify-items-center text-sm md:text-[17px] font-medium rounded-[40px] bg-gray transition bg-[#FFFFFF] items-center space-x-2 shadow-sm hover:shadow-xl hover:-translate-y-0.5 hover:bg-[#E9F3FF] hover:border-[#5B8DEF] hover:text-[#0B1F44] duration-300 ease-out"
+                onClick={() => navigate("/signup")}
+              >
+                <img src={cbicon} alt="chatbot icon" className="w-6 h-6" />
+                <span className="text-black text-[13px]">
+                  {t("button.free")}
+                </span>
               </button>
             </div>
 
@@ -76,14 +71,42 @@ text-center text-white
                 арга.
               </p>
               <div className="flex gap-4 mt-6 lg:mt-0 lg:justify-start">
-                <img src={facebook} alt="facebook"
-                  className="  cursor-pointer
-      transition-transform
-      duration-500
-      ease-in-out
-      hover:[transform:rotateY(180deg)]" />
-                <img src={instagram} alt="instagram" />
-                <img src={Youtube} alt="youtube" />
+                <a
+                  href="https://www.facebook.com/Chatbot.mn"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Chatbot Facebook"
+                >
+                  <img
+                    src={facebook}
+                    alt="facebook"
+                    className="cursor-pointer transition duration-400 ease-out hover:[transform:rotateY(180deg)]"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/chatbot.mn_official/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Chatbot Instagram"
+                >
+                  <img
+                    src={instagram}
+                    alt="instagram"
+                    className="cursor-pointer transition duration-400 ease-out hover:[transform:rotateY(180deg)]"
+                  />
+                </a>
+                <a
+                  href="https://www.youtube.com/@chatbotmn"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Chatbot YouTube"
+                >
+                  <img
+                    src={Youtube}
+                    alt="youtube"
+                    className="cursor-pointer transition duration-400 ease-out hover:[transform:rotateY(180deg)]"
+                  />
+                </a>
               </div>
             </div>
 
@@ -99,9 +122,9 @@ text-center text-white
                   </HashLink>
                 </li>
                 <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px] hover:underline">
-                  <HashLink smooth to="/pricing#top"> 
+                  <HashLink smooth to="/pricing#top">
                     {t("footer.row7")}
-                    </HashLink>
+                  </HashLink>
                 </li>
               </ul>
             </div>
@@ -120,20 +143,20 @@ text-center text-white
                 </p>
 
                 <div className="flex flex-col gap-3">
-                  <div className="flex items-center bg-[#171C1F] rounded-[7px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[110px]">
+                  <a
+                    href="tel:77441616"
+                    className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[120px] hover:bg-[#1f262a] transition"
+                  >
                     <img src={phone} alt="phone" className="w-4 h-4 mr-3" />
-                    <p className="truncate">7744-1616</p>
-                  </div>
-                  <div className="flex items-center bg-[#171C1F] rounded-[7px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[170px]">
+                    <span className="truncate">7744-1616</span>
+                  </a>
+                  <a
+                    href="mailto:info@example.com?subject=%D0%A1%D0%B0%D0%BD%D0%B0%D0%BB%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%D1%82&body=%D0%A2%D0%B0%D0%BD%D1%8B%20%D0%BD%D1%8D%D1%80:%0A%D0%A5%D0%BE%D0%BB%D0%B1%D0%BE%D0%B3%D0%B4%D0%BE%D1%85%20%D1%83%D1%82%D0%B0%D1%81:%0A%D0%90%D1%81%D1%83%D1%83%D0%B4%D0%B0%D0%BB:%20"
+                    className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[190px] hover:bg-[#1f262a] transition"
+                  >
                     <img src={mail} alt="mail" className="w-4 h-4 mr-3" />
-                    <a href="mailto:info@example.com" className="truncate"></a>
-                    <a
-                      href="mailto:info@example.com"
-                      className="hover:underline"
-                    >
-                      info@example.com
-                    </a>
-                  </div>
+                    <span className="truncate">info@example.com</span>
+                  </a>
                 </div>
               </div>
             </div>

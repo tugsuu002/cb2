@@ -11,7 +11,18 @@ const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 2
 
     divRef.current.style.setProperty('--mouse-x', `${x}px`);
     divRef.current.style.setProperty('--mouse-y', `${y}px`);
-    divRef.current.style.setProperty('--spotlight-color', spotlightColor);
+    
+    // Parse gradient colors from spotlightColor if it contains multiple colors
+    if (spotlightColor.includes('|')) {
+      const colors = spotlightColor.split('|');
+      const gradientStops = colors.map((color, idx) => {
+        const percent = (idx / (colors.length - 1)) * 100;
+        return `${color.trim()} ${percent}%`;
+      }).join(', ');
+      divRef.current.style.setProperty('--spotlight-color', `radial-gradient(circle at var(--mouse-x) var(--mouse-y), ${gradientStops}, transparent 80%)`);
+    } else {
+      divRef.current.style.setProperty('--spotlight-color', `radial-gradient(circle at var(--mouse-x) var(--mouse-y), ${spotlightColor}, transparent 80%)`);
+    }
   };
 
   return (
