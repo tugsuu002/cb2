@@ -3,7 +3,7 @@
   font-family: 'TT Hoves Pro';
   src: url('/src/assets/fonts/TT-Hoves/TT Hoves Pro Trial Medium.ttf') format('truetype');
   font-weight: 500;
-  font-style: normal;
+  font-style: medium;
   font-display: swap;
 }
 
@@ -27,7 +27,7 @@
   font-family: 'TT Hoves Pro';
   src: url('/src/assets/fonts/TT-Hoves/TT Hoves Pro Trial DemiBold.ttf') format('truetype');
   font-weight: 600;
-  font-style: normal;
+  font-style: semibold;
   font-display: swap;
 }
 

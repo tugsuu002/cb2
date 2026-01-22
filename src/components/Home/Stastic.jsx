@@ -27,7 +27,7 @@ export default function Stastic() {
         <div key={i} className="w-full flex justify-center">
           <div className="relative w-full min-h-[180px] sm:min-h-[200px] rounded-2xl bg-gradient-to-br from-white via-[#f6f8ff] to-white border border-gray-100 shadow-[0_10px_40px_rgba(15,23,42,0.08)] overflow-hidden">
             {/* Icon */}
-            <div className="flex items-center justify-center sm:justify-start p-5 sm:p-6">
+            <div className="flex items-center justify-center sm:justify-start p-4">
               <img
                 src={item.icon}
                 alt=""
@@ -36,7 +36,7 @@ export default function Stastic() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col justify-center h-full px-6 sm:px-8 pb-6 text-center sm:text-left">
+            <div className="flex flex-col justify-center h-full px-6 sm:px-8 pb-20 text-center sm:text-left">
               <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
                 <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                   {counter && (

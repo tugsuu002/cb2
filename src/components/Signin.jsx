@@ -229,7 +229,7 @@ export default function LoginPage() {
                 </div>
 
                 <p className="mt-1 text-xs text-[#FF0004]">
-                  Нууц үг хамгийн багадаа 8 тэмдэгтээс бүрдэнэ
+                  {t("input.label9")}
                 </p>
               </div>
 
@@ -271,7 +271,7 @@ export default function LoginPage() {
               {/* Divider */}
               <div className="flex items-center gap-3 justify-center mt-4">
                 <div className="h-px bg-gray-300 w-20" />
-                <span className="text-[#a3aed0] text-sm">Эсвэл</span>
+                <span className="text-[#a3aed0] text-sm">{t("input.or")}</span>
                 <div className="h-px bg-gray-300 w-20" />
               </div>
 

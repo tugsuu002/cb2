@@ -27,8 +27,10 @@ function Faq() {
       </div>
 
       {/* Content on top */}
-      <div className="relative z-10">
-        <div className="flex justify-center mb-2"><img src={asuult} className="h-5 w-5" /> <p className="text-white">FAQS</p>
+      <div className="relative z-10 justify-center justify-items-center">
+        <div className="flex justify-center mb-2 py-3 px-4 bg-[#171C1F] text-white w-[80px] border border-gray-800 rounded-[10px] space-x-3">
+          <img src={asuult} className="h-5 w-5" />
+          <p>FAQS</p>
         </div>
         <h2 className="font-pro font-semibold text-[30px] md:text-[50px] px-6 text-white justify-center flex">{t("faqHeader")}</h2>
       </div>
@@ -58,14 +60,17 @@ function Faq() {
               )}
             </li>
             {checkedState[e.id] && (
-              <div className="">
+              <div>
                 <hr className="mb-2 w-full border-t-1 border-gray-400" />
-                <p className="px-6 pb-6 whitespace-pre-line font-pro font-normal normal-case tracking-tight">{e.description}</p>
+                <p className="px-6 pb-6">{e.description}</p>
               </div>
             )}
           </ul>
         );
       })}
+      </div>
+      <div className="text-center text-gray-400 font-pro font-normal text-sm text-[16px] mt-28">
+        Contact us at <span className="text-white">info@chatbot.mn</span> via email!
       </div>
     </div>
   );

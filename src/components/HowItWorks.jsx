@@ -1,11 +1,15 @@
+import { useTranslation } from "react-i18next";
 import utas from "../assets/Utas.png";
 import Frame3 from "../assets/Frame3.png";
 export default function HowItWorks() {
+
+  const { t } = useTranslation();
+
   return (
     <section className="relative bg-[#EDF2FB] py-24 overflow-hidden rounded-[20px]" >
       {/* Title */}
       <h2 className="text-center text-[30px] lg:text-[70px] font-pro font-medium mb-16">
-        ЯАЖ АЖИЛЛАДАГ ВЭ?
+        {t("phoneScreen")}
       </h2>
 
       {/* Content */}

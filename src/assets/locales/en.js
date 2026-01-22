@@ -4,172 +4,301 @@ import phone from "../phone-call.png";
 import cursor from "../cursor.svg";
 import boticon from "../BotIcon.svg";
 import customericon from "../customericon.svg";
-import plus from "../plus.png"
+import plus from "../plus.png";
+import oper from "../t.png";
+import mess from "../p.png";
+import cus from "../supplier.png";
+import like from "../lik.png";
+import {
+  FbCard1,
+  FbCard2,
+  FbCard3,
+  FbCard4,
+  FbCard5,
+  FbCard6,
+  FbCard7,
+  FbCard8,
+  FbCard9,
+  FbCard10,
+  FbCard11,
+  FbCard12,
+  FbCard13,
+  FbCard14,
+  FbCard15,
+  FbCard16,
+  FbCard17,
+  FbCard18,
+} from "../svg";
 
 export const en = {
   nav: {
-    li1: "Service",
-    li2: "Price",
-    li3: "Opportunity",
+    li1: "INTRODUCTION",
+    li2: "PRICING",
+    li3: "HELP",
   },
-  navFeatures: [
+  navIntroduction: [
     {
       id: 0,
-      type: "Blog",
-      route: "https://blog.chatbot.mn/",
+      type: "Facebook introduction",
+      route: "facebook",
     },
     {
       id: 1,
-      type: "Manual",
-      route: "https://help.chatbot.mn/",
-    },
-    {
-      id: 2,
-      type: "Support",
-      route: "https://www.messenger.com/t/308105179819485",
-    },
-    {
-      id: 3,
-      type: "Online course",
-      route: "/tutorials",
+      type: "Instagram introduction",
+      route: "instagram",
     },
   ],
+
+  facebookIntroTitle: "CORE SERVICE",
+  facebookIntroSubtitle: "Бидний системийн боломжууд",
+
+  fb_card: [
+    {
+      title: "Information Setup",
+      desc: "Share information in multiple formats including images, text, videos, files, and links.",
+      icon: FbCard1,
+    },
+    {
+      title: "Online Shop",
+      desc: "Display products by category, announce discounts, add items to cart, provide detailed information, and create collections.",
+      icon: FbCard2,
+    },
+    {
+      title: "Comment Reply",
+      desc: "Automatically reply to comments on Facebook Page posts and send detailed information via chat.",
+      icon: FbCard3,
+    },
+    {
+      title: "Interactive Conversations",
+      desc: "Detect keywords from text and send appropriate responses.",
+      icon: FbCard4,
+    },
+    {
+      title: "Payment Integration",
+      desc: "Accept payments through local payment systems such as QPay, SocialPay, and MonPay.",
+      icon: FbCard5,
+    },
+    {
+      title: "Online Contract",
+      desc: "Gather required contract information from users anywhere and email it to the organization.",
+      icon: FbCard6,
+    },
+    {
+      title: "Custom Message",
+      desc: "Automatically deliver follow-up messages to users after a set time based on button clicks.",
+      icon: FbCard7,
+    },
+    {
+      title: "Calculation",
+      desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
+      icon: FbCard8,
+    },
+    {
+      title: "Questionnaire Form",
+      desc: "User feedback, survey data, and information are collected through two-way chat interactions.",
+      icon: FbCard9,
+    },
+    {
+      title: "Webform",
+      desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system’s dashboard.",
+      icon: FbCard10,
+    },
+    {
+      title: "View Reports",
+      desc: "User traffic and activity reports can be filtered by year, month, and day, and downloaded as Excel files.",
+      icon: FbCard11,
+    },
+    {
+      title: "DAN System",
+      desc: "Users can proceed to the next step after being verified through the E-Mongolia integrated government e-service system.",
+      icon: FbCard12,
+    },
+    {
+      title: "Hubspot Integration",
+      desc: "Integrates with internal systems used by organizations, such as HubSpot, Google Sheets, and Google Calendar.",
+      icon: FbCard13,
+    },
+    {
+      title: "Mass Message",
+      desc: "Sends advertisements and announcements to all users who have interacted with the chatbot within the last 24 hours.",
+      icon: FbCard14,
+    },
+    {
+      title: "Delivery System",
+      desc: "Automatically sends order details to the delivery company after payment for quick delivery.",
+      icon: FbCard15,
+    },
+    {
+      title: "Account Manager",
+      desc: "A dedicated account manager is assigned from the start of the contract and provides continuous support and communication.",
+      icon: FbCard16,
+    },
+    {
+      title: "User System",
+      desc: "Manage user access and permissions for bot system users.",
+      icon: FbCard17,
+    },
+    {
+      title: "System Integration",
+      desc: "Provides custom development upon request and connects the chatbot with the organization’s internal systems.",
+      icon: FbCard18,
+    },
+  ],
+
+  insta_card: [
+    {
+      title: "Information Setup",
+      desc: "Share information in multiple formats including images, text, videos, files, and links.",
+      icon: FbCard1,
+    },
+    {
+      title: "Online Shop",
+      desc: "Display products by category, announce discounts, add items to cart, provide detailed information, and create collections.",
+      icon: FbCard2,
+    },
+    {
+      title: "Comment Reply",
+      desc: "Automatically reply to comments on Facebook Page posts and send detailed information via chat.",
+      icon: FbCard3,
+    },
+    {
+      title: "Payment Integration",
+      desc: "Accept payments through local payment systems such as QPay, SocialPay, and MonPay.",
+      icon: FbCard5,
+    },
+    {
+      title: "Online Contract",
+      desc: "Gather required contract information from users anywhere and email it to the organization.",
+      icon: FbCard6,
+    },
+  ],
+
+  highlight: [
+    { src: oper, label: "24/7 Automation" },
+    { src: mess, label: "Professional development program" },
+    { src: cus, label: "Account manager" },
+    { src: like, label: "User-friendly service" },
+  ],
+
+  phoneScreen: "HOW THE SYSTEM WORKS?",
+  howChatbot: "How to start with a chatbot?",
+
+  steps: [
+    {
+      title: "Step 1",
+      description:
+        "Explore our services and choose the package that fits your business.",
+    },
+    {
+      title: "Step 2",
+      description: "Contact a account manager to set up a service agreement.",
+    },
+    {
+      title: "Step 3",
+      description:
+        "After completing your chatbot in the testing environment, connect it to your Facebook page and launch it.",
+    },
+  ],
+
   stastic: [
     {
       id: 0,
-      type: "cb",
+      type: "Visitors to Chatbot",
       icon: cursor,
-      count: "6,676,417",
-      plus: null
+      count: "10.556.655",
+      plus: null,
     },
     {
       id: 1,
-      type: "Бот devlop",
+      type: "Developed bot",
       icon: boticon,
-      count: "6,676,417",
-      plus: null
+      count: "13.556",
+      plus: null,
     },
     {
       id: 2,
-      type: "Бизнесийн байгууллага",
+      type: "Businesses and customers",
       icon: customericon,
-      count: "6,676,417",
+      count: "600",
       plus: plus,
     },
     {
       id: 3,
-      type: "Ботsssssss",
+      type: "Advertising content",
       icon: boticon,
-      count: "6,676,417",
+      count: "400",
       plus: plus,
     },
   ],
 
+  featuresTitle: "KEY FEATURE",
   features: [
     {
-      title: "Чатботоор борлуулах",
-      desc: "Social pay, Qpay, Monpay болон дотоодын төлбөрийн системүүдтэй холбогдсон бөгөөд бараа бүтээгдэхүүнийг онлайнаар борлуулна.",
+      title: "In-chatbot sales",
+      desc: "Sell products directly through the chatbot’s online shop, integrated with local payment systems like SocialPay, QPay, and MonPay.",
     },
     {
-      title: "Онлайнаар гэрээ",
-      desc: "Гэрээ хийх, зохицуулах бүх үйл ажиллагааг орон зай хамаарахгүйгээр харилцагчаас авч байгууллагад мэдээлэл илгээнэ.",
+      title: "Online Contract",
+      desc: "Gather required contract information from users anywhere and email it to the organization.",
     },
     {
-      title: "Хандалтын тайлан",
-      desc: "Фэйсбүүк хуудастай бот холбогдсон бөгөөд хандалт хэрэглэгчийн хандалтын тайланг оновчтой үзэж хянах боломжтой.",
+      title: "Access report",
+      desc: "Download user activity reports to Excel, filtered by date since the bot was connected to the Facebook page.",
     },
     {
-      title: "Тооцоолол",
-      desc: "Материалын тооцооллын тоон үзүүлэлтүүдийг хэрэглэгчийн оруулсан мэдээлэлд үндэслэн онлайнаар гаргаж өгнө.",
+      title: "Calculation",
+      desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
     },
     {
-      title: "Пост автоматжуулалт",
-      desc: "Фэйсбүүк хуудаст нийтлэгдэх постыг цагийн хуваарьтайгаар автоматаар нийтэлж, хариу өгөх процессыг хялбарчилна.",
+      title: "Automatically reply to posts.",
+      desc: "Automatically reply to comments on Facebook posts and send detailed information via chat.",
     },
     {
-      title: "Нэмэлт хөгжүүлэлт",
-      desc: "Тухайн байгууллагын онцлогт тохирсон системийн нэмэлт хөгжүүлэлтийг хийж, шийдэл санал болгоно.",
+      title: "Custom development services",
+      desc: "Integrate with the organization’s internal systems and develop custom solutions tailored to their operations.",
     },
   ],
-  hero: {
-    h2: "Your Business Equipment",
-    h1: "TRANSFORM YOUR PROSPECTS INTO CUSTOMERS!",
-    h3: "Virtual assistant for everyone",
-    companies:
-      "Industry Leaders Successfully Implementing Chatbot Services in Their Operations",
-    bubble1: "Hello. It's Chatbot.mn auto responder.",
-    bubble2: "What is a chatbot?",
-    downloadLink:
-      "https://chatbot.mn/uploads/home/Taniltsuulga%20English%20NEW%205.pdf",
-  },
-  vertTitle: "Chatbots are essential marketing tools",
-  integration: "CONNECT WITH THE TOOLS YOU REGULARLY USE IN YOUR OPERATIONS.",
-  integrationDesc:
-    "By integrating our apps with your tech tools, you can boost team productivity, improve customer satisfaction, and achieve more with the assistance of a chatbot.",
-  subscribeM:
-    "Sign up below with your email to keep getting interesting news and updates.",
-  subscribeW:
-    "Stay updated on exciting news about conversation marketing and tech trends, chatbot development opportunities, new products, and more. Just enter your email below.",
-  priceTitle:
-    "Choose from the following plans based on your company's goals and activities.",
+
+  AiChatHelp: "HOW CAN WE HELP YOU?",
+  AiQuasion: "Ask a anything",
+  AiSuggestions1: "How do I sign the contract online?",
+  AiSuggestions2: "How much does the AI chatbot service cost?",
+  AiSuggestions3: "How can we help you?",
+
+  chatbotTest: "TRY CHATBOT",
+  chatbotText: "GET STARTED EASILY WITH YOUR CHATBOT IN YOUR NATIVE LANGUAGE!",
+
   price: [
     {
       id: 0,
-      type: "PRO PLAN",
+      name: "Pro",
       price: "300,000₮",
-      userCount: "User count",
       description:
-        "A plan for freelancers, small, and medium-sized businesses to enhance customer communication, manage relationships, and foster growth.",
-      button: "Sign Up",
-      link: "",
+        "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон ав",
+      highlight: false,
     },
     {
       id: 1,
-      type: "ENTERPRISE PLAN",
+      name: "Enterprise",
       price: "900,000₮",
-      userCount: "Unlimited User count",
-      description:
-        "A plan designed to boost the productivity of large businesses in the banking, trading, and manufacturing sectors, as well as their customer service, sales, and marketing teams.",
-      button: "Get Information",
-      link: "https://chatbot.mn/webform/dynamic/5536?__btn__=357219&psid=4090596247724602&__bid__=4",
+      description: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашигла",
+      highlight: true,
     },
     {
       id: 2,
-      type: "VIP",
-      price: "Unlimited users",
-      userCount: "Unlimited user count",
+      name: "VIP",
+      price: "Дотно ярья",
       description:
-        "A customized package for large companies undergoing digital transformation, allowing you to tailor and develop code as needed for every aspect of your operations.",
-      button: "Get Information",
-      link: "https://chatbot.mn/webform/dynamic/5536?__btn__=357219&psid=4090596247724602&__bid__=4",
+        "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
+      highlight: false,
     },
   ],
   priceTitle2: "Comparison with similar companies",
-  tableHd: [
-    "OUR CAPABILITIES AND ADVANTAGES",
-    "Chatbot.mn",
-    "Manychat",
-    "Chatfuel",
-  ],
-  tableDt: [
-    ["Creating bots by bot developers.", "+", "-", "-"],
-    ["Consulting service tailored to your company", "+", "-", "-"],
-    ["Dedicated manager", "+", "-", "-"],
-    ["Customer support 24/7", "+", "-", "-"],
-    ["Shop 2.0 feature", "+", "-", "-"],
-    ["Delivery service", "+", "-", "-"],
-    ["Online contract", "+", "-", "-"],
-    ["DAN system", "+", "-", "-"],
-    ["Mass message", "+", "+", "+"],
-    ["Local payment opportunities", "+", "-", "-"],
-    ["Manuals and video lessons", "+", "+", "+"],
-    ["Bot developer group", "+", "+", "+"],
-  ],
   priceCTA:
     "Contact our sales manager for personalized guidance on selecting the right plan for your industry, company, and needs.",
-  priceComment:
-    "Industry leaders have shared their experiences and success stories of implementing chatbot services in their business operations.",
+  priceComment: "An Overview of Our System’s",
   faqHeader: "FREQUENTLY ASKED QUESTIONS",
+  
   faq: [
     {
       id: 0,
@@ -196,41 +325,6 @@ export const en = {
     },
   ],
   productHeader: "EXTRA FEATURES",
-  mainFeature: {
-    type: "Basic Service",
-    description:
-      "Chatbot LLC offers BOT CREATION AND DEVELOPMENT services, with the option to integrate with your internal systems to match your operational needs.",
-  },
-  subFeature: "Basic features",
-  subDesc: [
-    "Build menus according to the information flow",
-    "Enter Frequently Asked Question",
-    "Show product descriptions",
-    "Divide users into several groups or segments",
-    "Hubspot integration",
-    "Dedicated manager for that particular bot",
-    "View analytics and do monitoring",
-    "Process payments",
-    "Send mass messages",
-    "Conduct surveys",
-    "Fill out inquiry forms",
-    "Send custom messages etc. Many possibilities.",
-  ],
-
-  featureCTA:
-    "We maintain ongoing communication with our clients and customers.",
-  featureCTA2: [
-    {
-      title: "Empowerment training",
-      description:
-        "We adjust the training schedule to fit our clients needs and work capabilities. You can choose between weekdays 10:00 and 14:00. <br/> /Each training session lasts an hour and a half/",
-    },
-    {
-      title: "Customer Service",
-      description:
-        "We are always with you to provide guidance and help with questions, improvements, entering additional information, and making changes related to chatbot.",
-    },
-  ],
   productHeader2: "Advantages",
   button: {
     signin: "Log In",
@@ -242,6 +336,7 @@ export const en = {
     logout: "Log out",
   },
   termTitle: "Terms of Service",
+  Feedback: "Feedback",
   termList: [
     {
       header: "General conditions",
@@ -524,110 +619,15 @@ export const en = {
       ],
     },
   ],
-  //////////////////////////////////////////////////////////////
-  heroStat: {
-    col1: "Visitors to Chatbot",
-    col2: "Developed virtual assistants and bots for brands",
-    col3: "Businesses and customers",
-  },
-  contact: [
-    {
-      id: 0,
-      name: "Phone",
-      value: "7744-1616",
-      image: phone,
-    },
-    {
-      id: 1,
-      name: "Mail",
-      value: "info@chatbot.mn",
-      image: mail,
-    },
-    {
-      id: 2,
-      name: "Address",
-      value:
-        "Ambassador Office, 1st Floor, Room 104, Sukhbaatar District, Ulaanbaatar",
-      image: location,
-    },
-  ],
-  products: [
-    {
-      id: 0,
-      type: "Online Store",
-      description:
-        "Users can easily search for products they desire by category, and not only can they access detailed product information, but they can also make direct purchases.",
-    },
-    {
-      id: 1,
-      type: "Comment Reply",
-      description:
-        "Users who want to get information by commenting on a Facebook post will automatically respond to comments 24/7 and send detailed information to all of them via Messenger without wasting time.",
-    },
-    {
-      id: 2,
-      type: "Live Chat",
-      description:
-        "Due to the behavior of users, specific situations, requests, and their desire to receive services that suit them, customers have the need to contact an operator when they need information.",
-    },
-    {
-      id: 3,
-      type: "Delivery Service",
-      description:
-        "Customers make payments for their selected items, choose a delivery service, and have their orders sent to the specified address. It provides a comprehensive solution for the store feature.",
-    },
-    {
-      id: 4,
-      type: "Online Contract",
-      description:
-        "The information required for the contract is collected from the user through the inquire form and automatically uploaded to the contract draft, and the contract is ready and sent to both parties by email at the same time.",
-    },
-  ],
-  productHeader3: "Team Collaboration",
-  productSlide: [
-    {
-      id: 0,
-      type: "MARKETING TEAM",
-      title:
-        "Effective marketing creates loyal customers and sustainable relationships.",
-      description: [
-        "Establish a relationship between the company and the customer.",
-        "Enhance user experience",
-        "Create a positive brand image",
-        "Prepare consumers who have enough knowledge about the brand and love the brand",
-      ],
-    },
-    {
-      id: 1,
-      type: "SALES TEAM",
-      title: "Use technology to innovate business models and make sales.",
-      description: [
-        "Increase sales channel",
-        "Collect potential customer information",
-        "Support sales team activities",
-        "Automate the sales process",
-      ],
-    },
-    {
-      id: 2,
-      type: "SERVICE TEAM",
-      title: "Satisfaction with the service motivates repeat purchases.",
-      description: [
-        "Provide necessary information to users 24/7",
-        "Systematically resolve suggestions and complaints promptly",
-        "Enhance the productivity of the customer service team",
-        "Boost the number of repeat purchases by cultivating customer loyalty.",
-      ],
-    },
-  ],
+
   footer: {
     title: "TRY CHATBOT FOR FREE",
     subtitle: "GET STARTED EASILY WITH YOUR CHATBOT IN YOUR NATIVE LANGUAGE",
-    col1: "Chatbot",
+    col1: "CHATBOT",
     row1: "About Us",
     row2: "FAQ",
     row3: "Chatbot User Group",
-    row4: "Contact Us",
+    row4: "CONTACT US",
     col2: "PRODUCT",
     row5: "Bot Development",
     row6: "Empowerment Training",
@@ -639,277 +639,42 @@ export const en = {
     row11: "Manual",
     row12: "Template",
     copyright: "All rights reserved",
+    address:
+      "Ambassador Office, 1st Floor, Room 104, Sukhbaatar District, Ulaanbaatar",
     year: "year",
+    ai: "Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг арга.",
   },
-  about: {
-    title: "ABOUT US",
-    p1: "NSP LLC, formed by tech-savvy Mongolian youth with years of experience in the technology sector, began developing the Chatbot platform in 2019 and later transformed it into an independent entity, Chatbot LLC, transitioning from its startup origins.",
-    p2: "It continues to automate the daily customer service of more than 3,500 companies engaged in government, private sector, and business activities and keeps introducing new technology opportunities to businesses.",
-    row1Title: "MISSION",
-    row2Title: "OUR VALUES",
-    row3Title: "VISION",
-    row1: "Highlighting the intelligence and solidarity of Mongolian youth on the international platform.",
-    row2: ["Teamwork", "Vision", "Persistent labor"],
-    row3: "We aim to advance the Chatbot platform, transforming it into a competitive product in the Southeast Asian and global markets, while expanding the distribution of our services through multiple channels.",
-  },
+
   input: {
     email: "Email",
     pwd: "Password",
-    pwdCheck: "Нууц үг баталгаажуулах",
+    pwdCheck: "Confirm Password",
     lName: "Last Name",
     fName: "First Name",
     phone: "Phone",
     forgot: "Forgot Password?",
     remember: "Remember Me",
-    signinif: "Already have an account? Sign in",
-    signupif: "If you don't have an account", //end darj burgtuulne uu gdgiig ni tusad ni ene hesegt bicheed ogoorei
-    signupifLink: "SIGN UP HERE.", //end darj burgtuulne uu gdgiig ni tusad ni ene hesegt bicheed ogoorei
+    signinif: "Already have an account?",
+    signupif: "If you don't have an account",
+    signupifLink: "SIGN UP HERE.",
+    or: "Or",
     acceptTerm: 'CLICK "SIGN UP" TO CREATE AN ACCOUNT',
     acceptTerm2: "AGREE",
     forgotTitle: "ENTER YOUR REGISTERED EMAIL",
     forgotButton: "Reset Password",
     button: "Sign in with Facebook",
-    privacy: "Privacy Policy.",
-    term: "Terms and Conditions",
+    privacy: "I confirm that I have read and agree to the Privacy Policy",
+    checkPrivacy: "Please agree to the Privacy Policy.",
+    term: "Please agree to the Terms of Service.",
     label1: "Enter Email",
     label2: "Enter Password",
     label3: "Enter Last Name",
     label4: "Enter First Name",
     label5: "Enter Phone Number",
-  },
-  tutorial: {
-    h2: "Learn with Us",
-    h3: "Topics of Study",
-    h4: "Chatbot Opportunity №",
-    button: "Details",
-    input: "Search...",
-    templateTitle: "Related Templates",
-    request: "Would you like to enroll in classroom training?",
-    formName: "Your Name",
-    formOrg: "Company",
-    formDate: "Date / Available for enrollment at 10:00 on that day /",
-    formEmail: "Your email address",
-    formPhone: "Your contact phone number",
-    formSubmit: "Submit Request",
-    phoneLabel: "Phone number: ",
-    phone: "77441616",
-    addressLabel: "Our address: ",
-    address:
-      "Sukhbaatar District, Enkhtaivny Orgon Choloo, 15A/5, Ambassador Office, 1st floor 104, Ulaanbaatar, Mongolia 14200",
-    paragraph:
-      "In this course, you can get detailed information about CHATBOT services, features, and how to use them successfully from expert bot developers.",
-    cards: [
-      {
-        id: 1,
-        title: "Placing information",
-        url: "https://www.youtube.com/embed/GBHuScg_5Mc?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "You can regularly deliver all kinds of information about your products and services to your customers at any time of the week in many ways, such as images, text, video, files, links, etc.",
-      },
-      {
-        id: 2,
-        title: "Interactive Conversations",
-        url: "https://www.youtube.com/embed/YhdgfHWzPAU?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "By identifying keywords in people's questions, you can send customized answers and detailed information in response to those queries.",
-      },
-      {
-        id: 3,
-        title: "Frequently Asked Questions",
-        url: "https://www.youtube.com/embed/YxUOWzF2FuI?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Users can generate FAQs and corresponding answers based on frequently asked questions by customers. The system will automatically respond to users, offering information quickly and efficiently.",
-      },
-      {
-        id: 4,
-        title: "Live Agent",
-        url: "https://www.youtube.com/embed/qAoZvdaLWJw?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The customer can stop the chatbot's automated information flow and interact with an operator to obtain precise details. Furthermore, the organization evaluates its operators on a scale of 1 to 5 stars based on user feedback, using this data to determine and improve the quality of its services.",
-      },
-      {
-        id: 5,
-        title: "Inquiry Form",
-        url: "https://www.youtube.com/embed/OAgFNUG1NTg?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Chatbots can be used to design inquiry forms for gathering feedback about products and services, as well as various surveys and news in the form of chat interactions.",
-      },
-      {
-        id: 6,
-        title: "Web Form",
-        url: "https://www.youtube.com/embed/Hth3BvrSgyo?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "This feature allows the creation of an additional chat window for the purpose of questionnaire completion and data collection from users. When the webform is completed, the responses can be received via email, and the collected data can be downloaded from the dashboard as an Excel file.",
-      },
-      {
-        id: 7,
-        title: "Mass Message",
-        url: "https://www.youtube.com/embed/YTgT3gQAFIA?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Send standard messages, advertisements, and detailed information to all subscribers who have interacted with your chatbot, or to segmented groups within 24 hours.",
-      },
-      {
-        id: 8,
-        title: "Comment Reply",
-        url: "https://www.youtube.com/embed/yaNh9Nteaqk?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "When users leave a comment on a Facebook post, they can automatically respond with two types of chat replies: \n1. Sending customized responses by recognizing keywords from user comments. \n2. Setting up a consistent single response regardless of what the user types. \n\nAdditionally, negative comments can be detected based on keywords stored in the conversation and deleted without being published.",
-      },
-      {
-        id: 9,
-        title: "Contact Data",
-        url: "https://www.youtube.com/embed/eENdtu7CSis?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "All data, including contacts information, customer segments, chat history, query and webform results, reports, etc., is stored in the chatbot dashboard.",
-      },
-      {
-        id: 10,
-        title: "User Tag",
-        url: "https://www.youtube.com/embed/e1dg50_w9GE?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Chatbot users can be segmented into tags based on their behavior and actions. This allows the creation of different groups for distributing and activating messages tailored to each segment.",
-      },
-      {
-        id: 11,
-        title: "Static Pages",
-        url: "https://www.youtube.com/embed/57HuwrdPk4o?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "With the help of static pages, you can create additional windows in Messenger to show information.",
-      },
-      {
-        id: 12,
-        title: "System Integration",
-        url: "https://www.youtube.com/embed/FXZgnKigRkQ?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "It is possible to integrate with systems such as Google sheet, Google calendar, Hubspot, etc., used by companies for their internal operations.",
-      },
-      {
-        id: 13,
-        title: "Analytics",
-        url: "https://www.youtube.com/embed/Ez1eO5ce6E4?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Chatbot user access and activity reports can be filtered by date, month, and day, and they can be downloaded as an Excel file.",
-      },
-      {
-        id: 14,
-        title: "Monitor",
-        url: "https://www.youtube.com/embed/qfWTKhNH660?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The Monitor section shows information such as bot errors, unanswered user queries, and user actions within the system on a daily, monthly, and date-specific basis.",
-      },
-      {
-        id: 15,
-        title: "Shop 2.0",
-        url: "https://www.youtube.com/embed/-7VLTCTJeg0?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "New Store 2.0 is your online shopping platform, enabling users to make payments through QPay and SocialPay, local payment systems specifically designed for shopping, all without leaving the messenger window. With our Store 2.0 feature, you can:\n1. Add products\n2. Apply discounts\n3. Provide informations for contacts\n4. Categorize your products\n5. Highlight featured products\n6. Show banners\n7. Create collections\n8. Set countdown timers\n9. Manage inventory\n10. Allow users to add products to their carts\n11. Configure shipping addresses\n12. Conduct online payments for product purchases.",
-      },
-      {
-        id: 16,
-        title: "Payment Integration",
-        url: "https://www.youtube.com/embed/FpRjP7BcEJU?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Chatbots are not just autoresponders managing communication between companies and users, but they can also integrate with local payment systems to facilitate payments for various products and services.",
-      },
-      {
-        id: 17,
-        title: "Delivery Service",
-        url: "https://www.youtube.com/embed/ucvgziyd5uM?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Chatbot is automating and simplifying the process of delivering products to companies and users by establishing system connections with local delivery companies, offering a comprehensive solution within the online shopping Store 2.0 feature.",
-      },
-      {
-        id: 18,
-        title: "Order",
-        url: "https://www.youtube.com/embed/JInmNgDLLwA?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The order feature allows you to purchase products and services and make payments using QPAY and Social Pay. It is not limited to selling goods; you can also use it for various transactions such as training registration and payment, fundraising, registration verification, and more.",
-      },
-      {
-        id: 19,
-        title: "Create bots and link pages",
-        url: "https://www.youtube.com/embed/rGJCF4wNNR4?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Using the control panel, you can create new bots, view all existing bots, filter them by their active or inactive status, search by name, explore model bots suitable for your business, and give credentials access to users registered in the chatbot system to exchange information and make edits to your bots.",
-      },
-      {
-        id: 20,
-        title: "Message Block",
-        url: "https://www.youtube.com/embed/kR57nSi3lOw?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The Message Block feature serves as the main area for organizing messages for your customers, testing the flow of their operations by concatenating them, and preparing your bot.",
-      },
-      {
-        id: 21,
-        title: "Settings: General",
-        url: "https://www.youtube.com/embed/r1Dq405xpKo?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The General page of the settings consists of five sections: start, start question, allowed domains, persona, and bot settings. Within these settings, you can establish the first question users can ask, specify the allowed domains registered on the page, choose the bot's avatar or cover photo, and make various other adjustments.",
-      },
-      {
-        id: 22,
-        title: "Settings: Greetings",
-        url: "https://www.youtube.com/embed/xIn51RFCXXc?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The Greeting feature allows you to configure festival, daily, conversation starter, and farewell greeting messages.",
-      },
-      {
-        id: 23,
-        title: "Settings: Subscriber Entrance",
-        url: "https://www.youtube.com/embed/FQqOZJ8l_XY?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "This section enables you to send essential information and define the initial questions for subscribers accessing your company's chatbot for the first time by clicking 'Get started' through the 'Subscriber entrance'. Companies commonly use this feature to gather data, including users phone numbers and email addresses.",
-      },
-      {
-        id: 24,
-        title: "Settings: Main Menu",
-        url: "https://www.youtube.com/embed/0nXYYo1kpig?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "The main menu is the button closest to the user, located in the lower right corner of the messenger window. It is an effective way for companies to showcase their most important information within this menu.",
-      },
-      {
-        id: 25,
-        title: "Users",
-        url: "https://www.youtube.com/embed/xTIwo1l3A-g?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Using the user feature, users can access a list of all contacts registered in the company's chatbot or those who initiated the conversation by clicking 'Get started.' You can view the chat history of the 1 user and send replies.",
-      },
-      {
-        id: 26,
-        title: "User Attributes",
-        url: "https://www.youtube.com/embed/vefrnuDnGyY?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "Attributes are the characteristics that represent users, and companies can gather the desired information from users and store it in the user attribute feature. This feature allows them to optimize marketing campaigns by grouping users based on common characteristics and sending mass messages to these groups.",
-      },
-      {
-        id: 27,
-        title: "User Group",
-        url: "https://www.youtube.com/embed/vWOzDqq3cPQ?list=PLGsALiW67iaaJv4rrKkG7cvKLZfL5BmrE",
-        description:
-          "You can group registered users by tags and attributes and create segments to send mass messages.",
-      },
-      {
-        id: 28,
-        title: "Custom message",
-        url: "",
-        description:
-          "The custom message feature is used to send personalized information at a specific time, such as completing incomplete customer actions, ensuring successful sales, recovering abandoned actions, Remind your products and services again, and more.\n\nA mass message is a general message broadcasted to multiple recipients simultaneously, whereas a custom message is tailored for an individual subscriber.",
-      },
-      {
-        id: 29,
-        title: "JSON API",
-        url: "",
-        description:
-          "This is used when establishing an API connection to show variable information to users. For instance, it can provide industry information, timetables, product details, today's weather, the exchange rate of a selected currency, and more.",
-      },
-      {
-        id: 30,
-        title: "Content",
-        url: "",
-        description:
-          "Using the content feature, you can bundle blocks into a single content unit and configure information that is accessible through multiple buttons simultaneously. Additionally, you can also prioritize the information to be delivered first to subscribers who have engaged with the created content.",
-      },
-    ],
-    notFound: "Page not found",
+    label6: "Passwords must match",
+    label7: "I agree to the Terms and Conditions",
+    label8:
+      " I confirm that I am 18 years old or older and have read and agree to the Terms of Service",
+    label9: "Password must be at least 8 characters long",
   },
 };

@@ -3,37 +3,38 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import Faq from "./Home/Faq.jsx";
 import HeroSection from "./HeroSection.jsx";
 import { useEffect, useState, useRef } from "react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-const plans = [
-  {
-    name: "Pro",
-    price: "300,000₮",
-    period:
-      "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон ав",
-    highlight: false,
-  },
-  {
-    name: "Enterprise",
-    price: "900,000₮",
-    period: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашигла",
-    highlight: true,
-  },
-  {
-    name: "VIP",
-    price: "Let's talk",
-    period:
-      "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
-    highlight: false,
-  },
-];
+// const plans = [
+//   {
+//     name: "Pro",
+//     price: "300,000₮",
+//     period:
+//       "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон ав",
+//     highlight: false,
+//   },
+//   {
+//     name: "Enterprise",
+//     price: "900,000₮",
+//     period: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашигла",
+//     highlight: true,
+//   },
+//   {
+//     name: "VIP",
+//     price: "Дотно ярья",
+//     period:
+//       "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
+//     highlight: false,
+//   },
+// ];
 
 const features = [
   { label: "Мэдээлэл боловсруулах", sub: null , values: [true, true, true] },
-  { label: "Харицагч ядра", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
+  { label: "Харицагч ядра", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
   { label: "Хэрэглэгчийн сегмент", sub: null , values: [true, true, true] },
   { label: "Hubspot холболт", sub: null , values: [true, true, true] },
   { label: "Харицагч менежер", sub: null , values: [true, true, true] },
@@ -41,30 +42,43 @@ const features = [
   { label: "Мониторинг хийх", sub: null , values: [true, true, true] },
   { label: "Төлбөрийн холболт", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
   { label: "Масс мессеж", sub: null , values: [true, true, true] },
-  { label: "Web форм", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
+  { label: "Web форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
   { label: "Асуулгын форм", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
-  { label: "HTML тайбар", sub: null , values: [false, true, false] },
+  { label: "HTML тайбар", sub: null , values: [true, true, true] },
   { label: "Захиалга удирдах", sub: null , values: [false, true, false] },
-  { label: "Онлайн дэмжлэг", sub: null , values: [false, true, false] },
-  { label: "Коммент тохиргоо", sub: null , values: [false, true, false] },
-  { label: "Live agent", sub: null , values: [false, true, false] },
-  { label: "Онлайн гэрээ", sub: null , values: [false, true, false] },
-  { label: "Тооцооллууд",  sub: null ,values: [false, true, false] },
-  { label: "ДАН систем", sub: null , values: [false, true, false] },
-  { label: "Систем холболт", sub: null , values: [false, true, false] },
+  { label: "Онлайн дэмжлэг", sub: null , values: [false, true, true] },
+  { label: "Коммент тохиргоо", sub: null , values: [true, true, true] },
+  { label: "Live agent", sub: null , values: [true, true, true] },
+  { label: "Онлайн гэрээ", sub: null , values: [true, true, true] },
+  { label: "Тооцооллууд",  sub: null ,values: [true, true, true] },
+  { label: "ДАН систем", sub: null , values: [true, true, true] },
+  { label: "Систем холболт", sub: null , values: [true, true, true] },
 ];
 
-const Check = () => (
-  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#A3AED0] text-white text-xs">
+const Check = ({select}) => {
+  return select ? 
+  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[#608DFF] text-xs">
     ✓
-  </span>
-);
+    </span>
+    :
+    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#A3AED0] text-white text-xs">
+    ✓
+    </span>;
+};
+
+const truncateText = (text = "", max = 140) =>
+  text.length > max ? `${text.slice(0, max)}...` : text;
 
 export default function PricingTable() {
   const { t } = useTranslation();
   const priceCommentList = t("priceCommentList", { returnObjects: true })
+  const plans = t("price", { returnObjects: true })
   const [visibleSections, setVisibleSections] = useState(new Set());
   const sectionRefs = useRef([]);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null);
+  const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -85,7 +99,6 @@ export default function PricingTable() {
     return () => observer.disconnect();
   }, []);
 
-  console.log("🚀 ~ PricingTable ~ priceCommentList:", priceCommentList)
 
   return (
     <div className="w-full max-w-[1320px] mx-auto  py-12 mt-28">
@@ -96,7 +109,7 @@ export default function PricingTable() {
           visibleSections.has('title') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}
       >
-        Үйлчилгээний багц
+        {t("footer.row7")}
       </p>
         <div 
           ref={(el) => (sectionRefs.current[1] = el)}
@@ -108,17 +121,30 @@ export default function PricingTable() {
         {plans.map((plan) => (
           <div
             key={plan.name}
-            className={`rounded-[10px] border p-6  justify-start text-left ${
-              plan.highlight
-                ? "bg-gradient-to-tr from-[#F4F7FE] via-[#F4F7FE] to-[#608DFF]"
-                : "bg-[#F4F7FE]"
+            className={`rounded-[10px] px-3 py-6 text-left h-full flex flex-col ${
+              plan.highlight ? "bg-[#D4E0FF]" : "bg-[#F4F7FE]"
             }`}
+            style={
+              plan.highlight
+                ? {  background: "linear-gradient(135deg, #D4E0FF 5%, #608DFF 35%)" }
+                : undefined
+            }
           >
-            <h3 className="text-xl font-pro font-semibold">{plan.name}</h3>
-            <div className="text-[13px] font-pro font-normal opacity-80 mt-1">{plan.period}</div>
-            <div className="flex justify-start items-baseline mt-4 space-x-2">
-              <div className="text-[30px] font-pro font-medium">{plan.price}</div>
-             {plan?.name !=='VIP' && <p>/1 сар</p>}
+            <div>
+              <h3 className={`text-xl font-pro font-semibold ${plan?.name == 'Enterprise' ? "text-white" : " text-black"}`}>{plan.name}</h3>
+              <div className={`text-[13px]  font-pro font-normal opacity-80 mt-1 ${plan?.name == 'Enterprise' ? "text-white" : "text-[#A3AED0]"}`}>{plan.description}</div>
+            </div>
+            <div className={`flex justify-start items-baseline mt-6 space-x-2 ${plan?.name == 'Enterprise'&& "text-white" }`}>
+              <div className="text-[23px] font-pro font-medium">{plan.price}</div>
+              {plan?.name === 'Pro' && (
+                <div className="flex items-center gap-2">
+                  <p className="text-[#A3AED0]">/1 сар</p>
+                  <span className="text-[10px] bg-[#608DFF] rounded-full text-white px-2 py-0.5 whitespace-nowrap">
+                    *Нэмэлт цэс авах
+                  </span>
+                </div>
+              )}
+              {plan?.name == 'Enterprise' && <p>/1 сар</p>}
             </div>
           </div>
         ))}
@@ -132,7 +158,7 @@ export default function PricingTable() {
         }`}
       >
         {/* Feature names */}
-        <div className="bg-gray-50">
+        <div className="bg-[#F4F7FE]">
           <div className="h-14 border-b px-4 py-4 font-medium text-[#031555] bg-[#F4F7FE]">
             Суурь боломж
           </div>
@@ -152,21 +178,23 @@ export default function PricingTable() {
         {plans.map((plan, colIndex) => (
           <div
             key={plan.name}
-            className={plan.highlight ? "bg-blue-50" : "bg-[#FFFFFF]"}
+            className={plan.highlight ? "bg-[#608DFF]" : "bg-[#FFFFFF]"}
           >
-            <div className="h-14 border-b bg-[#F4F7FE]" />
+            <div className="h-14 border-b bg-[#F4F7FE] border-[#A3AED066]" />
 
             {features.map((f, rowIndex) => (
               <div
                 key={rowIndex}
-                className="px-4 py-3 font-pro font-medium border-b flex justify-center text-[18px] text-[#A3AED0]"
+                className="px-4 py-3 font-pro font-medium border-b border-[#A3AED066] flex justify-center text-[18px] text-[#A3AED0]"
               >
-                {f.values[colIndex] === true && <Check />}
+                {f.values[colIndex] === true && <Check select={plan.highlight}/>}
                 {f.values[colIndex] === false && (
                   <span className="opacity-40">—</span>
                 )}
                 {typeof f.values[colIndex] === "string" && (
-                  <span className="text-xs">{f.values[colIndex]}</span>
+                  <span className={`text-xs ${plan.highlight ? "text-[#FFFFFF]" : "text-[#A3AED0]"}`}>
+                    {f.values[colIndex]}
+                  </span>
                 )}
               </div>
             ))}
@@ -179,14 +207,30 @@ export default function PricingTable() {
       <div 
         ref={(el) => (sectionRefs.current[3] = el)}
         data-section="industry"
-        className={`lg:container transition-all duration-1000 delay-600 ${
+        className={`lg:container transition-all duration-1000 delay-600 mt-28 ${
           visibleSections.has('industry') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}
       >
-        <h2 className="text-center mt-6 lg:px-36 font-black">
+        <h2 className="text-center mt-6 font-pro font-semibold text-[55px]">
           {t("priceComment")}
         </h2>
-        <div id="faq">
+        <div id="faq" className="relative mt-28 bg-[#F4F7FE]">
+          <div className="absolute top-10 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+            <button
+              ref={prevRef}
+              className="h-10 w-10 rounded-full bg-[#F4F7FE] text-[28px] hover:text-[#608DFF] hover:bg-[#635BFF1A] text-[#727F96] shadow-sm transition flex items-center justify-center"
+              aria-label="Previous"
+            >
+             <FaArrowLeft  size={14}/>
+            </button>
+            <button
+              ref={nextRef}
+              className="h-10 w-10 rounded-full bg-[#F4F7FE] text-[28px] hover:text-[#608DFF] hover:bg-[#635BFF1A] text-[#727F96] transition flex items-center justify-center"
+              aria-label="Next"
+            >
+            <FaArrowRight size={14}/>
+            </button>
+          </div>
           <Swiper
             spaceBetween={5}
             breakpoints={{
@@ -201,44 +245,78 @@ export default function PricingTable() {
               },
             }}
             loop
-            // autoplay={{delay:5000, disableOnInteraction: true, pauseOnMouseEnter: true}}
-            modules={[ Autoplay]}
+            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              // Re-init navigation after refs are attached
+              setTimeout(() => {
+                if (!swiperRef.current?.params?.navigation) return;
+                swiperRef.current.params.navigation.prevEl = prevRef.current;
+                swiperRef.current.params.navigation.nextEl = nextRef.current;
+                swiperRef.current.navigation.destroy();
+                swiperRef.current.navigation.init();
+                swiperRef.current.navigation.update();
+              }, 0);
+            }}
+            autoplay={{delay:5000, disableOnInteraction: true, pauseOnMouseEnter: true}}
+            modules={[ Autoplay, Navigation ]}
           >
             {priceCommentList.map((e) => {
+              const isExpanded = expandedId === e.id;
+              const text = isExpanded ? e.description : truncateText(e.description, 140);
               return (
-                <SwiperSlide key={e.id} className="py-10">
-                  <div className="p-6 border-t-4 bot border-t-[#0000FF] h-[315px] rounded-[8px] space-y-3 bg-white lg:hover:-translate-y-1 shadow-lg justify-center">
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#0A2540]">{e.name}</h3>
-                    </div>  
-                    <div className="flex flex-col space-y-2">
-                      <p className="text-[12px] font-semibold text-black normal-case text-justify tracking-tight">
-                        {e.description}
-                      </p>
+                <SwiperSlide key={e.id} className="py-10 mt-28 pl-2">
+                  <div className="p-6 border-t-4 bot border-t-[#608DFF] h-[315px] rounded-[8px] bg-white lg:hover:-translate-y-1 shadow-xl flex flex-col">
+                    <div className="space-y-3 pt-10">
+                      <div>
+                        <h3 className="text-lg font-semibold text-[#0A2540]">{e.name}</h3>
+                      </div>  
+                      <div className="flex flex-col space-y-2">
+                        <p className="text-[12px] font-semibold text-black normal-case text-justify tracking-tight">
+                          {text}
+                        </p>
+                        {e?.description?.length > 140 && (
+                          <button
+                            className="text-[12px] font-semibold text-[#608DFF] hover:text-[#031555] transition self-start inline-flex items-center gap-1"
+                            onClick={() => setExpandedId(isExpanded ? null : e.id)}
+                          >
+                            {isExpanded ? "Show less" : "Learn more"}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-3 w-3"
+                              viewBox="0 0 16 16"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path d="M5.47 2.97a.75.75 0 0 0 0 1.06L9.44 8l-3.97 3.97a.75.75 0 1 0 1.06 1.06l4.5-4.5a.75.75 0 0 0 0-1.06l-4.5-4.5a.75.75 0 0 0-1.06 0Z" />
+                            </svg>
+                          </button>
+                        )}
+                      </div>
                     </div>
-                    <div className="border border-b-1 w-[90%] mx-auto"></div>
-
-                    <div className="flex gap-3 items-center justify-center">
-                      {/* {e.logos && e.logos.map((logo, idx) => ( */}
+                    <div className="mt-auto pt-4 space-y-3">
+                      <div className="w-[90%] mx-auto"></div>
+                      <div className="flex gap-3 items-center justify-center">
                         <img
-                          // key={idx}
-                          src={e?.img}
-                          className="h-12 w-auto object-contain"
-                          alt={`logo`}
-                      />
-                      <img
-                          // key={idx}
-                          src={e?.img}
-                          className="h-12 w-auto object-contain"
-                          alt={`logo`}
-                      />
-                      <img
-                          // key={idx}
-                          src={e?.img}
+                          src={e?.img1}
                           className="h-12 w-auto object-contain"
                           alt={`logo`}
                         />
-                      {/* ))} */}
+                        <img
+                          src={e?.img2}
+                          className="h-12 w-auto object-contain"
+                          alt={`logo`}
+                        />
+                        <img
+                          src={e?.img3}
+                          className="h-12 w-auto object-contain"
+                          alt={`logo`}
+                        />
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>

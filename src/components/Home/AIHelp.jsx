@@ -7,6 +7,7 @@ import world from "../../assets/world.svg";
 import Search from "../../assets/Search.png";
 import GradientBlinds from "../GradientBlinds";
 import bs from "../../assets/BS.svg";
+import { t } from "i18next";
 export default function AIHelp() {
   const [question, setQuestion] = useState("");
   const inputRef = useRef(null);
@@ -54,7 +55,7 @@ export default function AIHelp() {
             ✨ ChatAI in Action
           </div>
           <h2 className="text-[25px] lg:text-[55px] font-pro font-semibold mb-8 text-[#FFFFFF]">
-            БИ ТАНД ЯАЖ ТУСЛАХ ВЭ?
+            {t("AiChatHelp")}
           </h2>
           <div className="w-full max-w-[720px] mx-auto  rounded-xl">
             <div className="bg-black/70 backdrop-blur-sm rounded-2xl p-4 h-[151px] flex flex-col justify-between">
@@ -68,7 +69,7 @@ export default function AIHelp() {
                   ref={inputRef}
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
-                  placeholder="Ask a question"
+                  placeholder={t("AiQuasion")}
                   className="flex-1 bg-transparent outline-none text-sm text-white"
                 />
 
@@ -92,34 +93,35 @@ export default function AIHelp() {
             <motion.button
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => handleSuggestion("Онлайн гэрээ яаж хийх вэ?")}
+              onClick={() => handleSuggestion(`${t("AiSuggestions1")}`)}
               className="inline-flex items-center gap-2 px-4 py-4 text-xs rounded-[10px] font-pro font-normal bg-black hover:bg-white/20 transition whitespace-nowrap"
             >
               <img src={paper} alt="paper" className="w-4 h-4" />
-              <span className="text-white">Онлайн гэрээ яаж хийх вэ?</span>
+              <span className="text-white">{t("AiSuggestions1")}</span>
             </motion.button>
 
             <motion.button
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => handleSuggestion("Chatbot ашиглах заавар")}
+              onClick={() => handleSuggestion(`${t("AiSuggestions2")}`)}
               className="inline-flex items-center gap-2 px-4 py-4 text-xs rounded-[10px] font-pro font-normal bg-black hover:bg-white/20 transition whitespace-nowrap"
             >
               <img src={world} alt="world" className="w-4 h-4" />
-              <span className="text-white">Chatbot ашиглах заавар</span>
+              <span className="text-white">{t("AiSuggestions2")}</span>
             </motion.button>
 
             <motion.button
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => handleSuggestion("Үнийн санал авах")}
+              onClick={() => handleSuggestion(`${t("AiSuggestions3")}`)}
               className="inline-flex items-center gap-2 px-4 py-4 text-xs font-pro font-normal rounded-[10px] bg-black hover:bg-white/20 transition whitespace-nowrap"
             >
               <img src={heart} alt="heart" className="w-4 h-4" />
-              <span className="text-white">Үнийн санал авах</span>
+              <span className="text-white">{t("AiSuggestions3")}</span>
             </motion.button>
           </div>
         </div>
+        {/* <p className="text-white">Энэхүү чатбот A.I нь туршилтын шатандаа байгаа тул зарим мэдээлэл бүрэн үнэн зөв биш байх магадлалтай.</p> */}
       </div>
     </section>
   );

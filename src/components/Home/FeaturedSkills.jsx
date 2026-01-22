@@ -9,7 +9,7 @@ export default function FeaturedSkills() {
   return (
     <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
       <h2 className="text-[40px] md:text-[55px] font-pro font-semibold text-center mb-8 sm:mb-12">
-        ОНЦЛОХ ЧАДВАР
+        {t("featuresTitle")}
       </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[41px]">

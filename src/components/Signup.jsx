@@ -2,6 +2,7 @@ import { useState } from "react";
 import SwiperCustom from "./SwiperCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import logo from "../assets/logo.png";
 import user from "../assets/human.svg";
 import key from "../assets/key.svg";
@@ -49,8 +50,8 @@ export default function Signup() {
       phone: t("input.label5"),
       password: t("input.label2"),
       passwordConfirm: t("input.label6"),
-      terms: t("input.label7"),
-      privacy: t("input.label8"),
+      terms: t("input.term"),
+      privacy: t("input.checkPrivacy"),
     };
 
     const isActive = warning[name]?.isActive;
@@ -196,7 +197,11 @@ console.info("formData==>", formData);
                     {t("input.fName")}
                   </label>
                   <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img src={user} alt="logo" className="h-5 w-5 flex-shrink-0" />
+                    <img
+                      src={user}
+                      alt="logo"
+                      className="h-5 w-5 flex-shrink-0"
+                    />
                     <input
                       className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                       placeholder={t("input.fName")}
@@ -213,8 +218,12 @@ console.info("formData==>", formData);
                   <label className="text-sm text-gray-600">
                     {t("input.lName")}
                   </label>
- <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img src={user} alt="logo" className="h-5 w-5 flex-shrink-0" />
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                    <img
+                      src={user}
+                      alt="logo"
+                      className="h-5 w-5 flex-shrink-0"
+                    />
                     <input
                       className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
                       placeholder={t("input.lName")}
@@ -231,8 +240,12 @@ console.info("formData==>", formData);
                   <label className="text-sm text-gray-600">
                     {t("input.email")}
                   </label>
-                 <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img src={logEmail} alt="logo" className="h-5 w-5 flex-shrink-0" />
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                    <img
+                      src={logEmail}
+                      alt="logo"
+                      className="h-5 w-5 flex-shrink-0"
+                    />
                     <input
                       name="email"
                       className=" w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
@@ -248,7 +261,11 @@ console.info("formData==>", formData);
                     {t("input.phone")}
                   </label>
                   <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img src={call} alt="logo" className="h-5 w-5 flex-shrink-0" />
+                    <img
+                      src={call}
+                      alt="logo"
+                      className="h-5 w-5 flex-shrink-0"
+                    />
                     <input
                       name="phone"
                       className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
@@ -329,7 +346,7 @@ console.info("formData==>", formData);
                     )}
                   </button>
                 </div>
-                  <WarningComment name="password" />
+                <WarningComment name="password" />
               </div>
 
               {/* Confirm Password */}
@@ -395,7 +412,7 @@ console.info("formData==>", formData);
                     )}
                   </button>
                 </div>
-                  <WarningComment name="passwordConfirm" />
+                <WarningComment name="passwordConfirm" />
               </div>
 
               {/* Checkboxes */}
@@ -409,10 +426,11 @@ console.info("formData==>", formData);
                       handleChange(e);
                     }}
                   />
-                  Би 18 нас хүрсэн бөгөөд үйлчилгээний нөхцөл-тэй уншиж
-                  танилцсан.
+                  <HashLink smooth to="/terms" className="underline">
+                    {t("input.label8")}
+                  </HashLink>
                 </label>
-                 <WarningComment name="terms" />
+                <WarningComment name="terms" />
                 <label className="flex items-center gap-2 text-gray-600">
                   <input
                     type="checkbox"
@@ -422,9 +440,11 @@ console.info("formData==>", formData);
                       handleChange(e);
                     }}
                   />
-                  {t("input.privacy")}
+                  <HashLink smooth to="/privacy" className="underline">
+                    {t("input.privacy")}
+                  </HashLink>
                 </label>
-                 <WarningComment name="privacy" />
+                <WarningComment name="privacy" />
               </div>
 
               {/* Register Button */}

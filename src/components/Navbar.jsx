@@ -15,7 +15,6 @@ function Navbar() {
   const [showIntro, setShowIntro] = useState(false);
 
   const { t, i18n } = useTranslation();
-  // const [isAuthorized] = useState(false);
   const location = useLocation();
   const [openLang, setOpenLang] = useState(false);
     const [isAuthorized, setIsAuthorized] = useState(false);
@@ -64,7 +63,33 @@ function Navbar() {
     };
   }, []);
 
-  const current = langs.find((l) => l.code === i18n.language) || langs[0];
+  const normalizeLangCode = (value) => value?.split("-")[0] || value;
+
+  const current =
+    langs.find((l) => normalizeLangCode(i18n.language) === l.code) || langs[0];
+
+  const changeLanguage = (code) => {
+    const normalized = normalizeLangCode(code);
+    localStorage.setItem("i18nextLng", normalized);
+    i18n.changeLanguage(normalized);
+    setOpenLang(false);
+  };
+
+  useEffect(() => {
+    const saved = normalizeLangCode(localStorage.getItem("i18nextLng"));
+    if (saved && saved !== normalizeLangCode(i18n.language)) {
+      i18n.changeLanguage(saved);
+    }
+
+    const handleLanguageChange = (lng) => {
+      localStorage.setItem("i18nextLng", normalizeLangCode(lng));
+    };
+
+    i18n.on("languageChanged", handleLanguageChange);
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, [i18n]);
 
   return (
     <>
@@ -173,10 +198,7 @@ function Navbar() {
                 {langs.map((l) => (
                   <button
                     key={l.code}
-                    onClick={() => {
-                      i18n.changeLanguage(l.code);
-                      setOpenLang(false);
-                    }}
+                    onClick={() => changeLanguage(l.code)}
                     className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100"
                   >
                     <img
@@ -201,7 +223,10 @@ function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            onClick={() => setOpen(!isOpen)}
+            onClick={(e) => {
+              // Close only when tapping the backdrop, not when interacting with menu items
+              if (e.target === e.currentTarget) setOpen(false);
+            }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -232,6 +257,35 @@ function Navbar() {
                 <Link to="/">{t("nav.li3")}</Link>
               </li>
             </ul>
+
+            <div className="mt-8 space-y-3">
+              {!isAuthorized ? (
+                <>
+                  <Link
+                    to="/signin"
+                    onClick={() => setOpen(false)}
+                    className="block w-full text-center px-4 py-3 rounded-full bg-black text-white text-[16px] font-pro font-normal"
+                  >
+                    {t("button.signin")}
+                  </Link>
+                  <Link
+                    to="/signup"
+                    onClick={() => setOpen(false)}
+                    className="block w-full text-center px-4 py-3 rounded-full bg-[#0B1F44] text-white text-[16px] font-pro font-normal"
+                  >
+                    {t("button.signup")}
+                  </Link>
+                </>
+              ) : (
+                <Link
+                  to="/dashboard"
+                  onClick={() => setOpen(false)}
+                  className="block w-full text-center px-4 py-3 rounded-full border border-black text-[16px] font-pro font-normal text-black"
+                >
+                  {t("button.dashboard")}
+                </Link>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

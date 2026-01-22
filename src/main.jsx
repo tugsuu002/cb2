@@ -14,13 +14,12 @@ i18next
   .init({
   debug: false,
   fallbackLng: 'mn',
-  lng: 'mn',
   load: 'languageOnly',
-  whitelist: ['mn', 'en'],
+  supportedLngs: ['mn', 'en'],
   detection: {
-    order: ['localstorage','session','cookie'],
-    lookupFromPathIndex: 0,
-    checkWhitelist: true
+    order: ['localStorage', 'sessionStorage', 'cookie'],
+    caches: ['localStorage'],
+    checkForSupportedLngs: true
   },
   resources: {
     mn: {

@@ -27,11 +27,11 @@ text-center text-white
           >
             <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start px-4 lg:px-0 pt-12 lg:pl-20 z-10  justify-start text-center lg:text-left">
               <p className=" text-[40px] md:text-[64px] font-pro font-semibold mb-4 text-[#FFFFFF]">
-                ЧАТБОТ ТУРШИХ
+                {t("chatbotTest")}
               </p>
 
               <p className="text-sm sm:text-base md:text-[17px] font-pro font-normal mb-6 text-[#FFFFFF]">
-                Xялбар бөгөөд эх хэл дээрээ чатботоо эхлүүлцгээе!
+                {t("chatbotText")}
               </p>
 
               <button
@@ -64,11 +64,10 @@ text-center text-white
           <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0 px-4">
             <div className="flex flex-col justify-between h-full">
               <div className="flex items-center gap-2 mb-4">
-                <img src={logo} className="w-36 h-auto" />
+                <img src={logo} className="w-40 h-auto" />
               </div>
               <p className="text-sm text-gray-400 max-w-sm mb-6">
-                Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг
-                арга.
+                Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг арга.
               </p>
               <div className="flex gap-4 mt-6 lg:mt-0 lg:justify-start">
                 <a
@@ -110,13 +109,15 @@ text-center text-white
               </div>
             </div>
 
-            <div>
-              <h4 className="text-white font-pro font-semibold mb-4">ЧАТБОТ</h4>
-              <ul className="space-y-2 text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px]">
+            <div className="w-96">
+              <h4 className="text-white font-pro font-semibold mb-4">
+                {t("footer.col1")}
+              </h4>
+              <ul className="space-y-3 text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
+                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px] hover:underline">
                   {t("footer.row1")}
                 </li>
-                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px]">
+                <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px] hover:underline">
                   <HashLink smooth to="/pricing#faq">
                     {t("footer.row2")}
                   </HashLink>
@@ -131,28 +132,24 @@ text-center text-white
 
             <div>
               <h4 className="text-white font-pro font-semibold mb-4">
-                ХОЛБОО БАРИХ
+                {t("footer.row4")}
               </h4>
-              <div className="max-w-[320px] ">
-                <p className="font-pro font-normal text-[16px] text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-4">
-                  Монгол улс, Улаанбаатар хот,
-                  <br />
-                  Сүхбаатар дүүрэг, 1-р хороо,
-                  <br />
-                  Ambassador office, 1-р давхар, 104 тоот
+              <div className="max-w-[330px] ">
+                <p className="font-pro font-normal text-[16px] leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-4 ">
+                  {t("footer.address")}
                 </p>
 
                 <div className="flex flex-col gap-3">
                   <a
                     href="tel:77441616"
-                    className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[120px] hover:bg-[#1f262a] transition"
+                    className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[125px] hover:bg-[#1f262a] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                   >
                     <img src={phone} alt="phone" className="w-4 h-4 mr-3" />
                     <span className="truncate">7744-1616</span>
                   </a>
                   <a
                     href="mailto:info@example.com?subject=%D0%A1%D0%B0%D0%BD%D0%B0%D0%BB%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%D1%82&body=%D0%A2%D0%B0%D0%BD%D1%8B%20%D0%BD%D1%8D%D1%80:%0A%D0%A5%D0%BE%D0%BB%D0%B1%D0%BE%D0%B3%D0%B4%D0%BE%D1%85%20%D1%83%D1%82%D0%B0%D1%81:%0A%D0%90%D1%81%D1%83%D1%83%D0%B4%D0%B0%D0%BB:%20"
-                    className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[190px] hover:bg-[#1f262a] transition"
+                    className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[190px] hover:bg-[#1f262a] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                   >
                     <img src={mail} alt="mail" className="w-4 h-4 mr-3" />
                     <span className="truncate">info@example.com</span>
@@ -167,7 +164,7 @@ text-center text-white
                   to="/terms"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] hover:border-[#E91E63]"
                 >
-                  <span>Үйлчилгээний нөхцөл</span>
+                  <span>{t("termTitle")}</span>
                   <img
                     src={arrow}
                     alt="arrow"
@@ -180,7 +177,7 @@ text-center text-white
                   to="/privacy"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px]"
                 >
-                  <span>Нууцын бодлого</span>
+                  <span>{t("privacyTitle")}</span>
                   <img
                     src={arrow}
                     alt="arrow"
@@ -193,7 +190,7 @@ text-center text-white
                   to="/privacy"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px]"
                 >
-                  <span>Санал хүсэлт</span>
+                  <span>{t("Feedback")}</span>
                   <img
                     src={arrow}
                     alt="arrow"
@@ -212,7 +209,7 @@ text-center text-white
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex-1">
                 <p className="cursor-pointer font-pro font-normal text-[16px] text-center sm:text-left text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                  Бүх эрх хуулиар хамгаалагдсан {new Date().getFullYear()} он
+                  {t("footer.copyright")} {new Date().getFullYear()} он
                 </p>
               </div>
 
