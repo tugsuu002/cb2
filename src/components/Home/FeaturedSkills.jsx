@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 export default function FeaturedSkills() {
   const { t } = useTranslation();
-  const stasticList = t("features", { returnObjects: true });
+  const stasticList = t("featuresHome", { returnObjects: true });
   const bars = Array.from({ length: 10 });
   console.log("🚀 ~ FeaturedSkills ~ stasticList:", stasticList);
   return (
@@ -32,16 +32,16 @@ export default function FeaturedSkills() {
       </div>
 
       <div className="relative overflow-hidden rounded-2xl mt-8">
-
-        <div className="sound-bars-container absolute left-1/2 transform -translate-x-1/2 top-6 px-4 z-30">
-          <div className="sound-bars mx-auto max-w-md h-36 flex items-end justify-center">
+        <div className="sound-bars-container absolute right-6 bottom-4 px-4 z-30">
+          <div className="sound-bars h-36 flex items-end justify-center">
             {Array.from({ length: 12 }).map((_, i) => (
               <div
                 key={i}
                 className="bar"
                 style={{
-                  animationDelay: `${(i % 6) * 0.12}s`,
-                  width: `${12 + (i % 6) * 6}px`,
+                  animationDelay: `${(i % 6) * 0.18}s`,
+                  width: `${10 + (i % 6) * 4}px`,
+                  height: `${48 + (i % 6) * 10}px`,
                 }}
               />
             ))}

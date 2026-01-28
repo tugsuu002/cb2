@@ -32,36 +32,36 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 //   },
 // ];
 
-const features = [
-  { label: "Мэдээлэл боловсруулах", sub: null , values: [true, true, true] },
-  { label: "Харицагч ядра", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-  { label: "Хэрэглэгчийн сегмент", sub: null , values: [true, true, true] },
-  { label: "Hubspot холболт", sub: null , values: [true, true, true] },
-  { label: "Харицагч менежер", sub: null , values: [true, true, true] },
-  { label: "Аналитик харах", sub: null , values: [true, true, true] },
-  { label: "Мониторинг хийх", sub: null , values: [true, true, true] },
-  { label: "Төлбөрийн холболт", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
-  { label: "Масс мессеж", sub: null , values: [true, true, true] },
-  { label: "Web форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-  { label: "Асуулгын форм", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
-  { label: "HTML тайбар", sub: null , values: [true, true, true] },
-  { label: "Захиалга удирдах", sub: null , values: [false, true, false] },
-  { label: "Онлайн дэмжлэг", sub: null , values: [false, true, true] },
-  { label: "Коммент тохиргоо", sub: null , values: [true, true, true] },
-  { label: "Live agent", sub: null , values: [true, true, true] },
-  { label: "Онлайн гэрээ", sub: null , values: [true, true, true] },
-  { label: "Тооцооллууд",  sub: null ,values: [true, true, true] },
-  { label: "ДАН систем", sub: null , values: [true, true, true] },
-  { label: "Систем холболт", sub: null , values: [true, true, true] },
-];
+// const features = [
+//   { label: "Мэдээлэл боловсруулах", sub: null , values: [true, true, true] },
+//   { label: "Харицагч ядра", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
+//   { label: "Хэрэглэгчийн сегмент", sub: null , values: [true, true, true] },
+//   { label: "Hubspot холболт", sub: null , values: [true, true, true] },
+//   { label: "Харицагч менежер", sub: null , values: [true, true, true] },
+//   { label: "Аналитик харах", sub: null , values: [true, true, true] },
+//   { label: "Мониторинг хийх", sub: null , values: [true, true, true] },
+//   { label: "Төлбөрийн холболт", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
+//   { label: "Масс мессеж", sub: null , values: [true, true, true] },
+//   { label: "Web форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
+//   { label: "Асуулгын форм", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
+//   { label: "HTML тайбар", sub: null , values: [true, true, true] },
+//   { label: "Захиалга удирдах", sub: null , values: [false, true, false] },
+//   { label: "Онлайн дэмжлэг", sub: null , values: [false, true, true] },
+//   { label: "Коммент тохиргоо", sub: null , values: [true, true, true] },
+//   { label: "Live agent", sub: null , values: [true, true, true] },
+//   { label: "Онлайн гэрээ", sub: null , values: [true, true, true] },
+//   { label: "Тооцооллууд",  sub: null ,values: [true, true, true] },
+//   { label: "ДАН систем", sub: null , values: [true, true, true] },
+//   { label: "Систем холболт", sub: null , values: [true, true, true] },
+// ];
 
 const Check = ({select}) => {
   return select ? 
-  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-[#608DFF] text-xs">
+  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-white text-[#608DFF] text-[10px]">
     ✓
     </span>
     :
-    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#A3AED0] text-white text-xs">
+    <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#A3AED0] text-white text-[10px]">
     ✓
     </span>;
 };
@@ -72,6 +72,7 @@ const truncateText = (text = "", max = 140) =>
 export default function PricingTable() {
   const { t } = useTranslation();
   const priceCommentList = t("priceCommentList", { returnObjects: true })
+  const features = t("features", { returnObjects: true })
   const plans = t("price", { returnObjects: true })
   const [visibleSections, setVisibleSections] = useState(new Set());
   const sectionRefs = useRef([]);
@@ -138,13 +139,13 @@ export default function PricingTable() {
               <div className="text-[23px] font-pro font-medium">{plan.price}</div>
               {plan?.name === 'Pro' && (
                 <div className="flex items-center gap-2">
-                  <p className="text-[#A3AED0]">/1 сар</p>
+                  <p className="text-[#A3AED0]">/{t("priceMonth")}</p>
                   <span className="text-[10px] bg-[#608DFF] rounded-full text-white px-2 py-0.5 whitespace-nowrap">
-                    *Нэмэлт цэс авах
+                    *{t("PriceAdd")}
                   </span>
                 </div>
               )}
-              {plan?.name == 'Enterprise' && <p>/1 сар</p>}
+              {plan?.name == 'Enterprise' && <p>/{t("priceMonth")}</p>}
             </div>
           </div>
         ))}
@@ -153,46 +154,42 @@ export default function PricingTable() {
       <div 
         ref={(el) => (sectionRefs.current[2] = el)}
         data-section="table"
-        className={`grid grid-cols-4 border rounded-2xl overflow-hidden transition-all duration-1000 delay-400 ${
+        className={`border rounded-2xl overflow-hidden transition-all duration-1000 delay-400 ${
           visibleSections.has('table') ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}
       >
-        {/* Feature names */}
-        <div className="bg-[#F4F7FE]">
+        {/* Header row */}
+        <div className="grid grid-cols-4">
           <div className="h-14 border-b px-4 py-4 font-medium text-[#031555] bg-[#F4F7FE]">
-            Суурь боломж
+            {t("priceTitle2")}
           </div>
-
-          {features.map((f, i) => (
+          {plans.map((plan) => (
             <div
-              key={i}
-              className="px-4 flex py-3 border-b text-sm text-[#031555] bg-[#FFFFFF]"
-            >
-              <div>{f.label}</div>
-              {f.sub && <div className="text-xs font-pro font-normal text-gray-500 ml-2">{f.sub}</div>}
-            </div>
+              key={`${plan.name}-header`}
+              className="h-14 border-b bg-[#F4F7FE] border-[#A3AED066]"
+            />
           ))}
         </div>
 
-        {/* Feature values */}
-        {plans.map((plan, colIndex) => (
-          <div
-            key={plan.name}
-            className={plan.highlight ? "bg-[#608DFF]" : "bg-[#FFFFFF]"}
-          >
-            <div className="h-14 border-b bg-[#F4F7FE] border-[#A3AED066]" />
+        {/* Feature rows */}
+        {features.map((f, rowIndex) => (
+          <div key={rowIndex} className="grid grid-cols-4">
+            <div className="px-4 py-3 border-b text-sm font-pro font-medium text-[#031555] bg-[#FFFFFF] flex items-center gap-2">
+              <div>{f.label}</div>
+              {f.sub && <div className="text-xs font-pro font-normal text-gray-500">{f.sub}</div>}
+            </div>
 
-            {features.map((f, rowIndex) => (
+            {plans.map((plan, colIndex) => (
               <div
-                key={rowIndex}
-                className="px-4 py-3 font-pro font-medium border-b border-[#A3AED066] flex justify-center text-[18px] text-[#A3AED0]"
+                key={`${plan.name}-${rowIndex}`}
+                className={`px-4 py-3 font-pro font-medium border-b border-[#A3AED066] flex justify-center items-center gap-2 text-sm ${plan.highlight ? "bg-[#608DFF] text-white" : "bg-[#FFFFFF] text-[#A3AED0]"}`}
               >
                 {f.values[colIndex] === true && <Check select={plan.highlight}/>}
                 {f.values[colIndex] === false && (
                   <span className="opacity-40">—</span>
                 )}
                 {typeof f.values[colIndex] === "string" && (
-                  <span className={`text-xs ${plan.highlight ? "text-[#FFFFFF]" : "text-[#A3AED0]"}`}>
+                  <span className={plan.highlight ? "text-white" : "text-[#A3AED0]"}>
                     {f.values[colIndex]}
                   </span>
                 )}

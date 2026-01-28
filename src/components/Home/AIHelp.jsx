@@ -5,10 +5,12 @@ import heart from "../../assets/heart.svg";
 import paper from "../../assets/paper.svg";
 import world from "../../assets/world.svg";
 import Search from "../../assets/Search.png";
-import GradientBlinds from "../GradientBlinds";
-import bs from "../../assets/BS.svg";
-import { t } from "i18next";
+import Orb from "../GradientBlinds";
+// import GradientBlinds from "../GradientBlinds";
+// import bs from "../../assets/BS.svg";
+import { useTranslation } from "react-i18next";
 export default function AIHelp() {
+  const { t } = useTranslation();
   const [question, setQuestion] = useState("");
   const inputRef = useRef(null);
 
@@ -34,8 +36,8 @@ export default function AIHelp() {
           alt="ai background"
         /> */}
 
-        <GradientBlinds
-          className="absolute left-0 top-0 right-0 bottom-0 w-full h-full object-cover object-center"
+        {/* <GradientBlinds
+          className="absolute left-0 top-0 right-0 bottom-0 w-full h-full object-cover object-center border-[0.5px] border-white/30 overflow-hidden rounded-[30px] shadow-[0_10px_40px_rgba(15,23,42,0.05)]"
           gradientColors={["#FF9FFC", "#5227FF"]}
           angle={0}
           noise={0.3}
@@ -48,7 +50,16 @@ export default function AIHelp() {
           distortAmount={0}
           shineDirection="left"
           mixBlendMode="lighten"
+        /> */}
+        <Orb
+           className="absolute left-0 top-0 right-0 bottom-0 w-full h-full object-cover object-center border-[0.5px] border-white/30 overflow-hidden rounded-[30px] shadow-[0_10px_40px_rgba(15,23,42,0.05)] bg-black"
+            hoverIntensity={2}
+            rotateOnHover
+            hue={0}
+            forceHoverState={false}
+            backgroundColor="#000000"
         />
+
         {/* Content */}
         <div className="relative z-10 text-center justify-items-center px-1 mt-1 lg:mt-10">
           <div className=" inline-block text-center font-pro font-semibold text-xl sm:text-[30px] font-tt-hoves-pro-trial leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-blue-600 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-5">

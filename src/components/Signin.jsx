@@ -6,6 +6,7 @@ import SwiperCustom from "./SwiperCustom";
 import { useTranslation } from "react-i18next";
 import mail from "../assets/log-mail.svg";
 import key from "../assets/key.svg";
+import fbLogin from "../assets/fbLogin.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -72,7 +73,7 @@ export default function LoginPage() {
           );
         } else {
           window.location.href = "/dashboard/";
-          window.location.href = "/dashboard/";
+          // window.location.href = "/dashboard/";
         }
 
         localStorage.removeItem("newUser");
@@ -278,7 +279,8 @@ export default function LoginPage() {
               {/* Social login */}
               <div className="flex justify-center gap-6 mt-4 text-2xl">
                 <a href={`${api}/facebook/connect`} aria-label="Facebook login">
-                  <i className="fa fa-facebook text-blue-600 cursor-pointer" />
+                  {/* {t("input.button")} */}
+                  <img src={fbLogin} alt="facebook login" className="w-8 h-8"/>
                 </a>
                 <a href={`${api}/google/connect`} aria-label="Google login">
                   <i className="fa fa-google text-red-500 cursor-pointer" />

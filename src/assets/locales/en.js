@@ -232,7 +232,8 @@ export const en = {
   ],
 
   featuresTitle: "KEY FEATURE",
-  features: [
+
+  featuresHome: [
     {
       title: "In-chatbot sales",
       desc: "Sell products directly through the chatbot’s online shop, integrated with local payment systems like SocialPay, QPay, and MonPay.",
@@ -274,26 +275,52 @@ export const en = {
       name: "Pro",
       price: "300,000₮",
       description:
-        "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон ав",
+        "Customize your solution by selecting add-on menu options specific to your business operations.",
       highlight: false,
     },
     {
       id: 1,
       name: "Enterprise",
       price: "900,000₮",
-      description: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашигла",
+      description: "Empower your business with unlimited access to all chatbot features.",
       highlight: true,
     },
     {
       id: 2,
       name: "VIP",
-      price: "Дотно ярья",
+      price: "Custom Pricing",
       description:
-        "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
+        "Develop custom integrations with your operational systems",
       highlight: false,
     },
   ],
-  priceTitle2: "Comparison with similar companies",
+  priceMonth: "1 month",
+  PriceAdd: "Add on",
+  priceTitle2: "Core Features",
+
+    features: [
+  { label: "Content Management", sub: null , values: [true, true, true] },
+  { label: "Conversations", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
+  { label: "User Segmentation", sub: null , values: [true, true, true] },
+  { label: "HubSpot Integration", sub: null , values: [true, true, true] },
+  { label: "Dedicated Account Manager", sub: null , values: [true, true, true] },
+  { label: "Analytics & Reporting", sub: null , values: [true, true, true] },
+  { label: "Monitoring", sub: null , values: [true, true, true] },
+  { label: "Payment Integration", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
+  { label: "Mass Messaging", sub: null , values: [true, true, true] },
+  { label: "Web Forms", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
+  { label: "Inquiry Forms", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
+  { label: "HTML Field", sub: null , values: [true, true, true] },
+  { label: "Custom Messages", sub: null , values: [false, true, false] },
+  { label: "Online Store", sub: null , values: [false, true, true] },
+  { label: "Comment Management", sub: null , values: [true, true, true] },
+  { label: "Live agent", sub: null , values: [true, true, true] },
+  { label: "Online Contract", sub: null , values: [true, true, true] },
+  { label: "Calculation",  sub: null ,values: [true, true, true] },
+  { label: "DAN System Integration", sub: null , values: [true, true, true] },
+  { label: "System Integration", sub: null , values: [true, true, true] },
+],
+  
   priceCTA:
     "Contact our sales manager for personalized guidance on selecting the right plan for your industry, company, and needs.",
   priceComment: "An Overview of Our System’s",

@@ -41,7 +41,7 @@ export default function Stastic() {
                 <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
                   {counter && (
                     <CountUp
-                      end={stats?.info.total_sender || 6676417}
+                      end={item?.count || 6676417}
                       redraw={true}
                       duration={1}
                       separator=','

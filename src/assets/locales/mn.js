@@ -70,14 +70,14 @@ export const mn = {
       id: 0,
       type: "Чатбот-руу хандсан хэрэглэгчид",
       icon: cursor,
-      count: "10.556.655",
+      count: "10556655",
       plus: null,
     },
     {
       id: 1,
       type: "Бот хөгжүүлэлт",
       icon: boticon,
-      count: "13.556",
+      count: "13556",
       plus: null,
     },
     {
@@ -100,7 +100,7 @@ export const mn = {
   facebookIntroSubtitle: "Бидний системийн боломжууд",
 
   featuresTitle: "ОНЦЛОХ ЧАДВАР",
-  features: [
+  featuresHome: [
     {
       title: "Чатботоор борлуулах",
       desc: "Socialpay Qpay Monpay болох дотоодын төлбөрийн системүүдтэй интеграц холболттой Чатботын онлайн дэлгүүрээр бараа бүтээгдэхүүнээ борлуулна.",
@@ -341,12 +341,40 @@ export const mn = {
     {
       id: 2,
       name: "VIP",
-      price: "Дотно ярья",
+      price: "Тусгай үнэ",
       description:
         "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
       highlight: false,
     },
   ],
+  priceMonth: "1 сар",
+  PriceAdd: "Нэмэлт цэс авах",
+  priceTitle2: "Суурь боломж",
+  
+features: [
+  { label: "Мэдээлэл боловсруулах", sub: null , values: [true, true, true] },
+  { label: "Харицагч ядра", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
+  { label: "Хэрэглэгчийн сегмент", sub: null , values: [true, true, true] },
+  { label: "Hubspot холболт", sub: null , values: [true, true, true] },
+  { label: "Харицагч менежер", sub: null , values: [true, true, true] },
+  { label: "Аналитик харах", sub: null , values: [true, true, true] },
+  { label: "Мониторинг хийх", sub: null , values: [true, true, true] },
+  { label: "Төлбөрийн холболт", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
+  { label: "Масс мессеж", sub: null , values: [true, true, true] },
+  { label: "Web форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
+  { label: "Асуулгын форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
+  { label: "HTML тайбар", sub: null , values: [true, true, true] },
+  { label: "Захиалга удирдах", sub: null , values: [false, true, false] },
+  { label: "Онлайн дэмжлэг", sub: null , values: [false, true, true] },
+  { label: "Коммент тохиргоо", sub: null , values: [true, true, true] },
+  { label: "Live agent", sub: null , values: [true, true, true] },
+  { label: "Онлайн гэрээ", sub: null , values: [true, true, true] },
+  { label: "Тооцооллууд",  sub: null ,values: [true, true, true] },
+  { label: "ДАН систем", sub: null , values: [true, true, true] },
+  { label: "Систем холболт", sub: null , values: [true, true, true] },
+],
+
+
   priceCTA:
     "Та манай борлуулалтын менежертэй холбогдон салбар, компаний онцлог, үйл ажиллагаандаа тохирсон зөвлөгөөг аван өөрт шаардлагатай багцаа сонгоорой.",
   priceComment: "An Overview of Our System’s",
@@ -746,7 +774,7 @@ export const mn = {
     row12: "Темплейт",
     copyright: "Бүх эрх хуулиар хамгаалагдсан",
     address:
-      "Монгол улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, Амбассадор оффисс, 1-р давхар, 104 тоот",
+      "Монгол улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, Амбассадор \nоффисс, 1-р давхар, 104 тоот",
     year: "он",
     ai: "Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг арга.",
   },

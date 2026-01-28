@@ -50,7 +50,7 @@ const ChatbotSteps = () => {
           whileTap={{ scale: 0.995 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: index * 0.15, type: "spring", stiffness: 160, damping: 16 }}
-          className="relative w-full md:w-[380px] flex-shrink-0 cursor-pointer drop-shadow-sm hover:drop-shadow-xl transition-shadow duration-300 flex flex-col h-full"
+          className="relative w-full md:w-[380px] md:h-[391px] flex-shrink-0 cursor-pointer drop-shadow-sm hover:drop-shadow-xl transition-shadow duration-300 flex flex-col h-full"
         >
           {/* Top blue block */}
           <div className="h-40 md:h-[250px] rounded-t-[20px] rounded-b-none mb-0">

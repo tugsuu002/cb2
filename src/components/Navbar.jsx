@@ -159,18 +159,24 @@ function Navbar() {
         <div className="hidden lg:flex items-center gap-4 ml-10">
           {!isAuthorized ? (
             <>
-              <Link
-                to="/signin"
-                className="px-6 py-2 rounded-full bg-white text-black text-[16px] font-pro font-normal"
-              >
-                {t("button.signin")}
-              </Link>
-              <Link
-                to="/signup"
-                className="px-6 py-2 rounded-full bg-white text-black text-[16px] font-pro font-normal"
-              >
-                {t("button.signup")}
-              </Link>
+              <div className="relative rounded-full p-[2px] overflow-hidden">
+                <div className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]" aria-hidden="true" />
+                <Link
+                  to="/signin"
+                  className="relative block px-6 py-2 rounded-full bg-white text-black text-[16px] font-pro font-normal"
+                >
+                  {t("button.signin")}
+                </Link>
+              </div>
+              <div className="relative rounded-full p-[2px] overflow-hidden">
+                <div className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]" aria-hidden="true" />
+                <Link
+                  to="/signup"
+                  className="relative block px-6 py-2 rounded-full bg-white text-black text-[16px] font-pro font-normal"
+                >
+                  {t("button.signup")}
+                </Link>
+              </div>
             </>
           ) : (
             <Link

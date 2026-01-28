@@ -62,11 +62,11 @@ export default function IntroductionFacebook() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <SpotlightCard
-                    className="rounded-[20px] bg-white h-full gradient-border-bottom duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="group rounded-[20px] bg-white h-full gradient-border-bottom duration-300 hover:-translate-y-1 hover:shadow-xl hover:text-[#0166FF]"
                     spotlightColor="rgba(0, 102, 255, 0.4)"
                   >
                   <div className="py-5 px-4 transition-all duration-300 h-full w-full">
-                      <div className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] hover:text-[#0166FF]" >
+                      <div className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] group-hover:text-[#0166FF] transition-colors" >
                         <Icon />
                     </div>
 

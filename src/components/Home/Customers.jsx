@@ -111,7 +111,7 @@ const Customers = () => {
         <Globe />
       </div>
 
-      <div
+      {/* <div
         className={`absolute top-[220px] sm:top-[260px] md:top-[300px] left-1/2 -translate-x-1/2  w-[400px] md:w-full max-w-[1000px] transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
@@ -156,7 +156,7 @@ const Customers = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
     </section>
   );
 };

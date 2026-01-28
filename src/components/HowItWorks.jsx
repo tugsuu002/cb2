@@ -8,14 +8,14 @@ export default function HowItWorks() {
   return (
     <section className="relative bg-[#EDF2FB] py-24 overflow-hidden rounded-[20px]" >
       {/* Title */}
-      <h2 className="text-center text-[30px] lg:text-[70px] font-pro font-medium mb-16">
+      <h2 className="text-center text-[30px] lg:text-[55px] font-pro font-medium mb-16 text-[#242424] tracking-[-0.02em]">
         {t("phoneScreen")}
       </h2>
 
       {/* Content */}
       <div className="relative flex justify-center items-center z-10">
-        <div className="absolute">
-          <img src={Frame3}/>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img src={Frame3} alt="decorative frame" className="max-w-full"/>
         </div>
         {/* Phone */}
           <div className="relative z-30">
