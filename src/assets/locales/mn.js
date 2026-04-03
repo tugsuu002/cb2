@@ -27,19 +27,23 @@ import {
   FbCard17,
   FbCard18,
 } from "../svg";
-import instaCard1 from "../instaCard1.png";
-import instaCard2 from "../instaCard2.png";
-import instaCard3 from "../instaCard3.png";
-import instaCard4 from "../instaCard4.png";
-import instaCard5 from "../instaCard5.png";
-import instaCard6 from "../instaCard6.png";
+import featuresHome1 from "../featuresHome/1.jpg";
+import featuresHome2 from "../featuresHome/2.jpg";
+import featuresHome3 from "../featuresHome/3.jpg";
+import featuresHome4 from "../featuresHome/4.png";
+import featuresHome5 from "../featuresHome/5.png";
+import featuresHome6 from "../featuresHome/6.jpg";
+import featuresHome7 from "../featuresHome/7.jpg";
+import featuresHome8 from "../featuresHome/8.jpg";
 
 import oper from "../t.png";
 import mess from "../p.png";
 import cus from "../supplier.png";
 import like from "../lik.png";
 
-// baiguulga
+import fbStep1 from "../FbSearch.png";
+import fbStep2 from "../fbPaper.png";
+import fbStep3 from "../fbGallery.png";
 
 import Organization1 from "../slack.svg";
 import Organization2 from "../twilio.svg";
@@ -70,28 +74,29 @@ export const mn = {
       id: 0,
       type: "Чатбот-руу хандсан хэрэглэгчид",
       icon: cursor,
-      count: "10556655",
-      plus: null,
+      count: "6676417",
+      plus: plus,
     },
     {
       id: 1,
-      type: "Бот хөгжүүлэлт",
-      icon: boticon,
-      count: "13556",
-      plus: null,
-    },
-    {
-      id: 2,
       type: "Бизнесийн байгууллага",
       icon: customericon,
       count: "600",
       plus: plus,
     },
     {
-      id: 3,
-      type: "Зар сурталчилгаа",
+      id: 2,
+      type: "Бот үүсгэсэн",
       icon: boticon,
-      count: "400",
+      count: "19117",
+      plus: plus,
+    },
+
+    {
+      id: 3,
+      type: "Зар сурталчилгаа илгээсэн",
+      icon: boticon,
+      count: "800000",
       plus: plus,
     },
   ],
@@ -103,27 +108,43 @@ export const mn = {
   featuresHome: [
     {
       title: "Чатботоор борлуулах",
-      desc: "Socialpay Qpay Monpay болох дотоодын төлбөрийн системүүдтэй интеграц холболттой Чатботын онлайн дэлгүүрээр бараа бүтээгдэхүүнээ борлуулна.",
-    },
-    {
-      title: "Онлайнаар гэрээ",
-      desc: "Гэрээнд тусгагдах хэрэгцээт мэдээллийг орон зай хамаарахгүйгээр хэрэглэгчээс авч байгууллагад мэйлээр илгээнэ",
+      desc: "Socialpay, Qpay, Monpay болох дотоодын төлбөрийн системүүдтэй холбогдсон бөгөөд бараа бүтээгдэхүүнээ онлайнаар борлуулна.",
+      img: featuresHome1,
     },
     {
       title: "Хандалтын тайлан",
       desc: "Фэйсбүүк хуудастай бот холбогдсон өдрөөс хойшхи хэрэглэгчийн хандалтын тайланг огноогоор шүүж экселээр татна.",
+      img: featuresHome2,
     },
     {
       title: "Тооцоолол",
       desc: "Материалын тооцооллын томьёог чатботдоо оруулснаар хэрэглэгчдийнхээ цагийг хэмнэж хэрэгцээт мэдээллийг онлайнаар гаргаж өгнө.",
+      img: featuresHome3,
     },
     {
       title: "Пост автоматжуулалт",
       desc: "Фэйсбүүк хуудаст нийтлэгдсэн постны доор хэрэглэгчийн үлдээсэн сэтгэгдэлд автоматаар хариу бичиж, чатаар нь дэлгэрэнгүй мэдээлэл илгээнэ.",
+      img: featuresHome4,
     },
     {
       title: "Нэмэлт хөгжүүлэлт",
       desc: "Тухайн байгууллагын дотооддоо ашигладаг системтэй нэмэлт холболт хийж, үйл ажиллагаанд нийцүүлэн хөгжүүлнэ.",
+      img: featuresHome5,
+    },
+    {
+      title: "Сануулах зурвас",
+      desc: "Товч дээр дарж мэдээлэл авсан хэрэглэгч рүү тодорхой хугацааны дараа мэдээлэл илгээх боломжтой.",
+      img: featuresHome6,
+    },
+    {
+      title: "Вэб фром",
+      desc: "Нэмэлт цонх үүсгэн асуумж бөглүүлж, хариултуудыг системийн хянах самбараас харна.",
+      img: featuresHome7,
+    },
+    {
+      title: "Зайнаас гэрээ хийх",
+      desc: "Гэрээнд тусгагдах хэрэгцээт мэдээллийг хэрэглэгчээс авч гэрээ болгон мэйлээр илгээнэ.",
+      img: featuresHome8,
     },
   ],
 
@@ -138,19 +159,22 @@ export const mn = {
 
   steps: [
     {
-      title: "Алхам 1.",
+      title: "Алхам 1",
       description:
         "Манай үйлчилгээтэй танилцаж, өөрийн бизнес тохирох багцаа сонгоно",
+      img: fbStep1,
     },
     {
-      title: "Алхам 2.",
+      title: "Алхам 2",
       description:
         "Харилцааны менежертэй холбогдож, үйлчилгээний гэрээ байгуулна",
+      img: fbStep2,
     },
     {
-      title: "Алхам 3.",
+      title: "Алхам 3",
       description:
         "Тестийн орчинд чатботоо хийж дууссаны дараа фэйсбүүк хуудастай холбоод ажиллуулж оруулна",
+      img: fbStep3,
     },
   ],
 
@@ -350,30 +374,45 @@ export const mn = {
   priceMonth: "1 сар",
   PriceAdd: "Нэмэлт цэс авах",
   priceTitle2: "Суурь боломж",
-  
-features: [
-  { label: "Мэдээлэл боловсруулах", sub: null , values: [true, true, true] },
-  { label: "Харицагч ядра", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-  { label: "Хэрэглэгчийн сегмент", sub: null , values: [true, true, true] },
-  { label: "Hubspot холболт", sub: null , values: [true, true, true] },
-  { label: "Харицагч менежер", sub: null , values: [true, true, true] },
-  { label: "Аналитик харах", sub: null , values: [true, true, true] },
-  { label: "Мониторинг хийх", sub: null , values: [true, true, true] },
-  { label: "Төлбөрийн холболт", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
-  { label: "Масс мессеж", sub: null , values: [true, true, true] },
-  { label: "Web форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-  { label: "Асуулгын форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-  { label: "HTML тайбар", sub: null , values: [true, true, true] },
-  { label: "Захиалга удирдах", sub: null , values: [false, true, false] },
-  { label: "Онлайн дэмжлэг", sub: null , values: [false, true, true] },
-  { label: "Коммент тохиргоо", sub: null , values: [true, true, true] },
-  { label: "Live agent", sub: null , values: [true, true, true] },
-  { label: "Онлайн гэрээ", sub: null , values: [true, true, true] },
-  { label: "Тооцооллууд",  sub: null ,values: [true, true, true] },
-  { label: "ДАН систем", sub: null , values: [true, true, true] },
-  { label: "Систем холболт", sub: null , values: [true, true, true] },
-],
 
+  features: [
+    { label: "Мэдээлэл боловсруулах", sub: null, values: [true, true, true] },
+    {
+      label: "Харицагч ядра",
+      sub: null,
+      values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
+    },
+    { label: "Хэрэглэгчийн сегмент", sub: null, values: [true, true, true] },
+    { label: "Hubspot холболт", sub: null, values: [true, true, true] },
+    { label: "Харицагч менежер", sub: null, values: [true, true, true] },
+    { label: "Аналитик харах", sub: null, values: [true, true, true] },
+    { label: "Мониторинг хийх", sub: null, values: [true, true, true] },
+    {
+      label: "Төлбөрийн холболт",
+      sub: "Qpay SocialPay Monpay",
+      values: [false, true, false],
+    },
+    { label: "Масс мессеж", sub: null, values: [true, true, true] },
+    {
+      label: "Web форм",
+      sub: null,
+      values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
+    },
+    {
+      label: "Асуулгын форм",
+      sub: null,
+      values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
+    },
+    { label: "HTML тайбар", sub: null, values: [true, true, true] },
+    { label: "Захиалга удирдах", sub: null, values: [false, true, false] },
+    { label: "Онлайн дэмжлэг", sub: null, values: [false, true, true] },
+    { label: "Коммент тохиргоо", sub: null, values: [true, true, true] },
+    { label: "Live agent", sub: null, values: [true, true, true] },
+    { label: "Онлайн гэрээ", sub: null, values: [true, true, true] },
+    { label: "Тооцооллууд", sub: null, values: [true, true, true] },
+    { label: "ДАН систем", sub: null, values: [true, true, true] },
+    { label: "Систем холболт", sub: null, values: [true, true, true] },
+  ],
 
   priceCTA:
     "Та манай борлуулалтын менежертэй холбогдон салбар, компаний онцлог, үйл ажиллагаандаа тохирсон зөвлөгөөг аван өөрт шаардлагатай багцаа сонгоорой.",

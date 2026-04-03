@@ -30,6 +30,19 @@ import {
   FbCard18,
 } from "../svg";
 
+import featuresHome1 from "../featuresHome/1.jpg";
+import featuresHome2 from "../featuresHome/2.jpg";
+import featuresHome3 from "../featuresHome/3.jpg";
+import featuresHome4 from "../featuresHome/4.png";
+import featuresHome5 from "../featuresHome/5.png";
+import featuresHome6 from "../featuresHome/6.jpg";
+import featuresHome7 from "../featuresHome/7.jpg";
+import featuresHome8 from "../featuresHome/8.jpg";
+
+import fbStep1 from "../FbSearch.png";
+import fbStep2 from "../fbPaper.png";
+import fbStep3 from "../fbGallery.png";
+
 export const en = {
   nav: {
     li1: "INTRODUCTION",
@@ -177,7 +190,7 @@ export const en = {
     { src: oper, label: "24/7 Automation" },
     { src: mess, label: "Professional development program" },
     { src: cus, label: "Account manager" },
-    { src: like, label: "User-friendly service" },
+    { src: like, stepslabel: "User-friendly service" },
   ],
 
   phoneScreen: "HOW THE SYSTEM WORKS?",
@@ -188,15 +201,18 @@ export const en = {
       title: "Step 1",
       description:
         "Explore our services and choose the package that fits your business.",
+      img: fbStep1,
     },
     {
       title: "Step 2",
       description: "Contact a account manager to set up a service agreement.",
+      img: fbStep2,
     },
     {
       title: "Step 3",
       description:
         "After completing your chatbot in the testing environment, connect it to your Facebook page and launch it.",
+      img: fbStep3,
     },
   ],
 
@@ -237,26 +253,42 @@ export const en = {
     {
       title: "In-chatbot sales",
       desc: "Sell products directly through the chatbot’s online shop, integrated with local payment systems like SocialPay, QPay, and MonPay.",
+      img: featuresHome1,
     },
     {
       title: "Online Contract",
       desc: "Gather required contract information from users anywhere and email it to the organization.",
+      img: featuresHome2,
     },
     {
       title: "Access report",
       desc: "Download user activity reports to Excel, filtered by date since the bot was connected to the Facebook page.",
+      img: featuresHome3,
     },
     {
       title: "Calculation",
       desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
+      img: featuresHome4,
     },
     {
       title: "Automatically reply to posts.",
       desc: "Automatically reply to comments on Facebook posts and send detailed information via chat.",
+      img: featuresHome5,
     },
     {
       title: "Custom development services",
       desc: "Integrate with the organization’s internal systems and develop custom solutions tailored to their operations.",
+      img: featuresHome6,
+    },
+    {
+      title: "Web Form",
+      desc: "Create additional windows for users to fill out forms and view the responses from the system's dashboard.",
+      img: featuresHome7,
+    },
+    {
+      title: "Remote Contract Signing",
+      desc: "Collect the necessary information from users and send it as a contract via email.",
+      img: featuresHome8,
     },
   ],
 
@@ -282,15 +314,15 @@ export const en = {
       id: 1,
       name: "Enterprise",
       price: "900,000₮",
-      description: "Empower your business with unlimited access to all chatbot features.",
+      description:
+        "Empower your business with unlimited access to all chatbot features.",
       highlight: true,
     },
     {
       id: 2,
       name: "VIP",
       price: "Custom Pricing",
-      description:
-        "Develop custom integrations with your operational systems",
+      description: "Develop custom integrations with your operational systems",
       highlight: false,
     },
   ],
@@ -298,34 +330,54 @@ export const en = {
   PriceAdd: "Add on",
   priceTitle2: "Core Features",
 
-    features: [
-  { label: "Content Management", sub: null , values: [true, true, true] },
-  { label: "Conversations", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
-  { label: "User Segmentation", sub: null , values: [true, true, true] },
-  { label: "HubSpot Integration", sub: null , values: [true, true, true] },
-  { label: "Dedicated Account Manager", sub: null , values: [true, true, true] },
-  { label: "Analytics & Reporting", sub: null , values: [true, true, true] },
-  { label: "Monitoring", sub: null , values: [true, true, true] },
-  { label: "Payment Integration", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
-  { label: "Mass Messaging", sub: null , values: [true, true, true] },
-  { label: "Web Forms", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
-  { label: "Inquiry Forms", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
-  { label: "HTML Field", sub: null , values: [true, true, true] },
-  { label: "Custom Messages", sub: null , values: [false, true, false] },
-  { label: "Online Store", sub: null , values: [false, true, true] },
-  { label: "Comment Management", sub: null , values: [true, true, true] },
-  { label: "Live agent", sub: null , values: [true, true, true] },
-  { label: "Online Contract", sub: null , values: [true, true, true] },
-  { label: "Calculation",  sub: null ,values: [true, true, true] },
-  { label: "DAN System Integration", sub: null , values: [true, true, true] },
-  { label: "System Integration", sub: null , values: [true, true, true] },
-],
-  
+  features: [
+    { label: "Content Management", sub: null, values: [true, true, true] },
+    {
+      label: "Conversations",
+      sub: null,
+      values: ["Unlimited", "Unlimited", "Unlimited"],
+    },
+    { label: "User Segmentation", sub: null, values: [true, true, true] },
+    { label: "HubSpot Integration", sub: null, values: [true, true, true] },
+    {
+      label: "Dedicated Account Manager",
+      sub: null,
+      values: [true, true, true],
+    },
+    { label: "Analytics & Reporting", sub: null, values: [true, true, true] },
+    { label: "Monitoring", sub: null, values: [true, true, true] },
+    {
+      label: "Payment Integration",
+      sub: "Qpay SocialPay Monpay",
+      values: [false, true, false],
+    },
+    { label: "Mass Messaging", sub: null, values: [true, true, true] },
+    {
+      label: "Web Forms",
+      sub: null,
+      values: ["Unlimited", "Unlimited", "Unlimited"],
+    },
+    {
+      label: "Inquiry Forms",
+      sub: null,
+      values: ["Unlimited", "Unlimited", "Unlimited"],
+    },
+    { label: "HTML Field", sub: null, values: [true, true, true] },
+    { label: "Custom Messages", sub: null, values: [false, true, false] },
+    { label: "Online Store", sub: null, values: [false, true, true] },
+    { label: "Comment Management", sub: null, values: [true, true, true] },
+    { label: "Live agent", sub: null, values: [true, true, true] },
+    { label: "Online Contract", sub: null, values: [true, true, true] },
+    { label: "Calculation", sub: null, values: [true, true, true] },
+    { label: "DAN System Integration", sub: null, values: [true, true, true] },
+    { label: "System Integration", sub: null, values: [true, true, true] },
+  ],
+
   priceCTA:
     "Contact our sales manager for personalized guidance on selecting the right plan for your industry, company, and needs.",
   priceComment: "An Overview of Our System’s",
   faqHeader: "FREQUENTLY ASKED QUESTIONS",
-  
+
   faq: [
     {
       id: 0,

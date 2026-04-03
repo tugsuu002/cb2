@@ -4,13 +4,8 @@ import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
-import oper from "../assets/t.png";
-import mess from "../assets/p.png";
-import cus from "../assets/supplier.png";
-import like from "../assets/lik.png";
 import topArrow from "../assets/topArrow.png";
 import SpotlightCard from "./SpotlightCard";
-import Icon from "../assets/svg";
 import FeatureHighlights from "./FeatureHighlights";
 
 export default function IntroductionFacebook() {
@@ -28,7 +23,7 @@ export default function IntroductionFacebook() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-[40px] md:text-[70px] text-[#0D0D0D] font-pro font-normal text-center"
+          className="text-[40px] md:text-[70px] text-[#0D0D0D] font-pro font-semibold text-center"
         >
           {t("facebookIntroTitle")}
         </motion.p>

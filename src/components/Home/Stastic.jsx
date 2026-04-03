@@ -22,12 +22,12 @@ export default function Stastic() {
 
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 w-full px-4 sm:px-6 lg:px-0">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 w-[80%] px-4 sm:px-6 lg:px-0 z-10">
       {stasticList.map((item, i) => (
         <div key={i} className="w-full flex justify-center">
-          <div className="relative w-full min-h-[180px] sm:min-h-[200px] rounded-2xl bg-gradient-to-br from-white via-[#f6f8ff] to-white border border-gray-100 shadow-[0_10px_40px_rgba(15,23,42,0.08)] overflow-hidden">
+          <div className="relative w-full min-h-[140px] sm:min-h-[200px] rounded-2xl bg-gradient-to-br  overflow-hidden">
             {/* Icon */}
-            <div className="flex items-center justify-center sm:justify-start p-4">
+            <div className="p-4 justify-center items-center flex">
               <img
                 src={item.icon}
                 alt=""
@@ -36,16 +36,16 @@ export default function Stastic() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col justify-center h-full px-6 sm:px-8 pb-20 text-center sm:text-left">
+            <div className="flex flex-col justify-center h-auto px-2 sm:px-6 py-2 sm:py-6 text-center">
               <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
-                <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
+                <div className="flex items-center justify-center ">
                   {counter && (
                     <CountUp
                       end={item?.count || 6676417}
                       redraw={true}
                       duration={1}
                       separator=','
-                      className="text-[28px] sm:text-[32px] lg:text-[48px] font-pro font-medium text-black leading-none"
+                      className="text-[20px] sm:text-[32px] lg:text-[48px] font-pro font-medium text-black leading-none"
                     />
                   )}
 
@@ -58,7 +58,7 @@ export default function Stastic() {
                   )}
                 </div>
               </ScrollTrigger>
-              <div className="mt-3 text-[12px] sm:text-[14px] md:text-[16px] font-pro font-normal text-[#6B7280]">
+              <div className="mt-3 text-[12px] sm:text-[14px] md:text-[16px] font-pro font-normal text-[#A3AED0]">
                 {item.type}
               </div>
             </div>

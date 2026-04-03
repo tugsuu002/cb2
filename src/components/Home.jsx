@@ -9,7 +9,7 @@ export default function Home() {
 
   const sections = [
     { key: "hero", Element: Hero },
-    { key: "stastic", Element: Stastic },
+    // { key: "stastic", Element: Stastic },
     { key: "customers", Element: Customers },
     { key: "featured-skills", Element: FeaturedSkills },
     { key: "ai-help", Element: AIHelp },

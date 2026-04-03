@@ -1,19 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import world from "../../assets/earth_sphere.png";
-import tdb from "../../assets/tdb.png";
-import tdb1 from "../../assets/tdb.png";
-import tdb2 from "../../assets/tdb.png";
-import tdb3 from "../../assets/tdb.png";
-import tdb4 from "../../assets/tdb.png";
-import tdb5 from "../../assets/tdb.png";
-import tdb6 from "../../assets/tdb.png";
-import tdb7 from "../../assets/tdb.png";
-import khan from "../../assets/khan.png";
-import mak from "../../assets/mak.png";
-import tawanbogd from "../../assets/tawanbogd.png";
-import nomin from "../../assets/nomin.png";
-import apu from "../../assets/apu.png";
-import  {Globe}  from "./Globe.jsx";
+import { Globe } from "./Globe.jsx";
+import Stastic from "./Stastic.jsx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Navigation arrows removed — keep autoplay only
@@ -107,7 +94,7 @@ const Customers = () => {
           onTouchStart={() => (pausedRef.current = true)}
           onTouchEnd={() => (pausedRef.current = false)}
         /> */}
-
+        <Stastic />
         <Globe />
       </div>
 

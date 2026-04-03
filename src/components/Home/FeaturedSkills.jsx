@@ -18,7 +18,7 @@ export default function FeaturedSkills() {
             key={index}
             className="rounded-xl sm:rounded-2xl border border-gray-200 hover:shadow-lg transition"
           >
-            <div className="h-20 sm:h-36 rounded-t-lg sm:rounded-t-xl bg-indigo-300/70 p-2 sm:p-3 mb-3 sm:mb-5">
+            <div className="h-20 sm:h-36 rounded-t-lg sm:rounded-t-xl bg-indigo-300/70  mb-3 sm:mb-5">
               <img src={item?.img} />
             </div>
             <h3 className="font-pro font-medium text-sm sm:text-[20px] mb-1 sm:mb-2 px-4 text-black">
