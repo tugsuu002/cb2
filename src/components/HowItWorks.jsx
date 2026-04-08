@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import utas from "../assets/Utas.png";
-import Frame3 from "../assets/Frame3.png";
+import utas from "../assets/Utas.webp";
+import Frame3 from "../assets/Frame3.webp";
 export default function HowItWorks() {
 
   const { t } = useTranslation();
@@ -15,12 +15,12 @@ export default function HowItWorks() {
       {/* Content */}
       <div className="relative flex justify-center items-center z-10">
         <div className="absolute inset-0 flex items-center justify-center">
-          <img src={Frame3} alt="decorative frame" className="max-w-full"/>
+          <img loading="lazy" src={Frame3} alt="decorative frame" className="max-w-full"/>
         </div>
         {/* Phone */}
           <div className="relative z-30">
             <div className="flex items-center justify-center">
-              <img
+              <img loading="lazy"
                 src={utas}
                 alt="App preview"
                 className="w-[260px] sm:w-[300px] md:w-[460px] lg:w-[600px] object-contain"

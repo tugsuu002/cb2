@@ -3,7 +3,7 @@ import SwiperCustom from "./SwiperCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import user from "../assets/human.svg";
 import key from "../assets/key.svg";
 import call from "../assets/call.svg";
@@ -63,7 +63,6 @@ export default function Signup() {
 
   const handleChange = (e) => {
     const { name, type, value, checked} = e.target;
-    console.info("name" ,name, 'value',value );
     setFormData((prev) => ({
     ...prev,
     [name]: type === "checkbox" ? checked : value,
@@ -87,7 +86,6 @@ export default function Signup() {
 
   const register = async () => {
     try {
-      console.info("sssssssssssssssssssssss", formData);
       // const result = await fetchWithTimeout("/auth/register", {
       //   method: "POST",
       //   headers: {
@@ -136,7 +134,6 @@ export default function Signup() {
       //     text: "text-red-700",
       //   }));
     } catch (err) {
-      console.log(err.message);
     }
   };
 
@@ -153,7 +150,6 @@ export default function Signup() {
       privacy: { isActive: false },
       terms: { isActive: false },
     };
-console.info("formData==>", formData);
     if (!regexCheck(formData.email)) newWarning.email.isActive = true;
     if (!formData.firstname) newWarning.firstname.isActive = true;
     if (!formData.lastname) newWarning.lastname.isActive = true;
@@ -183,7 +179,7 @@ console.info("formData==>", formData);
           <div className="w-full max-w-[480px]">
             <div className="flex items-center justify-start mb-10">
               <a href="/">
-                <img src={logo} alt="logo" className="w-[160px]" />
+                <img loading="lazy" src={logo} alt="logo" className="w-[160px]" />
               </a>
             </div>
 
@@ -197,7 +193,7 @@ console.info("formData==>", formData);
                     {t("input.fName")}
                   </label>
                   <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img
+                    <img loading="lazy"
                       src={user}
                       alt="logo"
                       className="h-5 w-5 flex-shrink-0"
@@ -219,7 +215,7 @@ console.info("formData==>", formData);
                     {t("input.lName")}
                   </label>
                   <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img
+                    <img loading="lazy"
                       src={user}
                       alt="logo"
                       className="h-5 w-5 flex-shrink-0"
@@ -241,7 +237,7 @@ console.info("formData==>", formData);
                     {t("input.email")}
                   </label>
                   <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img
+                    <img loading="lazy"
                       src={logEmail}
                       alt="logo"
                       className="h-5 w-5 flex-shrink-0"
@@ -261,7 +257,7 @@ console.info("formData==>", formData);
                     {t("input.phone")}
                   </label>
                   <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                    <img
+                    <img loading="lazy"
                       src={call}
                       alt="logo"
                       className="h-5 w-5 flex-shrink-0"
@@ -291,7 +287,7 @@ console.info("formData==>", formData);
                   {t("input.pwd")}
                 </label>
                 <div className="relative mt-1 border rounded-xl flex items-center px-4 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                  <img src={key} alt="logo" className="h-5 w-5" />
+                  <img loading="lazy" src={key} alt="logo" className="h-5 w-5" />
                   <input
                     name="password"
                     type={showPassword ? "text" : "password"}
@@ -355,7 +351,7 @@ console.info("formData==>", formData);
                   {t("input.pwdCheck")}
                 </label>
                 <div className="relative mt-1 border rounded-xl flex items-center px-4 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                  <img src={key} alt="logo" className="h-5 w-5" />
+                  <img loading="lazy" src={key} alt="logo" className="h-5 w-5" />
                   <input
                     name="passwordConfirm"
                     type={showPassword2 ? "text" : "password"}

@@ -6,11 +6,11 @@ import SwiperCustom from "./SwiperCustom";
 import { useTranslation } from "react-i18next";
 import mail from "../assets/log-mail.svg";
 import key from "../assets/key.svg";
-import fbLogin from "../assets/fbLogin.png";
+import fbLogin from "../assets/fbLogin.webp";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 
 export default function LoginPage() {
   const { t } = useTranslation();
@@ -33,7 +33,6 @@ export default function LoginPage() {
 
   const login = async () => {
     try {
-      console.log("🚀 ~ login ~ formData:", formData)
       const result = await fetchWithTimeout("/auth/login", {
         method: "POST",
         headers: {
@@ -41,7 +40,6 @@ export default function LoginPage() {
         },
         body: JSON.stringify(formData),
       });
-      console.log("🚀 ~ login ~ result:", result)
       if (result.result.code === 1000) {
         setAlert((prev) => ({
           ...prev,
@@ -59,16 +57,8 @@ export default function LoginPage() {
           state = "",
         } = queryString.parse(window.location.search) ?? {};
 
-        console.log(
-          "params:",
-          client_id,
-          redirect_uri,
-          response_type,
-          scope,
-          state
-        );
         if (redirect_uri) {
-          window.location.erplace(
+          window.location.replace(
             `/api/auth/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=${response_type}&scope=${scope}&state=${state}`
           );
         } else {
@@ -86,7 +76,6 @@ export default function LoginPage() {
           text: "text-red-700",
         }));
     } catch (err) {
-      console.log(err.message);
     }
   };
 
@@ -99,7 +88,7 @@ export default function LoginPage() {
             {/* Logo */}
             <div className="flex items-center justify-center mb-10">
               <a href="/">
-                <img
+                <img loading="lazy"
                   src={logo}
                   className="w-[150px] md:w-[180px] xl:w-[200px]"
                   alt="logo"
@@ -138,7 +127,7 @@ export default function LoginPage() {
                   {t("input.email")}
                 </label>
                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                  <img src={mail} alt="logo" className="h-5 w-5 flex-shrink-0" />
+                  <img loading="lazy" src={mail} alt="logo" className="h-5 w-5 flex-shrink-0" />
                   
                 <input
                   type="email"
@@ -163,7 +152,7 @@ export default function LoginPage() {
 
 
                 <div className="border relative rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
-                  <img src={key} alt="logo" className="h-5 w-5 flex-shrink-0" />
+                  <img loading="lazy" src={key} alt="logo" className="h-5 w-5 flex-shrink-0" />
                   <input
                     type={showPassword ? "text" : "password"}
                     value={formData?.password}
@@ -280,7 +269,7 @@ export default function LoginPage() {
               <div className="flex justify-center gap-6 mt-4 text-2xl">
                 <a href={`${api}/facebook/connect`} aria-label="Facebook login">
                   {/* {t("input.button")} */}
-                  <img src={fbLogin} alt="facebook login" className="w-8 h-8"/>
+                  <img loading="lazy" src={fbLogin} alt="facebook login" className="w-8 h-8"/>
                 </a>
                 <a href={`${api}/google/connect`} aria-label="Google login">
                   <i className="fa fa-google text-red-500 cursor-pointer" />

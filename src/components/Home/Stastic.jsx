@@ -18,25 +18,24 @@ export default function Stastic() {
   //   // fetchStats();
   // }, []);
   
-  console.log("🚀 ~ Stastic ~ stats:", stats)
 
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 w-[80%] px-4 sm:px-6 lg:px-0 z-10">
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 w-[80%] px-4 sm:px-6 lg:px-0 z-10 ">
       {stasticList.map((item, i) => (
         <div key={i} className="w-full flex justify-center">
-          <div className="relative w-full min-h-[140px] sm:min-h-[200px] rounded-2xl bg-gradient-to-br  overflow-hidden">
+          <div className="relative w-full min-h-[100px] sm:min-h-[200px] rounded-2xl bg-gradient-to-br  overflow-hidden">
             {/* Icon */}
-            <div className="p-4 justify-center items-center flex">
-              <img
+            <div className="p-2 sm:p-4 justify-center items-center flex">
+              <img loading="lazy"
                 src={item.icon}
-                alt=""
+                alt="stat icon"
                 className="w-7 h-7 sm:w-8 sm:h-8"
               />
             </div>
 
             {/* Content */}
-            <div className="flex flex-col justify-center h-auto px-2 sm:px-6 py-2 sm:py-6 text-center">
+            <div className="flex flex-col justify-center h-auto px-1 sm:px-6 py-1 sm:py-6 text-center">
               <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
                 <div className="flex items-center justify-center ">
                   {counter && (
@@ -50,7 +49,7 @@ export default function Stastic() {
                   )}
 
                   {item?.plus && (
-                    <img
+                    <img loading="lazy"
                       src={item.plus}
                       alt="plus"
                       className="w-[22px] sm:w-[28px] h-[40px] sm:h-[50px] object-contain"

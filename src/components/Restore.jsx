@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 import { useTranslation } from "react-i18next";
 import Alert from "./Alert";
 import fetchWithTimeout from "../utils/fetchApi";
@@ -46,14 +46,13 @@ function Restore() {
           text: "text-red-700",
         }));
     } catch (err) {
-      console.log(err.message);
     }
   };
   return (
     <div className="md:container mx-auto px-2">
       <div className="2xl:pl-[40px] 2xl:mt-3">
         <Link to="/">
-          <img
+          <img loading="lazy"
             src={logo}
             className="w-[180px] md:w-[200px] xl:w-[230px]"
             alt=""

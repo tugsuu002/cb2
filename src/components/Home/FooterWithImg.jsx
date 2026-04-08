@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 // import { FaFacebookF } from "react-icons/fa";
 // import { BsInstagram } from "react-icons/bs";
-// import logo from "../assets/mobile-logo.png";
-import nsplogo from "../../assets/nsp-logo.png";
+// import logo from "../assets/mobile-logo.webp";
+import nsplogo from "../../assets/nsp-logo.webp";
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
@@ -35,14 +35,14 @@ function FooterWithImg() {
           </div>
           <div className="hidden xl:flex flex-1 xl:-mt-2 xl:mb-6">
             <div className="w-[217px] h-[416px] relative z-20 scale-90 2xl:scale-100">
-              {/* <img
+              {/* <img loading="lazy"
                 src={footer1}
                 alt=""
                 className="rounded-[50px] shadow-2xl"
                 loading="lazy"
               /> */}
             </div>
-            {/* <img
+            {/* <img loading="lazy"
               src={footer2}
               alt=""
               className="w-[517px] h-[362px] absolute top-[-7%] right-[7%] z-10 rounded-[20px] shadow-2xl scale-90 2xl:scale-100"
@@ -54,7 +54,7 @@ function FooterWithImg() {
       <div className="grid grid-cols-2 text-[14px] gap-3 p-6 md:grid-cols-3 md:px-6 lg:px-20 lg:py-24 lg:container md:place-items-center">
         {/* <div className="hidden md:flex md:justify-center" onClick={scrollToTop}>
           <Link to="/">
-            <img src={logo} className="w-14 h-14" alt="" />
+            <img loading="lazy" src={logo} className="w-14 h-14" alt="" />
           </Link>
         </div> */}
         <div>
@@ -140,7 +140,7 @@ function FooterWithImg() {
           </div>
           <div>
             <a href="https://nextsocial.mn" target="_blank" rel="noreferrer">
-              <img src={nsplogo} className="h-10 md:h-20" alt="" />
+              <img loading="lazy" src={nsplogo} className="h-10 md:h-20" alt="" />
             </a>
           </div>
         </div>

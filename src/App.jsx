@@ -4,17 +4,18 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home.jsx";
-import Signin from "./components/Signin.jsx";
-import Signup from "./components/Signup.jsx";
-import IntroductionFacebook from "./components/IntroductionFacebook.jsx";
-import IntroductionInstagram from "./components/IntroductionInstagram.jsx";
-import Pricing from "./components/Pricing";
-import Terms from "./components/Terms.jsx";
-import Privacy from "./components/Privacy.jsx";
-import Restore from "./components/Restore.jsx";
+
+const Home = lazy(() => import("./components/Home.jsx"));
+const Signin = lazy(() => import("./components/Signin.jsx"));
+const Signup = lazy(() => import("./components/Signup.jsx"));
+const IntroductionFacebook = lazy(() => import("./components/IntroductionFacebook.jsx"));
+const IntroductionInstagram = lazy(() => import("./components/IntroductionInstagram.jsx"));
+const Pricing = lazy(() => import("./components/Pricing"));
+const Terms = lazy(() => import("./components/Terms.jsx"));
+const Privacy = lazy(() => import("./components/Privacy.jsx"));
+const Restore = lazy(() => import("./components/Restore.jsx"));
 
 /* ✅ Scroll wrapper */
 const Wrapper = ({ children }) => {
@@ -38,7 +39,8 @@ function App() {
   return (
     <Router>
       <Wrapper>
-        <Routes>
+        <Suspense fallback={<div className="flex items-center justify-center h-screen bg-black"><div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin" /></div>}>
+          <Routes>
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="facebook" element={<IntroductionFacebook />} />
@@ -52,6 +54,7 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="restore" element={<Restore />} />
         </Routes>
+        </Suspense>
       </Wrapper>
     </Router>
   );

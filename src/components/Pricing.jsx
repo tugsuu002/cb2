@@ -1,59 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay, Navigation } from "swiper/modules";
 import Faq from "./Home/Faq.jsx";
 import HeroSection from "./HeroSection.jsx";
 import { useEffect, useState, useRef } from "react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-// const plans = [
-//   {
-//     name: "Pro",
-//     price: "300,000₮",
-//     period:
-//       "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон ав",
-//     highlight: false,
-//   },
-//   {
-//     name: "Enterprise",
-//     price: "900,000₮",
-//     period: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашигла",
-//     highlight: true,
-//   },
-//   {
-//     name: "VIP",
-//     price: "Дотно ярья",
-//     period:
-//       "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
-//     highlight: false,
-//   },
-// ];
-
-// const features = [
-//   { label: "Мэдээлэл боловсруулах", sub: null , values: [true, true, true] },
-//   { label: "Харицагч ядра", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-//   { label: "Хэрэглэгчийн сегмент", sub: null , values: [true, true, true] },
-//   { label: "Hubspot холболт", sub: null , values: [true, true, true] },
-//   { label: "Харицагч менежер", sub: null , values: [true, true, true] },
-//   { label: "Аналитик харах", sub: null , values: [true, true, true] },
-//   { label: "Мониторинг хийх", sub: null , values: [true, true, true] },
-//   { label: "Төлбөрийн холболт", sub: "Qpay SocialPay Monpay" , values: [false, true, false] },
-//   { label: "Масс мессеж", sub: null , values: [true, true, true] },
-//   { label: "Web форм", sub: null , values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"] },
-//   { label: "Асуулгын форм", sub: null , values: ["Unlimited", "Unlimited", "Unlimited"] },
-//   { label: "HTML тайбар", sub: null , values: [true, true, true] },
-//   { label: "Захиалга удирдах", sub: null , values: [false, true, false] },
-//   { label: "Онлайн дэмжлэг", sub: null , values: [false, true, true] },
-//   { label: "Коммент тохиргоо", sub: null , values: [true, true, true] },
-//   { label: "Live agent", sub: null , values: [true, true, true] },
-//   { label: "Онлайн гэрээ", sub: null , values: [true, true, true] },
-//   { label: "Тооцооллууд",  sub: null ,values: [true, true, true] },
-//   { label: "ДАН систем", sub: null , values: [true, true, true] },
-//   { label: "Систем холболт", sub: null , values: [true, true, true] },
-// ];
 
 const Check = ({select}) => {
   return select ? 
@@ -66,20 +18,20 @@ const Check = ({select}) => {
     </span>;
 };
 
-const truncateText = (text = "", max = 140) =>
-  text.length > max ? `${text.slice(0, max)}...` : text;
+// const truncateText = (text = "", max = 140) =>
+//   text.length > max ? `${text.slice(0, max)}...` : text;
 
 export default function PricingTable() {
   const { t } = useTranslation();
-  const priceCommentList = t("priceCommentList", { returnObjects: true })
+  // const priceCommentList = t("priceCommentList", { returnObjects: true })
   const features = t("features", { returnObjects: true })
   const plans = t("price", { returnObjects: true })
   const [visibleSections, setVisibleSections] = useState(new Set());
   const sectionRefs = useRef([]);
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const swiperRef = useRef(null);
-  const [expandedId, setExpandedId] = useState(null);
+  // const prevRef = useRef(null);
+  // const nextRef = useRef(null);
+  // const swiperRef = useRef(null);
+  // const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -201,7 +153,7 @@ export default function PricingTable() {
       
 
       {/* Салбарын ангилал  */}
-      <div 
+      {/* <div 
         ref={(el) => (sectionRefs.current[3] = el)}
         data-section="industry"
         className={`lg:container transition-all duration-1000 delay-600 mt-28 ${
@@ -298,17 +250,17 @@ export default function PricingTable() {
                     <div className="mt-auto pt-4 space-y-3">
                       <div className="w-[90%] mx-auto"></div>
                       <div className="flex gap-3 items-center justify-center">
-                        <img
+                        <img loading="lazy"
                           src={e?.img1}
                           className="h-12 w-auto object-contain"
                           alt={`logo`}
                         />
-                        <img
+                        <img loading="lazy"
                           src={e?.img2}
                           className="h-12 w-auto object-contain"
                           alt={`logo`}
                         />
-                        <img
+                        <img loading="lazy"
                           src={e?.img3}
                           className="h-12 w-auto object-contain"
                           alt={`logo`}
@@ -321,7 +273,7 @@ export default function PricingTable() {
             })}
           </Swiper>
         </div>
-      </div>
+      </div> */}
       
       {/*  */}
       

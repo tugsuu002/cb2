@@ -5,7 +5,6 @@ export default function FeaturedSkills() {
   const { t } = useTranslation();
   const stasticList = t("featuresHome", { returnObjects: true });
   const bars = Array.from({ length: 10 });
-  console.log("🚀 ~ FeaturedSkills ~ stasticList:", stasticList);
   return (
     <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
       <h2 className="text-[40px] md:text-[55px] font-pro font-semibold text-center mb-8 sm:mb-12">
@@ -19,7 +18,7 @@ export default function FeaturedSkills() {
             className="rounded-xl sm:rounded-2xl border border-gray-200 hover:shadow-lg transition"
           >
             <div className="h-20 sm:h-36 rounded-t-lg sm:rounded-t-xl bg-indigo-300/70  mb-3 sm:mb-5">
-              <img src={item?.img} />
+              <img loading="lazy" src={item?.img} alt={item?.title || 'feature'} />
             </div>
             <h3 className="font-pro font-medium text-sm sm:text-[20px] mb-1 sm:mb-2 px-4 text-black">
               {item.title}

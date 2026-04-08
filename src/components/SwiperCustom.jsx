@@ -16,21 +16,21 @@ export default function SwiperCustom (){
         className="w-full h-full"
       >
         <SwiperSlide>
-          <img
+          <img loading="lazy"
             src="https://picsum.photos/900/1200?1"
             alt="slide1"
             className="w-full h-full object-cover"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
+          <img loading="lazy"
             src="https://picsum.photos/900/1200?2"
             alt="slide2"
             className="w-full h-full object-cover"
           />
         </SwiperSlide>
         <SwiperSlide>
-          <img
+          <img loading="lazy"
             src="https://picsum.photos/900/1200?3"
             alt="slide3"
             className="w-full h-full object-cover"

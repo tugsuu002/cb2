@@ -3,25 +3,6 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
-
-// const steps = [
-//   {
-//     title: "Алхам 1.",
-//     description:
-//       "Манай үйлчилгээтэй танилцаж, өөрийн бизнес тохирох багцаа сонгоно",
-//   },
-//   {
-//     title: "Алхам 2.",
-//     description:
-//       "Харилцааны менежертэй холбогдож, үйлчилгээний гэрээ байгуулна",
-//   },
-//   {
-//     title: "Алхам 3.",
-//     description:
-//       "Тестийн орчинд чатботоо хийж дууссаны дараа фэйсбүүк хуудастай холбоод ажиллуулж оруулна",
-//   },
-// ];
-
 const ChatbotSteps = () => {
   const { t } = useTranslation();
   const steps = t("steps", { returnObjects: true });
@@ -31,7 +12,7 @@ const ChatbotSteps = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.6 }}
-      className="px-4 md:px-16 py-16"
+      className="px-4 md:px-16 py-8 md:py-16"
     >
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -52,33 +33,35 @@ const ChatbotSteps = () => {
           whileTap={{ scale: 0.995 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: index * 0.15, type: "spring", stiffness: 160, damping: 16 }}
-          className={`relative w-full md:w-[380px] md:h-[311px] flex-shrink-0 cursor-pointer drop-shadow-sm hover:drop-shadow-xl transition-shadow duration-300 flex flex-col justify-center h-full bg-[#F4F7FE] rounded-[20px]`}
+          className={`relative w-full md:w-[380px] md:h-[311px] flex-shrink-0 cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center h-full border border-[#F4F7FE] rounded-[20px]`}
           style={{ zIndex: steps.length - index }}
         >
+          {/* Bottom white card */}
+           <div className="h-52 md:h-[180px] bg-[#F4F7FE] rounded-[20px] mt-2 mx-2 p-2">
+              <img loading="lazy"
+                src={step.img}
+                alt="slide2"
+                className="w-full h-full object-cover rounded-[14px]"
+              />
+          </div>
           {/* Top blue block */}
          <div
-            className="w-full md:w-[380px] pt-6 px-3 md:px-4 flex flex-col gap-2 min-h-[150px] justify-center items-center"
+            className="w-full md:w-[380px] pt-2 px-3 md:px-4  flex flex-col gap-1 min-h-[120px] justify-center items-center mt-2"
             style={{ zIndex: steps.length - index }}
           >
             <p className="font-pro font-semibold text-[20px] md:text-[25px] rounded-full px-3 py-2">{step.title}</p>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between pb-4">
               <p className="text-sm md:text-base text-center text-gray-600 leading-snug rounded-lg px-3 py-2">
                 {step.description}
               </p>
             </div>
           </div>
-          {/* Bottom white card */}
-           <div className="h-40 md:h-[110px] ">
-              <img
-                src={step.img}
-                alt="slide2"
-                className="w-full h-full object-cover rounded-t-[20px] rounded-b-none"
-              />
-          </div>
           {index < steps.length - 1 && (
-          <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 bg-[#E91E63] flex items-center justify-center w-6 h-6 rounded-[30%] lg:hidden rotate-90">
-          <FaArrowRight  className="bg-[#E91E63] text-white" size={10}/>
-          </div>
+            <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 flex lg:hidden items-center justify-center w-10 h-10 rounded-[30%] bg-[#E91E63]/20 z-50">
+              <div className="flex items-center justify-center w-6 h-6 rounded-[30%] bg-[#E91E63]">
+                <FaArrowRight className="text-white rotate-90" size={13}/>
+              </div>
+            </div>
           )}
           {index < steps.length - 1 && (
             <div className="absolute -right-9 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-14 h-14 rounded-[30%] bg-[#E91E63]/20 z-50">

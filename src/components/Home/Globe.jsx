@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import createGlobe from "cobe"
-import { useMotionValue, useSpring } from "motion/react"
+import { useMotionValue, useSpring } from "framer-motion"
 
 // Simple className merge helper
 const cn = (...classes) => classes.filter(Boolean).join(" ")
@@ -18,12 +18,13 @@ const GLOBE_CONFIG = {
   theta: 0.3,
   dark: 0,
   diffuse: 0.4,
-  mapSamples: 40000,
-  mapBrightness: 1.2,
+  mapSamples: 50000,
+  mapBrightness: 0.6,
   baseColor: [1, 1, 1],
   // markerColor: [0 / 255, 122 / 255, 255 / 155],
-  markerColor: [251 / 255, 100 / 255, 21 / 255],
-  glowColor: [3, 15, 10],
+  // markerColor: [0.8, 0.15, 0.1],
+  markerColor: [255 / 155, 30 / 255, 10 / 55],
+  glowColor: [1, 2, 2],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
@@ -104,7 +105,7 @@ export function Globe({
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[820px] h-full",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[1000px] md:h-full",
         className
       )}
     >

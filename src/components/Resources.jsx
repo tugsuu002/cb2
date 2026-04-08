@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 const TopNav = () => {
   return (
     <div className="fixed top-6 left-1/2 -translate-x-1/2 
   w-[90%] max-w-7xl h-[72px]
   rounded-[40px] bg-black/70 backdrop-blur-xl
   flex items-center justify-between px-10 text-white">
-      <img
+      <img loading="lazy"
         className="absolute top-[24px] left-[40px] w-[162.3px] h-6 object-cover shrink-0"
          src={logo} alt="logo"
       />
@@ -29,7 +29,7 @@ const TopNav = () => {
         <div className="w-[93.5px] rounded-3xl bg-white flex items-center justify-center py-2 px-6 box-border gap-2">
           <div className="h-[21px] w-[21px] relative shrink-0">
             <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
-              <img
+              <img loading="lazy"
                 className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] max-w-full overflow-hidden max-h-full object-cover"
                 alt=""
               />

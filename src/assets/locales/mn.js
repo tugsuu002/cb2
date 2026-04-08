@@ -1,12 +1,12 @@
-import location from "../location.png";
-import mail from "../mail.png";
-import phone from "../phone-call.png";
-import cursor from "../cursor.svg";
-import boticon from "../BotIcon.svg";
-import customericon from "../customericon.svg";
-import plus from "../plus.png";
-import fb_card1 from "../fb_card1.png";
-// import d from "../svg";
+import location from "../location.webp";
+import mail from "../mail.webp";
+import phone from "../phone-call.webp";
+import cursor from "../stastic/cursor.svg";
+import boticon from "../stastic/BotIcon.svg";
+import customericon from "../stastic/customericon.svg";
+import send from "../stastic/send.svg"
+import plus from "../plus.webp";
+import fb_card1 from "../fb_card1.webp";
 import {
   FbCard1,
   FbCard2,
@@ -27,29 +27,27 @@ import {
   FbCard17,
   FbCard18,
 } from "../svg";
-import featuresHome1 from "../featuresHome/1.jpg";
-import featuresHome2 from "../featuresHome/2.jpg";
-import featuresHome3 from "../featuresHome/3.jpg";
-import featuresHome4 from "../featuresHome/4.png";
-import featuresHome5 from "../featuresHome/5.png";
-import featuresHome6 from "../featuresHome/6.jpg";
-import featuresHome7 from "../featuresHome/7.jpg";
-import featuresHome8 from "../featuresHome/8.jpg";
+import featuresHome1 from "../featuresHome/1.webp";
+import featuresHome2 from "../featuresHome/2.webp";
+import featuresHome3 from "../featuresHome/3.webp";
+import featuresHome4 from "../featuresHome/4.webp";
+import featuresHome5 from "../featuresHome/5.webp";
+import featuresHome6 from "../featuresHome/6.webp";
+import featuresHome7 from "../featuresHome/7.webp";
+import featuresHome8 from "../featuresHome/8.webp";
 
-import oper from "../t.png";
-import mess from "../p.png";
-import cus from "../supplier.png";
-import like from "../lik.png";
+import oper from "../t.webp";
+import mess from "../p.webp";
+import cus from "../supplier.webp";
+import like from "../lik.webp";
 
-import fbStep1 from "../FbSearch.png";
-import fbStep2 from "../fbPaper.png";
-import fbStep3 from "../fbGallery.png";
+import fbStep1 from "../FbSearch.webp";
+import fbStep2 from "../fbPaper.webp";
+import fbStep3 from "../fbGallery.webp";
 
 import Organization1 from "../slack.svg";
 import Organization2 from "../twilio.svg";
 import Organization3 from "../Linear.svg";
-import Organization4 from "../slack.svg";
-import Organization5 from "../slack.svg";
 
 export const mn = {
   nav: {
@@ -95,7 +93,7 @@ export const mn = {
     {
       id: 3,
       type: "Зар сурталчилгаа илгээсэн",
-      icon: boticon,
+      icon: send,
       count: "800000",
       plus: plus,
     },
@@ -210,19 +208,14 @@ export const mn = {
       icon: FbCard6,
     },
     {
-      title: "Захиалгат зурвас",
-      desc: "Товч дээр дарж мэдээлэл авсан хэрэглэгч рүү тодорхой хугацааны дараа мэдээлэл илгээх боломжтой.",
+      title: "Интеграци холболт",
+      desc: "Hubspot болон Google sheet, Google calendar гэх мэт системүүдтэй интеграц хийнэ.",
       icon: FbCard7,
     },
     {
-      title: "Тооцоолуур",
-      desc: "Материалын тооцооллын томьёог чатботдоо оруулснаар хэрэглэгчдийнхээ цагийг хэмнэж хэрэгцээт мэдээллийг онлайнаар гаргаж өгнө.",
-      icon: FbCard8,
-    },
-    {
-      title: "Асуулгын форм",
-      desc: "Хэрэглэгчээс сэтгэгдэл, судалгаа, мэдээллийг харилцан чатлах хэлбэрээр цуглуулна.",
-      icon: FbCard9,
+      title: "Масс мессеж",
+      desc: "Сүүлийн 24 цагийн дотор чатбот руу хандсан нийт хэрэглэгчид рүү зар сурталчилгаа, мэдээ мэдээлэл илгээнэ.",
+      icon: FbCard12,
     },
     {
       title: "Вебформ",
@@ -230,28 +223,33 @@ export const mn = {
       icon: FbCard10,
     },
     {
-      title: "Тайлан харах",
-      desc: "Хэрэглэгчдийн хандалт болон үйлдлийн тайланг он, сар, өдрөөр шүүж харах, мөн эксел файлаар татаж авах боломжтой.",
+      title: "Асуулгын форм",
+      desc: "Хэрэглэгчээс сэтгэгдэл, судалгаа, мэдээллийг харилцан чатлах хэлбэрээр цуглуулна.",
+      icon: FbCard9,
+    },
+    {
+      title: "Тооцоолуур",
+      desc: "Материалын тооцооллын томьёог чатботдоо оруулснаар хэрэглэгчдийнхээ цагийг хэмнэж хэрэгцээт мэдээллийг онлайнаар гаргаж өгнө.",
       icon: FbCard11,
     },
     {
-      title: "Дан систем",
-      desc: "Төрийн цахим үйлчилгээний нэгдсэн систем e-mongolia-гаас тухайн хэрэглэгчийг баталгаажуулснаар дараагийн алхам руу шилжих боломжтой.",
+      title: "Захиалгат зурвас",
+      desc: "Товч дээр дарж мэдээлэл авсан хэрэглэгч рүү тодорхой хугацааны дараа мэдээлэл илгээх боломжтой.",
       icon: FbCard12,
-    },
-    {
-      title: "Hubspot холболт",
-      desc: "Байгууллагуудын дотоод үйл ажиллагаандаа ашигладаг Hubspot болон Google sheet, Google calendar гэх мэт системүүдтэй интеграц хийнэ.",
-      icon: FbCard13,
-    },
-    {
-      title: "Масс мессеж",
-      desc: "Сүүлийн 24 цагийн дотор чатбот руу хандсан нийт хэрэглэгчид рүү зар сурталчилгаа, мэдээ мэдээлэл илгээнэ.",
-      icon: FbCard14,
     },
     {
       title: "Хүргэлтийн систем",
       desc: "Төлбөр төлөгдөж захиалга хийгдмэгц хүргэлтийн компанид мэдээлэл зэрэг очих бөгөөд хүргэлт шуурхай хийгдэх боломжтой.",
+      icon: FbCard13,
+    },
+    {
+      title: "Дан систем",
+      desc: "Төрийн цахим үйлчилгээний нэгдсэн систем e-mongolia-гаас тухайн хэрэглэгчийг баталгаажуулснаар дараагийн алхам руу шилжих боломжтой.",
+      icon: FbCard14,
+    },
+    {
+      title: "Тайлан харах",
+      desc: "Хэрэглэгчдийн хандалт болон үйлдлийн тайланг он, сар, өдрөөр шүүж харах, мөн эксел файлаар татаж авах боломжтой.",
       icon: FbCard15,
     },
     {
@@ -269,6 +267,11 @@ export const mn = {
       desc: "Байгууллагын захиалгаар хөгжүүлэлт хийж, дотооддоо ашигладаг системтэй нь чатботыг холбоно.",
       icon: FbCard18,
     },
+    // {
+    //   title: "Hubspot холболт",
+    //   desc: "Байгууллагуудын дотоод үйл ажиллагаандаа ашигладаг Hubspot болон Google sheet, Google calendar гэх мэт системүүдтэй интеграц хийнэ.",
+    //   icon: FbCard13,
+    // },
   ],
 
   insta_card: [
@@ -443,6 +446,12 @@ export const mn = {
         "Та chatbot.mn рүүгээ анх нэвтэрч байгаа бол бүртгүүлээд, дахин хандаж байгаа бол нэвтрэх дараад орно. Нэг хэрэглэгч 5 бот үнэгүй үүсгэх боломжтой. 1 сарын турш PRO багцаар туршаад, цаашид ҮНЭГҮЙ багц руу автоматаар шилжинэ.",
     },
   ],
+
+  business: "БИЗНЕС БҮРИЙН",
+  business1: "УХААЛАГ ХАМТРАГЧ",
+  businessDesc1: "Бизнес бүрийн ухаалаг хамтрагч Харилцагчийн урсгалаа хялбарчилж, бодит дата дээр суурилсан шийдвэр гарган, хэрэглэгчдэдээ",
+  businessDescBold: "хурдан, найдвартай үйлчилгээ",
+  businessDesc2: "үзүүлэх боломжийг chatbot.mn танд олгоно.",
 
   priceCommentList: [
     {

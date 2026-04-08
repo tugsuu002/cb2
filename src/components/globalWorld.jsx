@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-import world from "../assets/earth_sphere.png";
+import world from "../assets/earth_sphere.webp";
  
 const World = React.lazy(() => import("../ui/globe").then(m => ({ default: m.World })));
  

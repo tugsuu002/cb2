@@ -16,13 +16,11 @@ function Test(props) {
 
   const goRight = () => {
     x === -100 * (props.data.length - 1) ? setX(0) : setX(x - 100);
-    console.log(x);
   };
 
   const handleTouchStart = (e) => {
     const touchDown = e.touches[0].clientX;
     setTouchPosition(touchDown);
-    console.log(e);
   };
 
   const handleTouchMove = (e) => {
@@ -44,7 +42,6 @@ function Test(props) {
   const handleMouseStart = (e) => {
     const touchDown = e.clientX;
     setTouchPosition(touchDown);
-    console.log(e);
   };
 
   const handleMouseMove = (e) => {
@@ -78,7 +75,7 @@ function Test(props) {
             className="flex flex-col justify-center md:flex-row relative min-w-full duration-200 overflow-hidden"
             style={{ transform: `translateX(${x}%)` }}
           >
-            <img src={e.img} className="w-full md:w-[60%] md:max-h-72" />
+            <img loading="lazy" src={e.img} className="w-full md:w-[60%] md:max-h-72" />
             <div className="flex flex-col basis-full p-6 space-y-2 justify-center items-center">
               <p className="">{e.title}</p>
               <p className="">{e.description}</p>

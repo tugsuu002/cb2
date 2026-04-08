@@ -19,7 +19,7 @@ function Contact() {
       <div className="md:w-2/6 w-full mx-6 px-1 h-auto">
         {contact.map((e, i) => (
           <div key={i} className="flex items-start mb-3">
-            <img
+            <img loading="lazy"
               src={e.image}
               alt="icon"
               className="w-[20px] h-[20px] mr-2 mt-[2px]"

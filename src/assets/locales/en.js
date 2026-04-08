@@ -1,14 +1,15 @@
-import location from "../location.png";
-import mail from "../mail.png";
-import phone from "../phone-call.png";
-import cursor from "../cursor.svg";
-import boticon from "../BotIcon.svg";
-import customericon from "../customericon.svg";
-import plus from "../plus.png";
-import oper from "../t.png";
-import mess from "../p.png";
-import cus from "../supplier.png";
-import like from "../lik.png";
+import location from "../location.webp";
+import mail from "../mail.webp";
+import phone from "../phone-call.webp";
+import cursor from "../stastic/cursor.svg";
+import boticon from "../stastic/BotIcon.svg";
+import customericon from "../stastic/customericon.svg";
+import send from "../stastic/send.svg"
+import plus from "../plus.webp";
+import oper from "../t.webp";
+import mess from "../p.webp";
+import cus from "../supplier.webp";
+import like from "../lik.webp";
 import {
   FbCard1,
   FbCard2,
@@ -30,18 +31,18 @@ import {
   FbCard18,
 } from "../svg";
 
-import featuresHome1 from "../featuresHome/1.jpg";
-import featuresHome2 from "../featuresHome/2.jpg";
-import featuresHome3 from "../featuresHome/3.jpg";
-import featuresHome4 from "../featuresHome/4.png";
-import featuresHome5 from "../featuresHome/5.png";
-import featuresHome6 from "../featuresHome/6.jpg";
-import featuresHome7 from "../featuresHome/7.jpg";
-import featuresHome8 from "../featuresHome/8.jpg";
+import featuresHome1 from "../featuresHome/1.webp";
+import featuresHome2 from "../featuresHome/2.webp";
+import featuresHome3 from "../featuresHome/3.webp";
+import featuresHome4 from "../featuresHome/4.webp";
+import featuresHome5 from "../featuresHome/5.webp";
+import featuresHome6 from "../featuresHome/6.webp";
+import featuresHome7 from "../featuresHome/7.webp";
+import featuresHome8 from "../featuresHome/8.webp";
 
-import fbStep1 from "../FbSearch.png";
-import fbStep2 from "../fbPaper.png";
-import fbStep3 from "../fbGallery.png";
+import fbStep1 from "../FbSearch.webp";
+import fbStep2 from "../fbPaper.webp";
+import fbStep3 from "../fbGallery.webp";
 
 export const en = {
   nav: {
@@ -104,42 +105,42 @@ export const en = {
     {
       title: "Calculation",
       desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
-      icon: FbCard8,
+      icon: FbCard11,
     },
     {
       title: "Questionnaire Form",
       desc: "User feedback, survey data, and information are collected through two-way chat interactions.",
-      icon: FbCard9,
+      icon: FbCard10,
     },
     {
       title: "Webform",
       desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system’s dashboard.",
-      icon: FbCard10,
+      icon: FbCard9,
     },
     {
       title: "View Reports",
       desc: "User traffic and activity reports can be filtered by year, month, and day, and downloaded as Excel files.",
-      icon: FbCard11,
+      icon: FbCard8,
     },
     {
       title: "DAN System",
       desc: "Users can proceed to the next step after being verified through the E-Mongolia integrated government e-service system.",
-      icon: FbCard12,
+      icon: FbCard14,
     },
     {
       title: "Hubspot Integration",
       desc: "Integrates with internal systems used by organizations, such as HubSpot, Google Sheets, and Google Calendar.",
-      icon: FbCard13,
+      icon: FbCard15,
     },
     {
       title: "Mass Message",
       desc: "Sends advertisements and announcements to all users who have interacted with the chatbot within the last 24 hours.",
-      icon: FbCard14,
+      icon: FbCard12,
     },
     {
       title: "Delivery System",
       desc: "Automatically sends order details to the delivery company after payment for quick delivery.",
-      icon: FbCard15,
+      icon: FbCard13,
     },
     {
       title: "Account Manager",
@@ -175,6 +176,11 @@ export const en = {
       icon: FbCard3,
     },
     {
+      title: "Interactive Conversations",
+      desc: "Detect keywords from text and send appropriate responses.",
+      icon: FbCard4,
+    },
+    {
       title: "Payment Integration",
       desc: "Accept payments through local payment systems such as QPay, SocialPay, and MonPay.",
       icon: FbCard5,
@@ -184,13 +190,23 @@ export const en = {
       desc: "Gather required contract information from users anywhere and email it to the organization.",
       icon: FbCard6,
     },
+    {
+      title: "Hubspot Integration",
+      desc: "Integrates with internal systems used by organizations, such as HubSpot, Google Sheets, and Google Calendar.",
+      icon: FbCard7,
+    },
+    {
+      title: "Mass Message",
+      desc: "Sends advertisements and announcements to all users who have interacted with the chatbot within the last 24 hours.",
+      icon: FbCard14,
+    },
   ],
 
   highlight: [
     { src: oper, label: "24/7 Automation" },
     { src: mess, label: "Professional development program" },
     { src: cus, label: "Account manager" },
-    { src: like, stepslabel: "User-friendly service" },
+    { src: like, label: "User-friendly service" },
   ],
 
   phoneScreen: "HOW THE SYSTEM WORKS?",
@@ -221,28 +237,28 @@ export const en = {
       id: 0,
       type: "Visitors to Chatbot",
       icon: cursor,
-      count: "10.556.655",
-      plus: null,
+      count: "6676417",
+      plus: plus,
     },
     {
       id: 1,
-      type: "Developed bot",
-      icon: boticon,
-      count: "13.556",
-      plus: null,
-    },
-    {
-      id: 2,
       type: "Businesses and customers",
       icon: customericon,
       count: "600",
       plus: plus,
     },
     {
+      id: 2,
+      type: "Developed bot",
+      icon: boticon,
+      count: "19117",
+      plus: plus,
+    },
+    {
       id: 3,
       type: "Advertising content",
-      icon: boticon,
-      count: "400",
+      icon: send,
+      count: "800000",
       plus: plus,
     },
   ],
@@ -403,6 +419,12 @@ export const en = {
         "In the top right corner of the dashboard, you can click on the plans option. This will allow you to renew your bot or add extra paid services. After making your choice, you'll receive an invoice or can pay directly using a QR code to renew your bot.",
     },
   ],
+  business: "The Smart Partner for",
+  business1: "Every Business",
+  businessDesc1: "The smart partner for every business. Simplify your customer flow, make data-driven decisions, and deliver",
+  businessDescBold: "fast, reliable service",
+  businessDesc2: "to your customers — chatbot.mn makes it all possible.",
+
   productHeader: "EXTRA FEATURES",
   productHeader2: "Advantages",
   button: {
@@ -721,7 +743,7 @@ export const en = {
     address:
       "Ambassador Office, 1st Floor, Room 104, Sukhbaatar District, Ulaanbaatar",
     year: "year",
-    ai: "Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг арга.",
+    ai: "The smartest way to build and scale a modern business using AI.",
   },
 
   input: {

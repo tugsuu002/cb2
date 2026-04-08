@@ -2,9 +2,9 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
 import { useRef, useEffect, useState } from "react";
 import fetchWithTimeout from "../utils/fetchApi";
-import logo from "../assets/chatbot-logo_white.png";
-import english from "../assets/english.png";
-import mongolia from "../assets/mongolia.png";
+import logo from "../assets/chatbot-logo_white.webp";
+import english from "../assets/english.webp";
+import mongolia from "../assets/mongolia.webp";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { useTranslation } from "react-i18next";
@@ -40,7 +40,6 @@ function Navbar() {
         body: {},
       });
 
-      console.log('checkAuth', res);
 
       if (res?.result?.code === 1000) {
         setIsAuthorized(true);
@@ -111,7 +110,7 @@ function Navbar() {
             }}
           className="flex items-center"
         >
-          <img src={logo} alt="logo" className="h-10 md:h-16" />
+          <img loading="lazy" src={logo} alt="logo" className="h-10 md:h-16" />
         </Link>
 
         {/* ===== Desktop Menu ===== */}
@@ -152,7 +151,7 @@ function Navbar() {
             {t("nav.li2")}
           </Link>
 
-          <li className="cursor-pointer">{t("nav.li3")}</li>
+          <a href="https://www.youtube.com/@chatbotmn" target="_blank" rel="noopener noreferrer" className="cursor-pointer">{t("nav.li3")}</a>
         </ul>
 
         {/* ===== Right Side ===== */}
@@ -192,8 +191,9 @@ function Navbar() {
               onClick={() => setOpenLang(!openLang)}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black"
             >
-              <img
+              <img loading="lazy"
                 src={current.flag}
+                alt={current.label}
                 className="w-full h-[21px] rounded-full"
               />
               {current.label}
@@ -207,8 +207,9 @@ function Navbar() {
                     onClick={() => changeLanguage(l.code)}
                     className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100"
                   >
-                    <img
+                    <img loading="lazy"
                       src={l.flag}
+                      alt={l.label}
                       className="w-full h-[21px] rounded-full"
                     />
                     {l.label.toUpperCase()}
@@ -239,6 +240,9 @@ function Navbar() {
             transition={{ duration: 0.6 }}
             className="fixed inset-0 z-40 bg-white pt-24 px-6 mt-20"
           >
+            {/* <Link to="/" onClick={() => { setOpen(false); scrollToTop(); }} className="block mb-6">
+              <img loading="lazy" src={logo} alt="logo" className="h-10 invert" />
+            </Link> */}
             <ul className="space-y-6 text-lg font-medium">
               <li
                 className="flex justify-between"
@@ -260,9 +264,26 @@ function Navbar() {
                 <Link to="/pricing" onClick={() => { setOpen(false); scrollToTop(); }}>{t("nav.li2")}</Link>
               </li>
               <li className="flex justify-between">
-                <Link to="/">{t("nav.li3")}</Link>
+                <a href="https://www.youtube.com/@chatbotmn" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>{t("nav.li3")}</a>
               </li>
             </ul>
+
+            {/* Language Switcher */}
+            <div className="flex items-center gap-3 mt-4">
+              {langs.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => changeLanguage(l.code)}
+                  className={`flex items-center gap-2 px-2 py-2 rounded-full border ${
+                    current.code === l.code
+                      ? "border-black bg-black text-white"
+                      : "border-gray-300 bg-white text-black"
+                  }`}
+                >
+                  <img loading="lazy" src={l.flag} alt={l.label} className="w-5 h-5 rounded-full object-cover" />
+                </button>
+              ))}
+            </div>
 
             <div className="mt-8 space-y-3">
               {!isAuthorized ? (

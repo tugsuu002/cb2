@@ -32,7 +32,7 @@ function FeatureHighlights({ items = [] }) {
             transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
             className="flex items-center gap-4"
           >
-            <img
+            <img loading="lazy"
               src={item.src}
               alt={item.alt || item.label || "feature icon"}
               className="w-[32px] h-[29px]"

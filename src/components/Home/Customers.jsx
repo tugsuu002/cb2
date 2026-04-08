@@ -82,8 +82,8 @@ const Customers = () => {
 
   return (
     <section ref={sectionRef} className="relative">
-      <div className="h-[70vh] md:h-screen flex flex-col items-center justify-center px-4">
-        {/* <img
+      <div className="h-[50vh] md:h-screen flex flex-col-reverse md:flex-col items-center justify-center px-4">
+        {/* <img loading="lazy"
           ref={imgRef}
           src={world}
           alt="Earth globe"
@@ -94,8 +94,8 @@ const Customers = () => {
           onTouchStart={() => (pausedRef.current = true)}
           onTouchEnd={() => (pausedRef.current = false)}
         /> */}
-        <Stastic />
         <Globe />
+        <Stastic />
       </div>
 
       {/* <div
@@ -134,7 +134,7 @@ const Customers = () => {
               <div
                 className="h-[90px] w-[90px] sm:h-[120px] sm:w-[120px] md:h-[150px] md:w-[150px] rounded-full border border-whitesmoke flex items-center justify-center overflow-hidden transition-colors duration-300 hover:border-[#2a51e6]"
               >
-                <img
+                <img loading="lazy"
                   src={logo}
                   alt={`logo-${index}`}
                   className=" max-w-[45px] max-h-[16px] sm:max-w-[65px] sm:max-h-[22px] md:max-w-[95px] md:max-h-[34px] object-contain transition duration-300 filter hover:invert hover:brightness-0"

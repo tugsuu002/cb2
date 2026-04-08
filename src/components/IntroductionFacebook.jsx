@@ -4,7 +4,7 @@ import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
-import topArrow from "../assets/topArrow.png";
+import topArrow from "../assets/topArrow.webp";
 import SpotlightCard from "./SpotlightCard";
 import FeatureHighlights from "./FeatureHighlights";
 
@@ -96,7 +96,7 @@ export default function IntroductionFacebook() {
       "
             >
               {checkList ? "Хаах" : "Дэлгэрэнгүй"}
-              <img
+              <img loading="lazy"
                 src={topArrow}
                 alt="arrow icon"
                 className={`ml-2 transition-transform duration-300 ${

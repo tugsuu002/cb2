@@ -4,10 +4,10 @@ import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
-import oper from "../assets/t.png";
-import mess from "../assets/p.png";
-import cus from "../assets/supplier.png";
-import like from "../assets/lik.png";
+import oper from "../assets/t.webp";
+import mess from "../assets/p.webp";
+import cus from "../assets/supplier.webp";
+import like from "../assets/lik.webp";
 import SpotlightCard from "./SpotlightCard";
 import FeatureHighlights from "./FeatureHighlights";
 
@@ -57,10 +57,10 @@ export default function IntroductionInstagram() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <SpotlightCard
-                    className="rounded-[20px] bg-white h-full gradient-border-instagram transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="rounded-[30px] bg-white h-full gradient-border-instagram transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                     spotlightColor="rgba(255, 214, 0, 0.3) | rgba(233, 0, 151, 0.3) | rgba(118, 56, 250, 0.3)"
                   >
-                    <div key={index} className="rounded-[20px] px-4 py-5">
+                    <div key={index} className="px-4 py-5">
                       <div
                         className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] hover:text-[#0166FF] transition-colors duration-200 "
                       >

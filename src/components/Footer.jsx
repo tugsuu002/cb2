@@ -1,16 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/chatbot-logo_white.png";
-import turshih from "../assets/turshih.png";
+import logo from "../assets/chatbot-logo_white.webp";
+import turshih from "../assets/turshih.webp";
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
-import computer from "../assets/com.png";
+import computer from "../assets/com.webp";
 import Youtube from "../assets/youtube.svg";
 import instagram from "../assets/instagram.svg";
 import facebook from "../assets/facebook.svg";
 import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
-import cbicon from "../assets/BotIcon.svg";
-import arrow from "../assets/arrow.png";
+import cbicon from "../assets/stastic/BotIcon.svg";
+import arrow from "../assets/arrow.webp";
 
 function Footer() {
   const { t } = useTranslation();
@@ -38,7 +38,7 @@ text-center text-white
                 className="flex border-[#484848] w-[185px] h-[48px] gap-2 justify-center justify-items-center text-sm md:text-[17px] font-medium rounded-[40px] bg-gray transition bg-[#FFFFFF] items-center space-x-2 shadow-sm hover:shadow-xl hover:-translate-y-0.5 hover:bg-[#E9F3FF] hover:border-[#5B8DEF] hover:text-[#0B1F44] duration-300 ease-out"
                 onClick={() => navigate("/signup")}
               >
-                <img src={cbicon} alt="chatbot icon" className="w-6 h-6" />
+                <img loading="lazy" src={cbicon} alt="chatbot icon" className="w-6 h-6" />
                 <span className="text-black text-[13px]">
                   {t("button.free")}
                 </span>
@@ -47,13 +47,13 @@ text-center text-white
 
             {/* image */}
             <div className="w-full lg:w-1/2 flex items-stretch justify-center mt-8 lg:mt-0 z-10">
-              <img
+              <img loading="lazy"
                 src={computer}
                 alt="computer illustration"
                 className="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-full object-contain "
               />
             </div>
-            <img
+            <img loading="lazy"
               src={turshih}
               className="w-full h-full absolute top-0 left-0 rounded-[30px]"
             />
@@ -64,7 +64,7 @@ text-center text-white
           <div className="flex flex-col md:flex-row md:space-x-10 space-y-6 md:space-y-0">
             <div className="flex flex-col justify-between h-full">
               <div className="flex items-center gap-2 mb-4">
-                <img src={logo} className="w-40 h-auto -mt-4"/>
+                <img loading="lazy" src={logo} alt="Chatbot logo" className="w-40 h-auto -mt-4"/>
               </div>
               <p className="text-sm text-gray-400 max-w-sm mb-6 mt-[29px]">
                 Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг арга.
@@ -76,7 +76,7 @@ text-center text-white
                   rel="noreferrer"
                   aria-label="Chatbot Facebook"
                 >
-                  <img
+                  <img loading="lazy"
                     src={facebook}
                     alt="facebook"
                     className="cursor-pointer transition duration-400 ease-out hover:[transform:rotateY(180deg)]"
@@ -88,7 +88,7 @@ text-center text-white
                   rel="noreferrer"
                   aria-label="Chatbot Instagram"
                 >
-                  <img
+                  <img loading="lazy"
                     src={instagram}
                     alt="instagram"
                     className="cursor-pointer transition duration-400 ease-out hover:[transform:rotateY(180deg)]"
@@ -100,7 +100,7 @@ text-center text-white
                   rel="noreferrer"
                   aria-label="Chatbot YouTube"
                 >
-                  <img
+                  <img loading="lazy"
                     src={Youtube}
                     alt="youtube"
                     className="cursor-pointer transition duration-400 ease-out hover:[transform:rotateY(180deg)]"
@@ -146,14 +146,14 @@ text-center text-white
                     href="tel:77441616"
                     className="flex items-center bg-[#171C1F] rounded-[20px] p-2 text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[129px] hover:bg-[#1f262a] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                   >
-                    <img src={phone} alt="phone" className="w-4 h-4 ml-[14px] mt-1" />
+                    <img loading="lazy" src={phone} alt="phone" className="w-4 h-4 ml-[14px] mt-1" />
                     <span className="truncate ml-[8px]">7744-1616</span>
                   </a>
                   <a
                     href="mailto:info@example.com?subject=%D0%A1%D0%B0%D0%BD%D0%B0%D0%BB%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%D1%82&body=%D0%A2%D0%B0%D0%BD%D1%8B%20%D0%BD%D1%8D%D1%80:%0A%D0%A5%D0%BE%D0%BB%D0%B1%D0%BE%D0%B3%D0%B4%D0%BE%D1%85%20%D1%83%D1%82%D0%B0%D1%81:%0A%D0%90%D1%81%D1%83%D1%83%D0%B4%D0%B0%D0%BB:%20"
                     className="flex items-center bg-[#171C1F] p-[8px] rounded-[20px] text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[200px] hover:bg-[#1f262a] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                   >
-                    <img src={mail} alt="mail" className="w-4 h-4 ml-[14px] mt-1.5" />
+                    <img loading="lazy" src={mail} alt="mail" className="w-4 h-4 ml-[14px] mt-1.5" />
                     <span className="truncate ml-[8px]">info@example.com</span>
                   </a>
                 </div>
@@ -167,7 +167,7 @@ text-center text-white
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                 >
                   <span>{t("termTitle")}</span>
-                  <img
+                  <img loading="lazy"
                     src={arrow}
                     alt="arrow"
                     className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
@@ -180,7 +180,7 @@ text-center text-white
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                 >
                   <span>{t("privacyTitle")}</span>
-                  <img
+                  <img loading="lazy"
                     src={arrow}
                     alt="arrow"
                     className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
@@ -193,7 +193,7 @@ text-center text-white
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                 >
                   <span>{t("Feedback")}</span>
-                  <img
+                  <img loading="lazy"
                     src={arrow}
                     alt="arrow"
                     className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"

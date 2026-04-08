@@ -21,7 +21,6 @@ const fetchWithTimeout = (url, options, timeout = 10000) => {
 
         if (debug) {
           return res.text().then((text) => {
-            console.log("fetchWithTimeout debug text", text);
             return JSON.parse(text);
           });
         } else {
