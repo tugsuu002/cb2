@@ -52,7 +52,7 @@ export default function Stastic() {
                     <img loading="lazy"
                       src={item.plus}
                       alt="plus"
-                      className="w-[22px] sm:w-[28px] h-[40px] sm:h-[50px] object-contain"
+                      className="w-[15px] sm:w-[20px] h-[30px] sm:h-[50px] ml-2 object-contain"
                     />
                   )}
                 </div>
