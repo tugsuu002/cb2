@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import bg1 from "../../assets/bg1.webp";
-import bg2 from "../../assets/bg2.webp";
-import bg3 from "../../assets/bg3.webp";
-import bg4 from "../../assets/bg4.webp";
-import bg5 from "../../assets/bg5.webp";
 
-const Hero = () => {
-  const slides = [bg1, bg2, bg3, bg4, bg5];
+const Hero = ({ slides = [] }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => {
       setIndex(prev => (prev + 1) % slides.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(id);
   }, [slides.length]);
 

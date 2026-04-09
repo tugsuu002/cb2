@@ -365,7 +365,7 @@ export const en = {
     {
       label: "Payment Integration",
       sub: "Qpay SocialPay Monpay",
-      values: [false, true, false],
+      values: [false, true, true],
     },
     { label: "Mass Messaging", sub: null, values: [true, true, true] },
     {
@@ -378,15 +378,15 @@ export const en = {
       sub: null,
       values: ["Unlimited", "Unlimited", "Unlimited"],
     },
-    { label: "HTML Field", sub: null, values: [true, true, true] },
-    { label: "Custom Messages", sub: null, values: [false, true, false] },
+    { label: "HTML Field", sub: null, values: [false, true, true] },
+    { label: "Custom Messages", sub: null, values: [false, true, true] },
     { label: "Online Store", sub: null, values: [false, true, true] },
-    { label: "Comment Management", sub: null, values: [true, true, true] },
-    { label: "Live agent", sub: null, values: [true, true, true] },
-    { label: "Online Contract", sub: null, values: [true, true, true] },
-    { label: "Calculation", sub: null, values: [true, true, true] },
-    { label: "DAN System Integration", sub: null, values: [true, true, true] },
-    { label: "System Integration", sub: null, values: [true, true, true] },
+    { label: "Comment Management", sub: null, values: [false, true, true] },
+    { label: "Live agent", sub: null, values: [false, true, true] },
+    { label: "Online Contract", sub: null, values: [false, true, true] },
+    { label: "Calculation", sub: null, values: [false, true, true] },
+    { label: "DAN System Integration", sub: null, values: [false, true, true] },
+    { label: "System Integration", sub: null, values: [false, true, true] },
   ],
 
   priceCTA:
@@ -743,7 +743,7 @@ export const en = {
     address:
       "Ambassador Office, 1st Floor, Room 104, Sukhbaatar District, Ulaanbaatar",
     year: "year",
-    ai: "The smartest way to build and scale a modern business using AI.",
+    company: "© Chatbot LLC",
   },
 
   input: {

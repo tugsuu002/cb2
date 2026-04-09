@@ -11,6 +11,8 @@ import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
 import cbicon from "../assets/stastic/BotIcon.svg";
 import arrow from "../assets/arrow.webp";
+import vnuhtsulPdf from "../assets/pdf/vnuhtsul.pdf";
+import privacyPdf from "../assets/pdf/Нууцлалын бодлого.pdf";
 
 function Footer() {
   const { t } = useTranslation();
@@ -66,9 +68,6 @@ text-center text-white
               <div className="flex items-center gap-2 mb-4">
                 <img loading="lazy" src={logo} alt="Chatbot logo" className="w-40 h-auto -mt-4"/>
               </div>
-              <p className="text-sm text-gray-400 max-w-sm mb-6 mt-[29px]">
-                Орчин үеийн бизнесийг AI-аар бүтээх, түгээх хамгийн ухаалаг арга.
-              </p>
               <div className="flex gap-4 mt-6 lg:mt-0 lg:justify-start">
                 <a
                   href="https://www.facebook.com/Chatbot.mn"
@@ -150,11 +149,11 @@ text-center text-white
                     <span className="truncate ml-[8px]">7744-1616</span>
                   </a>
                   <a
-                    href="mailto:info@example.com?subject=%D0%A1%D0%B0%D0%BD%D0%B0%D0%BB%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%D1%82&body=%D0%A2%D0%B0%D0%BD%D1%8B%20%D0%BD%D1%8D%D1%80:%0A%D0%A5%D0%BE%D0%BB%D0%B1%D0%BE%D0%B3%D0%B4%D0%BE%D1%85%20%D1%83%D1%82%D0%B0%D1%81:%0A%D0%90%D1%81%D1%83%D1%83%D0%B4%D0%B0%D0%BB:%20"
+                    href="mailto:info@chatbot.mn?subject=%D0%A1%D0%B0%D0%BD%D0%B0%D0%BB%20%D1%85%D2%AF%D1%81%D1%8D%D0%BB%D1%82&body=%D0%A2%D0%B0%D0%BD%D1%8B%20%D0%BD%D1%8D%D1%80:%0A%D0%A5%D0%BE%D0%BB%D0%B1%D0%BE%D0%B3%D0%B4%D0%BE%D1%85%20%D1%83%D1%82%D0%B0%D1%81:%0A%D0%90%D1%81%D1%83%D1%83%D0%B4%D0%B0%D0%BB:%20"
                     className="flex items-center bg-[#171C1F] p-[8px] rounded-[20px] text-[#FFFFFF] text-[16px] font-pro font-medium w-full md:w-[200px] hover:bg-[#1f262a] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                   >
                     <img loading="lazy" src={mail} alt="mail" className="w-4 h-4 ml-[14px] mt-1.5" />
-                    <span className="truncate ml-[8px]">info@example.com</span>
+                    <span className="truncate ml-[8px]">info@chatbot.mn</span>
                   </a>
                 </div>
               </div>
@@ -162,8 +161,10 @@ text-center text-white
 
             <div>
               <div>
-                <Link
-                  to="/terms"
+                <a
+                  href={vnuhtsulPdf}
+                  target="_blank"
+                  rel="noreferrer"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                 >
                   <span>{t("termTitle")}</span>
@@ -172,11 +173,13 @@ text-center text-white
                     alt="arrow"
                     className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
                   />
-                </Link>
+                </a>
               </div>
               <div className="mt-3">
-                <Link
-                  to="/privacy"
+                <a
+                  href={privacyPdf}
+                  target="_blank"
+                  rel="noreferrer"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                 >
                   <span>{t("privacyTitle")}</span>
@@ -185,11 +188,11 @@ text-center text-white
                     alt="arrow"
                     className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
                   />
-                </Link>
+                </a>
               </div>
               <div className="mt-3">
-                <Link
-                  to="/privacy"
+                <a
+                  href="mailto:info@chatbot.mn"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
                 >
                   <span>{t("Feedback")}</span>
@@ -198,7 +201,7 @@ text-center text-white
                     alt="arrow"
                     className="w-4 h-4 md:w-[7px] md:h-[15px] ml-2"
                   />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -217,7 +220,7 @@ text-center text-white
 
               <div className="flex-1 text-center sm:text-right">
                 <p className="cursor-pointer font-pro font-normal text-[16px] text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
-                  © Chatbot XXK {new Date().getFullYear()}
+                  {t("footer.company")}
                 </p>
               </div>
             </div>

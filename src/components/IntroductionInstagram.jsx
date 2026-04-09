@@ -2,6 +2,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
+import bg1 from "../assets/bg1.webp";
+import bg2 from "../assets/bg2.webp";
+import bg3 from "../assets/bg3.webp";
+import bg4 from "../assets/bg4.webp";
+import bg5 from "../assets/bg5.webp";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
 import oper from "../assets/t.webp";
@@ -17,7 +22,7 @@ export default function IntroductionInstagram() {
   const highlight = t("highlight", { returnObjects: true });
   return (
     <>
-      <Hero />
+      <Hero slides={[bg1, bg2, bg4,]} />
       <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
         <motion.p
           initial={{ opacity: 0, y: 30 }}
