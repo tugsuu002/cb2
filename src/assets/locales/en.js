@@ -365,7 +365,7 @@ export const en = {
     {
       label: "Payment Integration",
       sub: "Qpay SocialPay Monpay",
-      values: [false, true, true],
+      values: [true, true, true],
     },
     { label: "Mass Messaging", sub: null, values: [true, true, true] },
     {
@@ -386,7 +386,7 @@ export const en = {
     { label: "Online Contract", sub: null, values: [false, true, true] },
     { label: "Calculation", sub: null, values: [false, true, true] },
     { label: "DAN System Integration", sub: null, values: [false, true, true] },
-    { label: "System Integration", sub: null, values: [false, true, true] },
+    { label: "System Integration", sub: null, values: [false, false, true] },
   ],
 
   priceCTA:

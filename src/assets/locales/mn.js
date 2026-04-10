@@ -350,14 +350,14 @@ export const mn = {
       name: "Pro",
       price: "300,000₮",
       description:
-        "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон ав",
+        "Өөрийн бизнесийн онцлогт тохируулан хүссэн цэсээ нэмэлтээр сонгон авах",
       highlight: false,
     },
     {
       id: 1,
       name: "Enterprise",
       price: "900,000₮",
-      description: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашигла",
+      description: "Чатботын бүх боломж чадварыг хязгааргүйгээр ашиглах боломжтой",
       highlight: true,
     },
     {
@@ -365,7 +365,7 @@ export const mn = {
       name: "VIP",
       price: "Тусгай үнэ",
       description:
-        "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлэх боломжтой",
+        "Үйл ажиллагаандаа ашигладаг системүүдтэй холболт хийлгэж хөгжүүлүүлээрэй",
       highlight: false,
     },
   ],
@@ -388,7 +388,7 @@ export const mn = {
     {
       label: "Төлбөрийн холболт",
       sub: "Qpay SocialPay Monpay",
-      values: [true, true, false],
+      values: [true, true, true],
     },
     { label: "Масс мессеж", sub: null, values: [true, true, true] },
     {
@@ -409,7 +409,7 @@ export const mn = {
     { label: "Онлайн гэрээ", sub: null, values: [false, true, true] },
     { label: "Тооцоолуур", sub: null, values: [false, true, true] },
     { label: "ДАН систем", sub: null, values: [false, true, true] },
-    { label: "Систем холболт", sub: null, values: [false, true, true] },
+    { label: "Систем холболт", sub: null, values: [false, false, true] },
   ],
 
   priceCTA:
@@ -816,8 +816,7 @@ export const mn = {
     row11: "Гарын авлага",
     row12: "Темплейт",
     copyright: "Бүх эрх хуулиар хамгаалагдсан",
-    address:
-      "Монгол улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, Амбассадор \nоффисс, 1-р давхар, 104 тоот",
+    address: "Монгол улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, Амбассадор \nоффис, 1 давхар, 104 тоот",
     year: "он",
     company: "© Чатбот ХХК",
   },

@@ -34,7 +34,7 @@ export default function HeroSection() {
               ))}
             </div>
             <p
-              className={`mt-4 text-gray-400 max-w-lg transition-all duration-700 font-pro font-normal leading-[21px] tracking-[-0.02em] text-center lowercase
+              className={`mt-4 text-gray-400 max-w-lg transition-all duration-700 font-pro font-normal leading-[21px] tracking-[-0.02em] text-center
                 ${active ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: "420ms" }}
             >

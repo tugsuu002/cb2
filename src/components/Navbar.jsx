@@ -194,7 +194,7 @@ function Navbar() {
               <img loading="lazy"
                 src={current.flag}
                 alt={current.label}
-                className="w-full h-[21px] rounded-full"
+                className="w-5 h-5 rounded-full object-cover"
               />
               {current.label}
             </button>
@@ -210,7 +210,7 @@ function Navbar() {
                     <img loading="lazy"
                       src={l.flag}
                       alt={l.label}
-                      className="w-full h-[21px] rounded-full"
+                      className="w-5 h-5 rounded-full object-cover"
                     />
                     {l.label.toUpperCase()}
                   </button>

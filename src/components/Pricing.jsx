@@ -18,12 +18,19 @@ const Check = ({select}) => {
     </span>;
 };
 
-// const truncateText = (text = "", max = 140) =>
-//   text.length > max ? `${text.slice(0, max)}...` : text;
-
+const Minus = ({select}) => {
+  return select ? 
+  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-white text-[#608DFF] text-[10px]">
+    ✕
+    </span>
+    :
+    <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#A3AED0] text-white text-[10px]">
+    ✕
+    </span>;
+};
+                  
 export default function PricingTable() {
   const { t } = useTranslation();
-  // const priceCommentList = t("priceCommentList", { returnObjects: true })
   const features = t("features", { returnObjects: true })
   const plans = t("price", { returnObjects: true })
   const [visibleSections, setVisibleSections] = useState(new Set());
@@ -137,11 +144,7 @@ export default function PricingTable() {
                 className={`px-4 py-3 font-pro font-normal border-b border-[#A3AED066] flex justify-center items-center gap-2 text-sm ${plan.highlight ? "bg-[#608DFF] text-white" : "bg-[#FFFFFF] text-[#A3AED0]"} flex`}
               >
                 {f.values[colIndex] === true && <Check select={plan.highlight}/>}
-                {f.values[colIndex] === false && (
-                  <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#A3AED0] text-white text-[10px]">
-                      ✕
-                  </span>
-                )}
+                {f.values[colIndex] === false && ( <Minus select={plan.highlight}/>)}
                 {typeof f.values[colIndex] === "string" && (
                   <span className={plan.highlight ? "text-white" : "text-[#A3AED0]"}>
                     {f.values[colIndex]}
