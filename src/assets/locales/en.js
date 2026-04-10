@@ -171,34 +171,34 @@ export const en = {
       icon: FbCard2,
     },
     {
-      title: "Comment Reply",
-      desc: "Automatically reply to comments on Facebook Page posts and send detailed information via chat.",
-      icon: FbCard3,
+      title: "Webform",
+      desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system’s dashboard.",
+      icon: FbCard10,
     },
-    {
-      title: "Interactive Conversations",
-      desc: "Detect keywords from text and send appropriate responses.",
-      icon: FbCard4,
-    },
-    {
+        {
       title: "Payment Integration",
       desc: "Accept payments through local payment systems such as QPay, SocialPay, and MonPay.",
       icon: FbCard5,
     },
     {
-      title: "Online Contract",
-      desc: "Gather required contract information from users anywhere and email it to the organization.",
-      icon: FbCard6,
+      title: "User system",
+      desc: "Manage user access and permissions for bot system users.",
+      icon: FbCard17,
     },
     {
-      title: "Hubspot Integration",
-      desc: "Integrates with internal systems used by organizations, such as HubSpot, Google Sheets, and Google Calendar.",
+      title: "Account manager",
+      desc: "A dedicated account manager is assigned from the start of the contract and provides continuous support and communication.",
+      icon: FbCard16,
+    },
+    {
+      title: "Comment Reply",
+      desc: "Automatically reply to comments on Facebook Page posts and send detailed information via chat",
+      icon: FbCard3,
+    },
+    {
+      title: "Card",
+      desc: "In the information section, you can add up to 10 cards to showcase your content with both images and text.",
       icon: FbCard7,
-    },
-    {
-      title: "Mass Message",
-      desc: "Sends advertisements and announcements to all users who have interacted with the chatbot within the last 24 hours.",
-      icon: FbCard14,
     },
   ],
 

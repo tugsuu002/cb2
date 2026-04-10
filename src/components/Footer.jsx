@@ -11,7 +11,7 @@ import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
 import cbicon from "../assets/stastic/BotIcon.svg";
 import arrow from "../assets/arrow.webp";
-import vnuhtsulPdf from "../assets/pdf/vnuhtsul.pdf";
+import vnuhtsulPdf from "../assets/pdf/Үйлчилгээний нөхцөл.pdf";
 import privacyPdf from "../assets/pdf/Нууцлалын бодлого.pdf";
 
 function Footer() {
