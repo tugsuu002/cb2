@@ -371,6 +371,25 @@ export const mn = {
   ],
   priceMonth: "1 сар",
   PriceAdd: "Нэмэлт цэс авах",
+  addOnTitle: "Нэмэлт цэсүүд",
+  addOnDesc: "Pro багцтай хамт нэмэлт үйлчилгээнүүдийг сонгон авах боломжтой.",
+
+  addOnList: [
+    { name: "Онлайн дэлгүүр", price: 100000, select: false },
+    { name: "Коммент тохиргоо", price: 100000, select: false },
+    { name: "Live agent", price: 100000, select: false },
+    { name: "Онлайн гэрээ", price: 66000, select: false },
+    { name: "Тооцоолуур", price: 100000, select: false },
+    { name: "ДАН систем", price: 100000, select: false },
+  ],
+  
+  
+  addOnContact: "Зөвлөгөө авах",
+  addOnBase: "Үндсэн үнэ (Pro):",
+  addOnExtra: "Нэмэлт цэсүүд:",
+  addOnTotal: "Нийт дүн:",
+  addOnNegotiate: "Үнэ тохиролцоно",
+  addOnNote: "Зарим үйлчилгээний үнэ тохиролцоноор тодорхойлогдоно",
   priceTitle2: "Суурь боломж",
 
   features: [
@@ -401,7 +420,7 @@ export const mn = {
       sub: null,
       values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
     },
-    { label: "HTML тайбар", sub: null, values: [false, true, true] },
+    { label: "HTML талбар", sub: null, values: [true, true, true] },
     { label: "Захиалгат зурвас", sub: null, values: [false, true, true] },
     { label: "Онлайн дэлгүүр", sub: null, values: [false, true, true] },
     { label: "Коммент тохиргоо", sub: null, values: [false, true, true] },

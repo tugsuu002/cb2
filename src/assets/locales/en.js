@@ -344,6 +344,22 @@ export const en = {
   ],
   priceMonth: "1 month",
   PriceAdd: "Add on",
+  addOnTitle: "Add-on Services",
+  addOnDesc: "You can select additional services along with the Pro plan.",
+  addOnList: [
+    { name: "Online Store", price: 100000, select: false },
+    { name: "Comment Setup", price: 100000, select: false },
+    { name: "Live Agent", price: 100000, select: false },
+    { name: "Online Contract", price: 66000, select: false },
+    { name: "Calculator", price: 100000, select: false },
+    { name: "DAN System", price: 100000, select: false },
+  ],
+  addOnContact: "Get Consultation",
+  addOnBase: "Base price (Pro):",
+  addOnExtra: "Add-ons:",
+  addOnTotal: "Total:",
+  addOnNegotiate: "Price on request",
+  addOnNote: "Some service prices are determined by negotiation",
   priceTitle2: "Core Features",
 
   features: [
