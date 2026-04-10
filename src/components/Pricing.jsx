@@ -90,7 +90,7 @@ export default function PricingTable() {
             <div className={`flex justify-start items-baseline mt-6 space-x-2 ${plan?.name == 'Enterprise'&& "text-white" }`}>
               <div className="text-[23px] md:text-[26px] font-pro font-medium">{plan.price}</div>
               {plan?.name === 'Pro' && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-centerteceenter gap-2">
                   <p className="text-[#A3AED0]">/{t("priceMonth")}</p>
                   <span className="text-[10px] bg-[#608DFF] rounded-full text-white px-2 py-0.5 whitespace-nowrap">
                     *{t("PriceAdd")}

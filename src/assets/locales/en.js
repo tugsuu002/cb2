@@ -4,7 +4,7 @@ import phone from "../phone-call.webp";
 import cursor from "../stastic/cursor.svg";
 import boticon from "../stastic/BotIcon.svg";
 import customericon from "../stastic/customericon.svg";
-import send from "../stastic/send.svg"
+import send from "../stastic/send.svg";
 import plus from "../plus.webp";
 import oper from "../t.webp";
 import mess from "../p.webp";
@@ -68,93 +68,93 @@ export const en = {
 
   fb_card: [
     {
-      title: "Information Setup",
-      desc: "Share information in multiple formats including images, text, videos, files, and links.",
+      title: "Content Management",
+      desc: "Allows you to publish various types of content such as text, images, videos, files, and links.",
       icon: FbCard1,
     },
     {
-      title: "Online Shop",
-      desc: "Display products by category, announce discounts, add items to cart, provide detailed information, and create collections.",
+      title: "Online Store",
+      desc: "Display products with categories, discounts, collections, and detailed info, with integrated payments.",
       icon: FbCard2,
     },
     {
       title: "Comment Reply",
-      desc: "Automatically reply to comments on Facebook Page posts and send detailed information via chat.",
+      desc: "Automatically reply to comments on Facebook page posts and send detailed info via chat.",
       icon: FbCard3,
     },
     {
-      title: "Interactive Conversations",
-      desc: "Detect keywords from text and send appropriate responses.",
+      title: "Conversation Automation",
+      desc: "Detects keywords from user messages and sends appropriate automated responses.",
       icon: FbCard4,
     },
     {
       title: "Payment Integration",
-      desc: "Accept payments through local payment systems such as QPay, SocialPay, and MonPay.",
+      desc: "Accept payments using local systems like QPay, SocialPay, and MonPay.",
       icon: FbCard5,
     },
     {
       title: "Online Contract",
-      desc: "Gather required contract information from users anywhere and email it to the organization.",
+      desc: "Collect required information from users and generate contracts sent via email.",
       icon: FbCard6,
     },
     {
-      title: "Custom Message",
-      desc: "Automatically deliver follow-up messages to users after a set time based on button clicks.",
+      title: "Integrations",
+      desc: "Connect with systems like HubSpot, Google Sheets, and Google Calendar.",
       icon: FbCard7,
     },
     {
-      title: "Calculation",
-      desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
-      icon: FbCard11,
-    },
-    {
-      title: "Questionnaire Form",
-      desc: "User feedback, survey data, and information are collected through two-way chat interactions.",
-      icon: FbCard10,
-    },
-    {
-      title: "Webform",
-      desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system’s dashboard.",
-      icon: FbCard9,
-    },
-    {
-      title: "View Reports",
-      desc: "User traffic and activity reports can be filtered by year, month, and day, and downloaded as Excel files.",
-      icon: FbCard8,
-    },
-    {
-      title: "DAN System",
-      desc: "Users can proceed to the next step after being verified through the E-Mongolia integrated government e-service system.",
-      icon: FbCard14,
-    },
-    {
-      title: "Hubspot Integration",
-      desc: "Integrates with internal systems used by organizations, such as HubSpot, Google Sheets, and Google Calendar.",
-      icon: FbCard15,
-    },
-    {
-      title: "Mass Message",
-      desc: "Sends advertisements and announcements to all users who have interacted with the chatbot within the last 24 hours.",
+      title: "Mass Messaging",
+      desc: "Send messages to users who interacted with the chatbot within the last 24 hours.",
       icon: FbCard12,
     },
     {
-      title: "Delivery System",
-      desc: "Automatically sends order details to the delivery company after payment for quick delivery.",
+      title: "Web Form",
+      desc: "Create popup forms to collect user input and view responses from the dashboard.",
+      icon: FbCard10,
+    },
+    {
+      title: "Survey Form",
+      desc: "Collect feedback, surveys, and data from users through interactive chat.",
+      icon: FbCard9,
+    },
+    {
+      title: "Calculator",
+      desc: "Apply formulas in the chatbot to provide users with calculated results online.",
+      icon: FbCard11,
+    },
+    {
+      title: "Scheduled Message",
+      desc: "Send follow-up messages to users after a certain time based on button interactions.",
+      icon: FbCard12,
+    },
+    {
+      title: "Delivery Service",
+      desc: "Automatically send order details to delivery services once payment is confirmed.",
       icon: FbCard13,
     },
     {
-      title: "Account Manager",
-      desc: "A dedicated account manager is assigned from the start of the contract and provides continuous support and communication.",
+      title: "DAN System",
+      desc: "Verify users through the integrated e-Mongolia digital service system.",
+      icon: FbCard14,
+    },
+    {
+      title: "Analytics",
+      desc: "View user activity reports by date and export data as Excel files.",
+      icon: FbCard15,
+    },
+    {
+      title: "Dedicated Manager",
+      desc: "A dedicated manager is assigned after contract signing for ongoing support.",
       icon: FbCard16,
     },
     {
-      title: "User System",
-      desc: "Manage user access and permissions for bot system users.",
+      title: "User Management",
+      desc: "Manage system user access and permissions for chatbot administration.",
       icon: FbCard17,
     },
     {
       title: "System Integration",
-      desc: "Provides custom development upon request and connects the chatbot with the organization’s internal systems.",
+      desc: "Custom development to integrate the chatbot with your internal systems.",
       icon: FbCard18,
     },
   ],
@@ -175,24 +175,24 @@ export const en = {
       desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system’s dashboard.",
       icon: FbCard10,
     },
-        {
+    {
       title: "Payment Integration",
       desc: "Accept payments through local payment systems such as QPay, SocialPay, and MonPay.",
       icon: FbCard5,
     },
     {
-      title: "User system",
-      desc: "Manage user access and permissions for bot system users.",
+      title: "User Management",
+      desc: "Manage system user access and permissions for chatbot administration.",
       icon: FbCard17,
     },
     {
-      title: "Account manager",
-      desc: "A dedicated account manager is assigned from the start of the contract and provides continuous support and communication.",
+      title: "Dedicated Manager",
+      desc: "A dedicated manager is assigned after contract signing for ongoing support.",
       icon: FbCard16,
     },
     {
       title: "Comment Reply",
-      desc: "Automatically reply to comments on Facebook Page posts and send detailed information via chat",
+      desc: "Automatically reply to comments on Facebook page posts and send detailed info via chat.",
       icon: FbCard3,
     },
     {
@@ -421,7 +421,8 @@ export const en = {
   ],
   business: "The Smart Partner for",
   business1: "Every Business",
-  businessDesc1: "The smart partner for every business. Simplify your customer flow, make data-driven decisions, and deliver",
+  businessDesc1:
+    "The smart partner for every business. Simplify your customer flow, make data-driven decisions, and deliver",
   businessDescBold: "fast, reliable service",
   businessDesc2: "to your customers — chatbot.mn makes it all possible.",
 

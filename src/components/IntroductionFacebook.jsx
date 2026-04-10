@@ -2,11 +2,7 @@ import { useState, isValidElement } from "react";
 import { motion } from "framer-motion";
 import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
-import bg1 from "../assets/bg1.webp";
-import bg2 from "../assets/bg2.webp";
 import bg3 from "../assets/bg3.webp";
-import bg4 from "../assets/bg4.webp";
-import bg5 from "../assets/bg5.webp";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
 import topArrow from "../assets/topArrow.webp";
@@ -48,7 +44,7 @@ export default function IntroductionFacebook() {
           transition={{ duration: 0.7 }}
           className="bg-[#EDF2FB]/80 p-6 sm:p-[50px] lg:p-[75px] rounded-[40px] mb-20 shadow-inner"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[41px]">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[30px]">
             {fbCardList.map((item, index) => {
               if (!checkList && index > 7) return null;
               // const cardIcon = renderIcon(item?.icon);
