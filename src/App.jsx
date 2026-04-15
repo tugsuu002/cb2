@@ -16,6 +16,7 @@ const Pricing = lazy(() => import("./components/Pricing"));
 const Terms = lazy(() => import("./components/Terms.jsx"));
 const Privacy = lazy(() => import("./components/Privacy.jsx"));
 const Restore = lazy(() => import("./components/Restore.jsx"));
+const AboutUs = lazy(() => import("./components/AboutUs.jsx"));
 
 /* ✅ Scroll wrapper */
 const Wrapper = ({ children }) => {
@@ -48,6 +49,7 @@ function App() {
             <Route path="pricing" element={<Pricing />} />
             <Route path="terms" element={<Terms />} />
             <Route path="privacy" element={<Privacy />} />
+            <Route path="about" element={<AboutUs />} />
           </Route>
 
           <Route path="signin" element={<Signin />} />

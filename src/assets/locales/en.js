@@ -10,6 +10,7 @@ import oper from "../t.webp";
 import mess from "../p.webp";
 import cus from "../supplier.webp";
 import like from "../lik.webp";
+import about1 from "../about/about1.png";
 import {
   FbCard1,
   FbCard2,
@@ -29,6 +30,9 @@ import {
   FbCard16,
   FbCard17,
   FbCard18,
+  divIcon,
+  storeIcon,
+  devlopIcon,
 } from "../svg";
 
 import featuresHome1 from "../featuresHome/1.webp";
@@ -435,7 +439,60 @@ export const en = {
         "In the top right corner of the dashboard, you can click on the plans option. This will allow you to renew your bot or add extra paid services. After making your choice, you'll receive an invoice or can pay directly using a QR code to renew your bot.",
     },
   ],
-  business: "The Smart Partner for",
+
+
+  business: "EVERY BUSINESS",
+  aboutStatAuto: "Automated chatbot systems",
+  aboutTeamTitle: "Our Team",
+
+  poweredByAI: "Powered by AI",
+  poweredByAIDesc: "AI-driven solutions tailored to your business needs and target audience, creating optimal interactions automatically.",
+  
+
+ aboutSections: [
+  {
+    type: "tag",
+    icon: about1,
+    title: "AI-Powered Next-Generation Chatbot",
+  },
+  {
+    type: "content",
+    dotIcon: divIcon,
+    tag: "In the field of information and technology, since 2019, we have been continuously developing our Chatbot platform.",
+  },
+  {
+    type: "stat",
+    icon: about1,
+    title: "600+",
+    tag: "Active Growth",
+    desc: "Automated chatbot systems",
+  },
+  {
+    type: "connected",
+    dotIcon: storeIcon,
+    title: "Connected Solutions",
+    desc: "We continuously improve our services to meet customer needs, aiming to create more efficient and user-friendly experiences.",
+  },
+  {
+    type: "shop",
+    tag: "Update",
+    title: "STORE 2.0",
+    desc: "A comprehensive solution to manage all social channel communications in one place.",
+  },
+  {
+    type: "Collaboration",
+    dotIcon: devlopIcon,
+    title: "Collaboration",
+    desc: "We continue to introduce new technological opportunities to businesses by automating daily customer service for over 3,500 public and private sector organizations.",
+  },
+  {
+    type: "message",
+    tag: "New Feature",
+    title: "Messenger and Instagram Bot",
+    desc: "A comprehensive solution to manage all social channel communications in one place.",
+  },
+],
+
   business1: "Every Business",
   businessDesc1:
     "The smart partner for every business. Simplify your customer flow, make data-driven decisions, and deliver",

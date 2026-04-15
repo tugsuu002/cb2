@@ -324,13 +324,6 @@ export default function PricingTable() {
                 )}
               </div>
             )}
-            {/* <a
-              href="#faq"
-              onClick={() => setShowAddOnModal(false)}
-              className="block w-full text-center bg-[#608DFF] hover:bg-[#4a6fd4] transition-colors text-white font-pro font-medium py-3 rounded-xl"
-            >
-              {t("addOnContact")}
-            </a> */}
           </div>
         </div>
       )}

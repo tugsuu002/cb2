@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
+import banner1 from "../assets/banner/banner1.png";
+import banner2 from "../assets/banner/banner2.png";
 
-export default function SwiperCustom (){
+export default function SwiperCustom() {
+  const bannerArray = [banner1, banner2];
   return (
     <div className="relative overflow-hidden rounded-2xl shadow-xl hidden md:flex flex-col m-3">
       <Swiper
@@ -15,30 +17,17 @@ export default function SwiperCustom (){
         modules={[Pagination, Autoplay]}
         className="w-full h-full"
       >
-        <SwiperSlide>
-          <img loading="lazy"
-            src="https://picsum.photos/900/1200?1"
-            alt="slide1"
-            className="w-full h-full object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img loading="lazy"
-            src="https://picsum.photos/900/1200?2"
-            alt="slide2"
-            className="w-full h-full object-cover"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img loading="lazy"
-            src="https://picsum.photos/900/1200?3"
-            alt="slide3"
-            className="w-full h-full object-cover"
-          />
-        </SwiperSlide>
+        {bannerArray.map((banner, index) => (
+          <SwiperSlide key={banner}>
+            <img
+              loading="lazy"
+              src={banner}
+              alt={`slide${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
 };
-
-// export default SwiperCustom;

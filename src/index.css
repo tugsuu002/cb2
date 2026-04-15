@@ -23,13 +23,16 @@
   font-display: swap;
 }
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   @apply leading-[normal] m-0;
+   font-family: 'TT Hoves Pro', sans-serif;
 }
+
 
 @layer base {
 

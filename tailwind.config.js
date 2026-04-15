@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["TT Hoves", "system-ui", "sans-serif"],
-        pro: ["TT Hoves Pro", "sans-serif"],
+        sans: ["TT Hoves"],
+        pro: ["TT Hoves Pro"],
       },
       colors: {
         customBlue: "#031555",

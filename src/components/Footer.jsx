@@ -108,14 +108,16 @@ text-center text-white
               </div>
             </div>
 
-            <div className="w-96 justify-end flex">
+            <div className="w-96 md:justify-end flex">
               <div>
               <h4 className="text-white font-pro font-semibold">
                 {t("footer.col1")}
               </h4>
               <ul className="mt-[29px] space-y-3 text-transparent bg-clip-text bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF] drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]">
                 <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px] hover:underline ">
-                  {t("footer.row1")}
+                  <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    {t("footer.row1")}
+                  </Link>
                 </li>
                 <li className="hover:text-white cursor-pointer font-pro font-normal text-[16px] hover:underline">
                   <HashLink smooth to="/pricing#faq">
