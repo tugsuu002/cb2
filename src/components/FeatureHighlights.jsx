@@ -18,7 +18,7 @@ function FeatureHighlights({ items = [] }) {
         md:justify-center
         md:text-left
         gap-6 md:gap-10
-        mt-8 my-20 w-full
+        mb-10 w-full
       "
     >
       <div className="absolute inset-y-0 left-1/2 w-px bg-gray-200 md:hidden" />
@@ -37,7 +37,7 @@ function FeatureHighlights({ items = [] }) {
               alt={item.alt || item.label || "feature icon"}
               className="w-[32px] h-[29px]"
             />
-            <p className="text-sm">{item.label}</p>
+            <p className="font-pro font-medium">{item.label}</p>
           </motion.div>
 
           {index < items.length - 1 && (

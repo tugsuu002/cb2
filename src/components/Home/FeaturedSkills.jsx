@@ -7,11 +7,11 @@ export default function FeaturedSkills() {
   const bars = Array.from({ length: 10 });
   return (
     <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
-      <h2 className="text-[40px] md:text-[55px] font-pro font-semibold text-center mb-8 sm:mb-12">
+      <h2 className="text-[40px] md:text-[55px] font-pro font-semibold text-center mb-8 sm:mb-12 text-[#000000]">
         {t("featuresTitle")}
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[41px]">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[22px]">
         {stasticList.map((item, index) => (
           <div
             key={index}
@@ -20,7 +20,7 @@ export default function FeaturedSkills() {
             <div className="h-20 sm:h-36 rounded-t-lg sm:rounded-t-xl bg-indigo-300/70 mb-3 sm:mb-5 overflow-hidden">
               <img loading="lazy" src={item?.img} alt={item?.title || 'feature'} className="w-full h-full object-cover" />
             </div>
-            <h3 className="font-pro font-medium text-sm sm:text-[20px] mb-1 sm:mb-2 px-4 text-black">
+            <h3 className="font-pro font-semibold text-sm sm:text-[20px] mb-1 sm:mb-2 px-4 text-black">
               {item.title}
             </h3>
             <p className="text-xs sm:text-[13px] font-pro font-normal text-[#A3AED0] leading-relaxed px-4 py-2">

@@ -17,7 +17,7 @@ function Navbar() {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [openLang, setOpenLang] = useState(false);
-    const [isAuthorized, setIsAuthorized] = useState(false);
+  const [isAuthorized, setIsAuthorized] = useState(false);
   const dropdownRef = useRef(null);
   const langs = [
     { code: "mn", label: "MN", flag: mongolia },
@@ -25,30 +25,28 @@ function Navbar() {
   ];
   const introList = t("navIntroduction", { returnObjects: true });
 
-
-    const scrollToTop = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       behavior: "smooth",
       top: 0,
     });
   };
 
-    useEffect(() => {
+  useEffect(() => {
     const checkAuth = async () => {
       const res = await fetchWithTimeout("/auth/validate", {
         method: "POST",
         body: {},
       });
 
-
       if (res?.result?.code === 1000) {
         setIsAuthorized(true);
       }
     };
 
-      checkAuth();
-    }, []);
-  
+    checkAuth();
+  }, []);
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -104,10 +102,10 @@ function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-              onClick={() => {
-              setOpen(false);
-              scrollToTop();
-            }}
+          onClick={() => {
+            setOpen(false);
+            scrollToTop();
+          }}
           className="flex items-center"
         >
           <img loading="lazy" src={logo} alt="logo" className="h-14 md:h-16" />
@@ -147,11 +145,16 @@ function Navbar() {
               )}
             </AnimatePresence>
           </li>
-          <Link to="/pricing" onClick={scrollToTop} className="flex items-center">
+          <Link
+            to="/pricing"
+            onClick={scrollToTop}
+            className="flex items-center"
+          >
             {t("nav.li2")}
           </Link>
-
-          <a href="https://www.youtube.com/@chatbotmn" target="_blank" rel="noopener noreferrer" className="cursor-pointer">{t("nav.li3")}</a>
+          <Link to="/help" onClick={scrollToTop} className="flex items-center">
+            {t("nav.li3")}
+          </Link>
         </ul>
 
         {/* ===== Right Side ===== */}
@@ -159,7 +162,10 @@ function Navbar() {
           {!isAuthorized ? (
             <>
               <div className="relative rounded-full p-[2px] overflow-hidden">
-                <div className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]" aria-hidden="true" />
+                <div
+                  className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]"
+                  aria-hidden="true"
+                />
                 <Link
                   to="/signin"
                   className="relative block px-6 py-2 rounded-full bg-white text-black text-[16px] font-pro font-normal"
@@ -168,7 +174,10 @@ function Navbar() {
                 </Link>
               </div>
               <div className="relative rounded-full p-[2px] overflow-hidden">
-                <div className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]" aria-hidden="true" />
+                <div
+                  className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]"
+                  aria-hidden="true"
+                />
                 <Link
                   to="/signup"
                   className="relative block px-6 py-2 rounded-full bg-white text-black text-[16px] font-pro font-normal"
@@ -191,7 +200,8 @@ function Navbar() {
               onClick={() => setOpenLang(!openLang)}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black"
             >
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src={current.flag}
                 alt={current.label}
                 className="w-5 h-5 rounded-full object-cover"
@@ -207,7 +217,8 @@ function Navbar() {
                     onClick={() => changeLanguage(l.code)}
                     className="flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100"
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={l.flag}
                       alt={l.label}
                       className="w-5 h-5 rounded-full object-cover"
@@ -255,16 +266,39 @@ function Navbar() {
                 <ul className="pl-4 space-y-3">
                   {introList.map((e) => (
                     <li key={e.id}>
-                      <Link to={e.route} onClick={() => { setOpen(false); scrollToTop(); }}>{e.type}</Link>
+                      <Link
+                        to={e.route}
+                        onClick={() => {
+                          setOpen(false);
+                          scrollToTop();
+                        }}
+                      >
+                        {e.type}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               )}
               <li className="flex justify-between">
-                <Link to="/pricing" onClick={() => { setOpen(false); scrollToTop(); }}>{t("nav.li2")}</Link>
+                <Link
+                  to="/pricing"
+                  onClick={() => {
+                    setOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  {t("nav.li2")}
+                </Link>
               </li>
               <li className="flex justify-between">
-                <a href="https://www.youtube.com/@chatbotmn" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>{t("nav.li3")}</a>
+                <a
+                  href="https://www.youtube.com/@chatbotmn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
+                  {t("nav.li3")}
+                </a>
               </li>
             </ul>
 
@@ -280,7 +314,12 @@ function Navbar() {
                       : "border-gray-300 bg-white text-black"
                   }`}
                 >
-                  <img loading="lazy" src={l.flag} alt={l.label} className="w-5 h-5 rounded-full object-cover" />
+                  <img
+                    loading="lazy"
+                    src={l.flag}
+                    alt={l.label}
+                    className="w-5 h-5 rounded-full object-cover"
+                  />
                 </button>
               ))}
             </div>
@@ -318,7 +357,7 @@ function Navbar() {
       </AnimatePresence>
 
       <Outlet />
-    {(() => {
+      {(() => {
         switch (location.pathname) {
           case "/":
             return <Footer />;

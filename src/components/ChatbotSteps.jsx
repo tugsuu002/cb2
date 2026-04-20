@@ -19,7 +19,7 @@ const ChatbotSteps = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-[30px] font-pro font-semibold text-center w-full mb-12"
+        className="text-[30px] md:text-[55px] font-pro font-semibold text-center w-full mb-12 text-black"
       >
         {t("howChatbot")}
       </motion.p>
@@ -33,7 +33,7 @@ const ChatbotSteps = () => {
           whileTap={{ scale: 0.995 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: index * 0.15, type: "spring", stiffness: 160, damping: 16 }}
-          className={`relative w-full flex-shrink-0 cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center border border-[#F4F7FE] rounded-[20px]`}
+          className={`relative w-full flex-shrink-0 cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center border border-[#F4F7FE] rounded-[20px]`}
           style={{ zIndex: steps.length - index }}
         >
           {/* Bottom white card */}
@@ -49,9 +49,9 @@ const ChatbotSteps = () => {
             className="w-full pt-2 px-3 md:px-4 flex flex-col gap-1 min-h-[100px] justify-center items-center mt-2"
             style={{ zIndex: steps.length - index }}
           >
-            <p className="font-pro font-semibold text-[20px] md:text-[25px] rounded-full px-3 py-2">{step.title}</p>
+            <p className="font-pro font-semibold text-[20px] md:text-[25px] rounded-full px-3 py-2 text-black">{step.title}</p>
             <div className="flex items-center justify-between pb-4">
-              <p className="text-sm md:text-base text-center text-gray-600 leading-snug rounded-lg px-3 py-2">
+              <p className="text-sm md:text-base text-center text-[#A3AED0] leading-snug rounded-lg px-3 py-2">
                 {step.description}
               </p>
             </div>

@@ -2,7 +2,7 @@ import { useState, isValidElement } from "react";
 import { motion } from "framer-motion";
 import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
-import bg3 from "../assets/bg3.webp";
+import bg3 from "../assets/bannerDesktop/facebook.jpg";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
 import topArrow from "../assets/topArrow.webp";
@@ -28,26 +28,25 @@ export default function IntroductionFacebook() {
         >
           {t("facebookIntroTitle")}
         </motion.p>
-        <motion.p 
+        {/* <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[18px] text-[#707082] font-pro font-normal text-center mb-8 sm:mb-12"
+          className="text-[18px] text-[#707082] font-pro font-normal text-center mb-8 sm:mb-12 mt-3 md:mt-6 "
         >
           {t("facebookIntroSubtitle")}
-        </motion.p>
+        </motion.p> */}
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="bg-[#EDF2FB]/80 p-6 sm:p-[50px] lg:p-[75px] rounded-[40px] mb-20 shadow-inner"
+          className="bg-[#F4F7FE] p-6 sm:p-[50px] lg:p-[75px] rounded-[40px] mb-10 mt-20"
         >
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[30px]">
             {fbCardList.map((item, index) => {
               if (!checkList && index > 7) return null;
-              // const cardIcon = renderIcon(item?.icon);
               const Icon = item?.icon;
               return (
                 <motion.div
@@ -58,19 +57,19 @@ export default function IntroductionFacebook() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <SpotlightCard
-                    className="group rounded-[20px] bg-white h-full gradient-border-bottom duration-300 hover:-translate-y-1 hover:shadow-xl hover:text-[#0166FF]"
+                    className="group rounded-[20px] bg-white h-full gradient-border-bottom duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0166FF33] hover:text-[#0166FF]"
                     spotlightColor="rgba(0, 102, 255, 0.4)"
                   >
                   <div className="py-5 px-4 transition-all duration-300 h-full w-full">
-                      <div className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] group-hover:text-[#0166FF] transition-colors" >
+                      <div className="bg-[#F4F7FE] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] group-hover:text-[#0166FF] transition-colors" >
                         <Icon />
                     </div>
 
-                    <h3 className="font-pro font-medium text-sm sm:text-[18px] text-black mb-1">
+                    <h3 className="font-pro font-medium text-sm sm:text-[18px] text-black mb-3">
                       {item.title}
                     </h3>
 
-                    <p className="text-xs sm:text-[13px] font-pro font-normal text-[#7E8BB6] leading-relaxed">
+                    <p className="text-xs sm:text-[13px] font-pro font-normal text-[#A3AED0] leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -86,8 +85,8 @@ export default function IntroductionFacebook() {
               onClick={() => setCheckList(!checkList)}
               className="
         w-[140px] h-[44px]
-        bg-[#B6CCFE]
-        rounded-[12px]
+        bg-[#0066FF]
+        rounded-[20px]
         text-white
         font-pro font-medium text-[14px]
         flex items-center justify-center
@@ -111,7 +110,7 @@ export default function IntroductionFacebook() {
         <FeatureHighlights
           items={highlight}
         />
-        <HowItWorks />
+        <HowItWorks type="facebook"/>
         <ChatbotSteps />
       </section>
     </>

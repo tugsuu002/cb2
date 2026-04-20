@@ -35,14 +35,14 @@ import {
   devlopIcon,
 } from "../svg";
 
-import featuresHome1 from "../featuresHome/1.webp";
-import featuresHome2 from "../featuresHome/2.webp";
-import featuresHome3 from "../featuresHome/3.webp";
-import featuresHome4 from "../featuresHome/4.webp";
-import featuresHome5 from "../featuresHome/5.webp";
-import featuresHome6 from "../featuresHome/6.webp";
-import featuresHome7 from "../featuresHome/7.webp";
-import featuresHome8 from "../featuresHome/8.webp";
+import featuresHome1 from "../featuresHome/C1.jpg";
+import featuresHome2 from "../featuresHome/C2.jpg";
+import featuresHome3 from "../featuresHome/C3.jpg";
+import featuresHome4 from "../featuresHome/C4.jpg";
+import featuresHome5 from "../featuresHome/C5.jpg";
+import featuresHome6 from "../featuresHome/C6.jpg";
+import featuresHome7 from "../featuresHome/C7.jpg";
+import featuresHome8 from "../featuresHome/C8.jpg";
 
 import fbStep1 from "../FbSearch.webp";
 import fbStep2 from "../fbPaper.webp";
@@ -50,9 +50,9 @@ import fbStep3 from "../fbGallery.webp";
 
 export const en = {
   nav: {
-    li1: "INTRODUCTION",
-    li2: "PRICING",
-    li3: "HELP",
+    li1: "Introduction",
+    li2: "Pricing",
+    li3: "Help",
   },
   navIntroduction: [
     {
@@ -267,7 +267,7 @@ export const en = {
     },
   ],
 
-  featuresTitle: "KEY FEATURE",
+  featuresTitle: "Key Feature",
 
   featuresHome: [
     {
@@ -276,29 +276,29 @@ export const en = {
       img: featuresHome1,
     },
     {
-      title: "Online Contract",
-      desc: "Gather required contract information from users anywhere and email it to the organization.",
-      img: featuresHome2,
-    },
-    {
       title: "Access report",
       desc: "Download user activity reports to Excel, filtered by date since the bot was connected to the Facebook page.",
-      img: featuresHome3,
+      img: featuresHome2,
     },
     {
       title: "Calculation",
       desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
-      img: featuresHome4,
+      img: featuresHome8,
     },
     {
       title: "Automatically reply to posts.",
       desc: "Automatically reply to comments on Facebook posts and send detailed information via chat.",
-      img: featuresHome5,
+      img: featuresHome6,
     },
     {
       title: "Custom development services",
       desc: "Integrate with the organization’s internal systems and develop custom solutions tailored to their operations.",
-      img: featuresHome6,
+      img: featuresHome5,
+    },
+    {
+      title: "Remote Contract Signing",
+      desc: "Collect the necessary information from users and send it as a contract via email.",
+      img: featuresHome4,
     },
     {
       title: "Web Form",
@@ -306,13 +306,13 @@ export const en = {
       img: featuresHome7,
     },
     {
-      title: "Remote Contract Signing",
-      desc: "Collect the necessary information from users and send it as a contract via email.",
-      img: featuresHome8,
+      title: "Online Contract",
+      desc: "Gather required contract information from users anywhere and email it to the organization.",
+      img: featuresHome3,
     },
   ],
 
-  AiChatHelp: "HOW CAN WE HELP YOU?",
+  AiChatHelp: "How can we help you?",
   AiQuasion: "Ask a anything",
   AiSuggestions1: "How do I sign the contract online?",
   AiSuggestions2: "How much does the AI chatbot service cost?",
@@ -441,7 +441,7 @@ export const en = {
   ],
 
 
-  business: "EVERY BUSINESS",
+
   aboutStatAuto: "Automated chatbot systems",
   aboutTeamTitle: "Our Team",
 
@@ -492,8 +492,9 @@ export const en = {
     desc: "A comprehensive solution to manage all social channel communications in one place.",
   },
 ],
-
-  business1: "Every Business",
+  
+  business: "BUSINESS FOCUSED",
+  business1: "SMART PARTNER",
   businessDesc1:
     "The smart partner for every business. Simplify your customer flow, make data-driven decisions, and deliver",
   businessDescBold: "fast, reliable service",
@@ -512,288 +513,288 @@ export const en = {
   },
   termTitle: "Terms of Service",
   Feedback: "Feedback",
-  termList: [
-    {
-      header: "General conditions",
-      desc: [
-        {
-          d: "The Chatbot.mn customer answering system is an official service provided by “Chatbot” LLC, and the purpose of these terms of service is to regulate the rights and obligations of the parties when users use the system's services.",
-          d1: [],
-        },
-        {
-          d: "These Terms of Service will be valid from the time the user registers or creates an account in the system until it is closed.",
-          d1: [],
-        },
-      ],
-    },
-    {
-      header: "Points to note by the user",
-      desc: [
-        {
-          d: "The Chatbot.mn system can connect with popular global messenger platforms like Facebook Messenger, WeChat, Whatsapp, Telegram, Viber, and Line. Currently, it's connected to the Facebook Messenger channel.",
-          d1: [],
-        },
-        {
-          d: "The information and conversations shared by the user through their self-created bot are considered private exchanges solely between the user and the messenger user. “Chatbot” LLC does not hold any legal responsibility for these interactions.",
-          d1: [],
-        },
-        {
-          d: "Chatbot LLC is entirely responsible for maintaining the confidentiality of all data generated within the Chatbot.mn system, which includes user accounts, bot information, and messenger user conversations. We commit not to disclose this information to third parties, except when required by law.",
-          d1: [],
-        },
-        {
-          d: "A user can make multiple bots on their account, but each bot can only be linked to one Facebook page.",
-          d1: [],
-        },
-        {
-          d: "To connect the bot they created to a Facebook page, the user needs admin rights for that page.",
-          d1: [],
-        },
-        {
-          d: "While using the system's created bot, the user is not allowed to engage in the following prohibited activities during conversations with messenger users. Includes:",
-          d1: [
-            "Please refrain from submitting or distributing fraudulent, defamatory, derogatory, insulting, or copyright-infringing information.",
-            "Publishing confidential information of any organization or individual without proper permission",
-            "Ask messenger users for private and personal financial secret information without permission",
-            "Doing any act prohibited by the laws and regulations of Mongolia",
-            "Use for election purposes is prohibited.",
-          ],
-        },
-        {
-          d: "The user-created bot within the Chatbot.mn system operates by exchanging information with the connected Facebook Messenger platform. Therefore, it is the user's responsibility to adhere strictly to the terms of service and privacy rules of the Facebook Messenger platform. If the user engages in an activity that does not comply with the terms of service of the Facebook Messenger platform, measures will be taken until the bot is deactivated.",
-          d1: [],
-        },
-        {
-          d: "The user is responsible for protecting the login password of the Chatbot.mn system and the user information from others, and is responsible for preventing any risks that may arise from the non-fulfillment of this responsibility. “Chatbot” LLC will not be responsible for the loss caused by this.",
-          d1: [],
-        },
-        {
-          d: "If the user believes that the privacy of their account lost to others, please change the password or contact us urgently at info@chatbot.mn or 7744-1616.",
-          d1: [],
-        },
-      ],
-    },
-    {
-      header: "Purchase and cancellation of paid services",
-      desc: [
-        {
-          d: "The Chatbot.mn system provides both free features and paid services to users.",
-          d1: [],
-        },
-        {
-          d: "To access the paid feature, users are required to enable the paid service for their bot and sign a postpaid service agreement.",
-          d1: [],
-        },
-        {
-          d: "The pricing for the paid service can be found on the Chatbot.mn website and will depend on the monthly user count and chosen paid service.",
-          d1: [],
-        },
-        {
-          d: "The user can activate the paid service for each bot they create, and the service fee is calculated individually for each bot.",
-          d1: [],
-        },
-        {
-          d: "The billing for the service in a particular month will be automatically calculated on the 1st of the following month and sent to the user's registered email. Payment must be made by the 20th of the following month. Failure to make the payment by the 20th of the following month will result in the user losing access to the paid service features of the bot.",
-          d1: [],
-        },
-        {
-          d: "At any time, the user can cancel the paid service. If canceled, the user will receive invoices up to the service cancellation date.",
-          d1: [],
-        },
-        {
-          d: "Upon canceling paid services, the paid features will be disabled, but the free features will continue to be available.",
-          d1: [],
-        },
-        {
-          d: "The customer will automatically switch to the Free package when the paid package expires, and the chatbot service menus will be limited when switching. Advertisements will also be sent periodically during a user's access to the Chatbot Service.",
-          d1: [],
-        },
-      ],
-    },
-    {
-      header: "Disconnect messenger, delete chatbot and close account",
-      desc: [
-        {
-          d: "The user can disconnect or connect the bot to a Facebook page at any time. In case of disconnection, the conversation history and messenger user data related to that Facebook messenger will be deleted. After disconnecting the bot from your Facebook page, you can choose to connect it to a new Facebook page.",
-          d1: [],
-        },
-        {
-          d: "The user can delete the bot they created. In this case, all information related to the bot, including message blocks, conversations, and user data, will be deleted.",
-          d1: [],
-        },
-        {
-          d: "If there is an unpaid invoice on the bot created by the user, the bot cannot be deleted.",
-          d1: [],
-        },
-        {
-          d: "The user has the possibility to close their account on the Chatbot.mn, and in this case, all bots and all information related to the bot will be deleted.",
-          d1: [],
-        },
-        {
-          d: "If there is any unpaid invoice on the user's account, the account cannot be closed.",
-          d1: [],
-        },
-      ],
-    },
-    {
-      header: "Other",
-      desc: [
-        {
-          d: "These terms of service may undergo additional changes based on Chatbot LLC's operational updates. In the event of such changes, all users receiving the service will be notified in advance.",
-          d1: [],
-        },
-        {
-          d: 'The Chatbot.mn system is registered on the official site of the Communications Regulatory Commission in the name of "Chatbot" LLC. The copyright of the Chatbot.mn website and system is legally protected.',
-          d1: [],
-        },
-      ],
-    },
-  ],
-  privacyTitle: "Privacy Policy",
-  privacyList: [
-    {
-      header: "General and Data Collection",
-      desc: [
-        {
-          d: 'chatbot.mn smart chatbot creation platform (hereinafter referred to as "System") collects information of citizens and legal entities (hereinafter referred to as "Users") and their Facebook page users (hereinafter referred to as "Chatbot Users") in the following cases. It includes:',
-          d1: [
-            {
-              d2: "A user can be an individual or a legal entity who accesses the chatbot.mn web system, creates an account, establishes a connection with their Facebook page with administrative rights, and installs a chatbot that automatically responds to chatbot users.",
-              d3: [],
-            },
-            {
-              d2: "A 'Chatbot User' refers to the end users who are connected with the auto-reply chatbot after clicking the “Send Message” button and other “Facebook Chat Plugin” on the User's connected Facebook page.",
-              d3: [],
-            },
-            {
-              d2: "When registering in the system, the user enters his email, last name, first name, phone number, and password, and the system encrypts the password created by the user using cryptographic methods without human intervention. The password is stored in the database, which is not readable.",
-              d3: [],
-            },
-            {
-              d2: "Also, the user logs in with their Facebook account to connect to their Facebook page, and at this time, the system collects the user's last name, first name, email address, date of birth, and gender with open settings, as well as Facebook App ID and Access Token information necessary to connect to the page is collected from Facebook with the user's permission.",
-              d3: [],
-            },
-            {
-              d2: "The chatbot user will register in the system after interacting with the autoresponder chatbot created by the user. Approved personal information, including last name, first name, email, phone number, birthday, age, gender, and 'Facebook PSID' (Page Scoped ID), will be stored in the system.",
-              d3: [],
-            },
-            {
-              d2: "When the user utilizes the system's payment and online shop features, it is necessary to enter and save the company's certificate, ID card copy, and account information in the system.",
-              d3: [],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      header: "Terms of use of information",
-      desc: [
-        {
-          d: "All information entered into the user and chatbot user system is the individual property of each and “Chatbot” LLC will not use it in any form other than the agreed conditions without the consent of the User and Chatbot User.",
-          d1: [
-            {
-              d2: "For the User:",
-              d3: [
-                "chatbot.mn can check payment and order information for cloud services, send notifications related to them, and make service payments (with the User's permission).",
-                "Provide customer service related to the User (with the User's permission)",
-                "Carry out technical maintenance related to customers. (With User's permission)",
-                "Deliver information about new products and discounts to users (With User's permission)",
-                "To enhance the quality of the chatbot.mn service and introduce new features to the market, Chatbot LLC may collect and use non-confidential information from individuals and legal entities, employing statistical methods related to chatbots and chatbot-related information.",
-              ],
-            },
-            {
-              d2: "For the Chatbot User:",
-              d3: [
-                "The system will send messages using the “Facebook PSID” of the chatbot user to communicate with the chatbot user",
-                "The user will utilize their chatbot user information to share details about their business, send information about products and services (referred to as 'Message Broadcasting'), or send mass messages within the guidelines approved by Facebook.",
-                "The user will use the system to provide customer service and other services to its chatbot users.",
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      header: "Sharing User Information",
-      desc: [
-        {
-          d: "",
-          d1: [
-            {
-              d2: "Only in the event that information is required to be provided by the state authorities in accordance with the laws of Mongolia",
-              d3: [],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      header: "Storing User Data",
-      desc: [
-        {
-          d: "",
-          d1: [
-            {
-              d2: "User registration details, chatbot information, chatbot user information, conversation history, and all other data generated within the chatbot.mn system are securely stored in Chatbot LLC's Mobinet LLC data center, ensuring a high level of confidentiality and security.",
-              d3: [],
-            },
-            {
-              d2: "The user is responsible for not disclosing the login name and password to others.",
-              d3: [],
-            },
-            {
-              d2: "Chatbot LLC will not be responsible for any harm or damage caused to the user's chatbot due to lost access rights to others. Chatbot LLC advises that accessing information using the user's access rights is impossible.",
-              d3: [],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      header: "Manage User Information",
-      desc: [
-        {
-          d: "",
-          d1: [
-            {
-              d2: "Users can change their personal and company information at any time they want from the system dashboard.",
-              d3: [],
-            },
-            {
-              d2: "If the user disconnects their chatbot from the Facebook page, the autoresponder will disabled, and the information will be stored in the system until reactivated.",
-              d3: [],
-            },
-            {
-              d2: "When the user deletes their chatbot, all chatbot and chatbot user data will be permanently erased from the system and cannot be restored.",
-              d3: [],
-            },
-            {
-              d2: "If the user deactivates his account information, it will be stored in the system until it is deactivated again.",
-              d3: [],
-            },
-            {
-              d2: "If the user intends to delete their registration information, they should send a request to the email address info@chatbot.mn, and we will remove the registration information from the chatbot.mn system within 3-5 business days.",
-              d3: [],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      header: "Privacy Policy Update",
-      desc: [
-        {
-          d: "",
-          d1: [
-            {
-              d2: "“Chatbot” LLC has the right to make changes to the Privacy Policy. In case changes are made to the Privacy Policy, it will be publicly published on the chatbot.mn website and the User has a responsibility to get acquainted.",
-              d3: [],
-            },
-          ],
-        },
-      ],
-    },
-  ],
+  // termList: [
+  //   {
+  //     header: "General conditions",
+  //     desc: [
+  //       {
+  //         d: "The Chatbot.mn customer answering system is an official service provided by “Chatbot” LLC, and the purpose of these terms of service is to regulate the rights and obligations of the parties when users use the system's services.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "These Terms of Service will be valid from the time the user registers or creates an account in the system until it is closed.",
+  //         d1: [],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Points to note by the user",
+  //     desc: [
+  //       {
+  //         d: "The Chatbot.mn system can connect with popular global messenger platforms like Facebook Messenger, WeChat, Whatsapp, Telegram, Viber, and Line. Currently, it's connected to the Facebook Messenger channel.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The information and conversations shared by the user through their self-created bot are considered private exchanges solely between the user and the messenger user. “Chatbot” LLC does not hold any legal responsibility for these interactions.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "Chatbot LLC is entirely responsible for maintaining the confidentiality of all data generated within the Chatbot.mn system, which includes user accounts, bot information, and messenger user conversations. We commit not to disclose this information to third parties, except when required by law.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "A user can make multiple bots on their account, but each bot can only be linked to one Facebook page.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "To connect the bot they created to a Facebook page, the user needs admin rights for that page.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "While using the system's created bot, the user is not allowed to engage in the following prohibited activities during conversations with messenger users. Includes:",
+  //         d1: [
+  //           "Please refrain from submitting or distributing fraudulent, defamatory, derogatory, insulting, or copyright-infringing information.",
+  //           "Publishing confidential information of any organization or individual without proper permission",
+  //           "Ask messenger users for private and personal financial secret information without permission",
+  //           "Doing any act prohibited by the laws and regulations of Mongolia",
+  //           "Use for election purposes is prohibited.",
+  //         ],
+  //       },
+  //       {
+  //         d: "The user-created bot within the Chatbot.mn system operates by exchanging information with the connected Facebook Messenger platform. Therefore, it is the user's responsibility to adhere strictly to the terms of service and privacy rules of the Facebook Messenger platform. If the user engages in an activity that does not comply with the terms of service of the Facebook Messenger platform, measures will be taken until the bot is deactivated.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The user is responsible for protecting the login password of the Chatbot.mn system and the user information from others, and is responsible for preventing any risks that may arise from the non-fulfillment of this responsibility. “Chatbot” LLC will not be responsible for the loss caused by this.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "If the user believes that the privacy of their account lost to others, please change the password or contact us urgently at info@chatbot.mn or 7744-1616.",
+  //         d1: [],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Purchase and cancellation of paid services",
+  //     desc: [
+  //       {
+  //         d: "The Chatbot.mn system provides both free features and paid services to users.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "To access the paid feature, users are required to enable the paid service for their bot and sign a postpaid service agreement.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The pricing for the paid service can be found on the Chatbot.mn website and will depend on the monthly user count and chosen paid service.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The user can activate the paid service for each bot they create, and the service fee is calculated individually for each bot.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The billing for the service in a particular month will be automatically calculated on the 1st of the following month and sent to the user's registered email. Payment must be made by the 20th of the following month. Failure to make the payment by the 20th of the following month will result in the user losing access to the paid service features of the bot.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "At any time, the user can cancel the paid service. If canceled, the user will receive invoices up to the service cancellation date.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "Upon canceling paid services, the paid features will be disabled, but the free features will continue to be available.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The customer will automatically switch to the Free package when the paid package expires, and the chatbot service menus will be limited when switching. Advertisements will also be sent periodically during a user's access to the Chatbot Service.",
+  //         d1: [],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Disconnect messenger, delete chatbot and close account",
+  //     desc: [
+  //       {
+  //         d: "The user can disconnect or connect the bot to a Facebook page at any time. In case of disconnection, the conversation history and messenger user data related to that Facebook messenger will be deleted. After disconnecting the bot from your Facebook page, you can choose to connect it to a new Facebook page.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The user can delete the bot they created. In this case, all information related to the bot, including message blocks, conversations, and user data, will be deleted.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "If there is an unpaid invoice on the bot created by the user, the bot cannot be deleted.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "The user has the possibility to close their account on the Chatbot.mn, and in this case, all bots and all information related to the bot will be deleted.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: "If there is any unpaid invoice on the user's account, the account cannot be closed.",
+  //         d1: [],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Other",
+  //     desc: [
+  //       {
+  //         d: "These terms of service may undergo additional changes based on Chatbot LLC's operational updates. In the event of such changes, all users receiving the service will be notified in advance.",
+  //         d1: [],
+  //       },
+  //       {
+  //         d: 'The Chatbot.mn system is registered on the official site of the Communications Regulatory Commission in the name of "Chatbot" LLC. The copyright of the Chatbot.mn website and system is legally protected.',
+  //         d1: [],
+  //       },
+  //     ],
+  //   },
+  // ],
+  // privacyTitle: "Privacy Policy",
+  // privacyList: [
+  //   {
+  //     header: "General and Data Collection",
+  //     desc: [
+  //       {
+  //         d: 'chatbot.mn smart chatbot creation platform (hereinafter referred to as "System") collects information of citizens and legal entities (hereinafter referred to as "Users") and their Facebook page users (hereinafter referred to as "Chatbot Users") in the following cases. It includes:',
+  //         d1: [
+  //           {
+  //             d2: "A user can be an individual or a legal entity who accesses the chatbot.mn web system, creates an account, establishes a connection with their Facebook page with administrative rights, and installs a chatbot that automatically responds to chatbot users.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "A 'Chatbot User' refers to the end users who are connected with the auto-reply chatbot after clicking the “Send Message” button and other “Facebook Chat Plugin” on the User's connected Facebook page.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "When registering in the system, the user enters his email, last name, first name, phone number, and password, and the system encrypts the password created by the user using cryptographic methods without human intervention. The password is stored in the database, which is not readable.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "Also, the user logs in with their Facebook account to connect to their Facebook page, and at this time, the system collects the user's last name, first name, email address, date of birth, and gender with open settings, as well as Facebook App ID and Access Token information necessary to connect to the page is collected from Facebook with the user's permission.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "The chatbot user will register in the system after interacting with the autoresponder chatbot created by the user. Approved personal information, including last name, first name, email, phone number, birthday, age, gender, and 'Facebook PSID' (Page Scoped ID), will be stored in the system.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "When the user utilizes the system's payment and online shop features, it is necessary to enter and save the company's certificate, ID card copy, and account information in the system.",
+  //             d3: [],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Terms of use of information",
+  //     desc: [
+  //       {
+  //         d: "All information entered into the user and chatbot user system is the individual property of each and “Chatbot” LLC will not use it in any form other than the agreed conditions without the consent of the User and Chatbot User.",
+  //         d1: [
+  //           {
+  //             d2: "For the User:",
+  //             d3: [
+  //               "chatbot.mn can check payment and order information for cloud services, send notifications related to them, and make service payments (with the User's permission).",
+  //               "Provide customer service related to the User (with the User's permission)",
+  //               "Carry out technical maintenance related to customers. (With User's permission)",
+  //               "Deliver information about new products and discounts to users (With User's permission)",
+  //               "To enhance the quality of the chatbot.mn service and introduce new features to the market, Chatbot LLC may collect and use non-confidential information from individuals and legal entities, employing statistical methods related to chatbots and chatbot-related information.",
+  //             ],
+  //           },
+  //           {
+  //             d2: "For the Chatbot User:",
+  //             d3: [
+  //               "The system will send messages using the “Facebook PSID” of the chatbot user to communicate with the chatbot user",
+  //               "The user will utilize their chatbot user information to share details about their business, send information about products and services (referred to as 'Message Broadcasting'), or send mass messages within the guidelines approved by Facebook.",
+  //               "The user will use the system to provide customer service and other services to its chatbot users.",
+  //             ],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Sharing User Information",
+  //     desc: [
+  //       {
+  //         d: "",
+  //         d1: [
+  //           {
+  //             d2: "Only in the event that information is required to be provided by the state authorities in accordance with the laws of Mongolia",
+  //             d3: [],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Storing User Data",
+  //     desc: [
+  //       {
+  //         d: "",
+  //         d1: [
+  //           {
+  //             d2: "User registration details, chatbot information, chatbot user information, conversation history, and all other data generated within the chatbot.mn system are securely stored in Chatbot LLC's Mobinet LLC data center, ensuring a high level of confidentiality and security.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "The user is responsible for not disclosing the login name and password to others.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "Chatbot LLC will not be responsible for any harm or damage caused to the user's chatbot due to lost access rights to others. Chatbot LLC advises that accessing information using the user's access rights is impossible.",
+  //             d3: [],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Manage User Information",
+  //     desc: [
+  //       {
+  //         d: "",
+  //         d1: [
+  //           {
+  //             d2: "Users can change their personal and company information at any time they want from the system dashboard.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "If the user disconnects their chatbot from the Facebook page, the autoresponder will disabled, and the information will be stored in the system until reactivated.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "When the user deletes their chatbot, all chatbot and chatbot user data will be permanently erased from the system and cannot be restored.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "If the user deactivates his account information, it will be stored in the system until it is deactivated again.",
+  //             d3: [],
+  //           },
+  //           {
+  //             d2: "If the user intends to delete their registration information, they should send a request to the email address info@chatbot.mn, and we will remove the registration information from the chatbot.mn system within 3-5 business days.",
+  //             d3: [],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     header: "Privacy Policy Update",
+  //     desc: [
+  //       {
+  //         d: "",
+  //         d1: [
+  //           {
+  //             d2: "“Chatbot” LLC has the right to make changes to the Privacy Policy. In case changes are made to the Privacy Policy, it will be publicly published on the chatbot.mn website and the User has a responsibility to get acquainted.",
+  //             d3: [],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // ],
 
   footer: {
     title: "TRY CHATBOT FOR FREE",
@@ -852,4 +853,152 @@ export const en = {
       " I confirm that I am 18 years old or older and have read and agree to the Terms of Service",
     label9: "Password must be at least 8 characters long",
   },
+
+
+helpCard: [
+  {
+    title: "Post Content",
+    desc: "Chatbot features",
+    link: "https://youtu.be/GBHuScg_5Mc?si=kMi6__WJ69OngIkP",
+    img: featuresHome1,
+  },
+  {
+    title: "Conversation",
+    desc: "Chatbot features",
+    link: "https://youtu.be/YhdgfHWzPAU?si=wVZfL5YJUnsNXpGZ",
+    img: featuresHome2,
+  },
+  {
+    title: "FAQ (Frequently Asked Questions)",
+    desc: "Chatbot features",
+    link: "https://youtu.be/YxUOWzF2FuI?si=gyZWApJ7eC7kfdjh",
+    img: featuresHome3,
+  },
+  {
+    title: "Live Agent",
+    desc: "Chatbot features",
+    link: "https://youtu.be/qAoZvdaLWJw?si=l0Ockcn4szTxT7FV",
+    img: featuresHome1,
+  },
+  {
+    title: "Survey Form",
+    desc: "Chatbot features",
+    link: "https://youtu.be/OAgFNUG1NTg?si=jaIiKHbtR4DW2tEq",
+    img: featuresHome1,
+  },
+  {
+    title: "Web Form",
+    desc: "Chatbot features",
+    link: "https://youtu.be/Hth3BvrSgyo?si=LjhPE7ObkkRKdAyN",
+    img: featuresHome1,
+  },
+  {
+    title: "Broadcast Messaging",
+    desc: "Chatbot features",
+    link: "https://youtu.be/YTgT3gQAFIA?si=bwt143RoBskvHSWl",
+    img: featuresHome1,
+  },
+  {
+    title: "Comment Auto-Reply",
+    desc: "Chatbot features",
+    link: "https://youtu.be/yaNh9Nteaqk?si=6VO_onCBtgOG6mEM",
+    img: featuresHome1,
+  },
+  {
+    title: "Customer Data",
+    desc: "Chatbot features",
+    link: "https://youtu.be/eENdtu7CSis?si=8FAbNQ9CIcAvMtSP",
+    img: featuresHome1,
+  },
+  {
+    title: "Customer Tags",
+    desc: "Chatbot features",
+    link: "https://youtu.be/e1dg50_w9GE?si=8Te6yo3xG6yGayGJ",
+    img: featuresHome1,
+  },
+  {
+    title: "Static Page",
+    desc: "Chatbot features",
+    link: "https://youtu.be/57HuwrdPk4o?si=54oabl-oPqU4sAph",
+    img: featuresHome1,
+  },
+  {
+    title: "System Integration",
+    desc: "Chatbot features",
+    link: "https://youtu.be/FXZgnKigRkQ?si=gKbMSQM3olU3yn_k",
+    img: featuresHome1,
+  },
+  {
+    title: "Analytics",
+    desc: "Chatbot features",
+    link: "https://youtu.be/Ez1eO5ce6E4?si=OdkZSM3OTwLAXUyq",
+    img: featuresHome1,
+  },
+  {
+    title: "Monitoring",
+    desc: "Chatbot features",
+    link: "https://youtu.be/qfWTKhNH660?si=An6MGawBkw3AJ2hz",
+    img: featuresHome1,
+  },
+  {
+    title: "Store 2.0",
+    desc: "Chatbot features",
+    link: "https://youtu.be/-7VLTCTJeg0?si=uZDlypI2PT1JQa-A",
+    img: featuresHome1,
+  },
+  {
+    title: "Payment Integration",
+    desc: "Chatbot features",
+    link: "https://youtu.be/FpRjP7BcEJU?si=oJGzTqpuxkcKAw4H",
+    img: featuresHome1,
+  },
+  {
+    title: "Delivery",
+    desc: "Chatbot features",
+    link: "https://youtu.be/ucvgziyd5uM?si=q_ABU4C15th4U-Tv",
+    img: featuresHome1,
+  },
+  {
+    title: "Orders",
+    desc: "Chatbot features",
+    link: "https://youtu.be/JInmNgDLLwA?si=alPaXSOqNAzMaklk",
+    img: featuresHome1,
+  },
+  {
+    title: "Create Bot & Connect Page",
+    desc: "Chatbot features",
+    link: "https://youtu.be/rGJCF4wNNR4?si=2SZQ5GkhkWci4Mq7",
+    img: featuresHome1,
+  },
+  {
+    title: "Message Block",
+    desc: "Chatbot features",
+    link: "https://youtu.be/kR57nSi3lOw?si=l-i3fMJ3Fy23pAAC",
+    img: featuresHome1,
+  },
+  {
+    title: "Settings Menu",
+    desc: "Chatbot features",
+    link: "https://youtu.be/r1Dq405xpKo?si=sVcdN6eiHJpo-gDw",
+    img: featuresHome1,
+  },
+  {
+    title: "Settings - User Login",
+    desc: "Chatbot features",
+    link: "https://youtu.be/FQqOZJ8l_XY?si=-VIdPDegQnTDqlwr",
+    img: featuresHome1,
+  },
+  {
+    title: "Settings - Main Menu",
+    desc: "Chatbot features",
+    link: "https://youtu.be/0nXYYo1kpig?si=l6IVcjREVnTEmrae",
+    img: featuresHome1,
+  },
+  {
+    title: "Users",
+    desc: "Chatbot features",
+    link: "https://youtu.be/xTIwo1l3A-g?si=aDUCzEk9d5u7UpI2",
+    img: featuresHome1,
+  },
+]
 };

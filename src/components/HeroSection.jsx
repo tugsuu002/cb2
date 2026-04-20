@@ -16,16 +16,16 @@ export default function HeroSection() {
       onEnter={() => setActive(true)}
       onExit={() => setActive(false)}
     >
-      <section className="w-full min-h-screen flex items-center justify-center bg-white">
+      <section className="w-full md:h-[500px] flex items-center justify-center bg-white">
         <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
           {/* Left */}
-          <div className="flex flex-col justify-center">
-            <div className="overflow-hidden">
+          <div className="flex flex-col justify-center ">
+            <div className="overflow-hidden space-y-2">
               {[t("business"), t("business1")].map((line, i) => (
                 <h1
                   key={i}
-                  className={`text-4xl md:text-5xl font-extrabold leading-tight
-                  transition-all duration-700 ease-out
+                  className={`text-4xl md:text-5xl font-pro font-semibold text-black leading-tight
+                  transition-all duration-700 ease-out 
                   ${active ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
                   style={{ transitionDelay: `${i * 120}ms` }}
                 >
@@ -34,7 +34,7 @@ export default function HeroSection() {
               ))}
             </div>
             <p
-              className={`mt-4 text-gray-400 max-w-lg transition-all duration-700 font-pro font-normal leading-[21px] tracking-[-0.02em] text-center
+              className={`mt-4 text-[#A3AED0] transition-all duration-700 font-pro font-normal leading-[21px] tracking-[-0.02em]  text-left text-[15px]
                 ${active ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: "420ms" }}
             >
@@ -51,7 +51,7 @@ export default function HeroSection() {
               {avatars.map((a, i) => (
                 <div
                   key={i}
-                  className="absolute flex items-center justify-center rounded-full shadow-lg"
+                  className="absolute flex items-center justify-center rounded-full"
                   style={{
                     width: a.size,
                     height: a.size,

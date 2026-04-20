@@ -13,7 +13,7 @@ const Signup = lazy(() => import("./components/Signup.jsx"));
 const IntroductionFacebook = lazy(() => import("./components/IntroductionFacebook.jsx"));
 const IntroductionInstagram = lazy(() => import("./components/IntroductionInstagram.jsx"));
 const Pricing = lazy(() => import("./components/Pricing"));
-const Terms = lazy(() => import("./components/Terms.jsx"));
+const Help = lazy(() => import("./components/Help.jsx"));
 const Privacy = lazy(() => import("./components/Privacy.jsx"));
 const Restore = lazy(() => import("./components/Restore.jsx"));
 const AboutUs = lazy(() => import("./components/AboutUs.jsx"));
@@ -47,8 +47,9 @@ function App() {
             <Route path="facebook" element={<IntroductionFacebook />} />
             <Route path="instagram" element={<IntroductionInstagram />} />
             <Route path="pricing" element={<Pricing />} />
-            <Route path="terms" element={<Terms />} />
-            <Route path="privacy" element={<Privacy />} />
+            <Route path="help" element={<Help />} />
+            {/* <Route path="terms" element={<Terms />} /> */}
+            {/* <Route path="privacy" element={<Privacy />} /> */}
             <Route path="about" element={<AboutUs />} />
           </Route>
 

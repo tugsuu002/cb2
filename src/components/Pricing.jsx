@@ -78,7 +78,7 @@ export default function PricingTable() {
       <p
         ref={(el) => (sectionRefs.current[0] = el)}
         data-section="title"
-        className={`font-pro font-semibold text-[55px] text-[#000000] flex justify-center justify-items-center mb-20 transition-all duration-1000 ${
+        className={`font-pro font-semibold text-[55px] text-[#000000] flex justify-center justify-items-center mb-20 mt-10 transition-all duration-1000 ${
           visibleSections.has("title")
             ? "opacity-100 scale-100"
             : "opacity-0 scale-90"
@@ -89,7 +89,7 @@ export default function PricingTable() {
       <div
         ref={(el) => (sectionRefs.current[1] = el)}
         data-section="plans"
-        className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 w-[80%] ml-auto text-[#031555 transition-all duration-1000 delay-200 ${
+        className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 w-[76%] ml-auto text-[#031555 transition-all duration-1000 delay-200 ${
           visibleSections.has("plans")
             ? "opacity-100 scale-100"
             : "opacity-0 scale-90"
@@ -117,7 +117,7 @@ export default function PricingTable() {
                 {plan.name}
               </h3>
               <div
-                className={`text-[13px]  font-pro font-normal opacity-80 mt-1 ${plan?.name == "Enterprise" ? "text-white" : "text-[#A3AED0]"}`}
+                className={`text-[13px]  font-pro font-normal opacity-80 mt-2 ${plan?.name == "Enterprise" ? "text-white" : "text-[#A3AED0]"}`}
               >
                 {plan.description}
               </div>
@@ -125,7 +125,7 @@ export default function PricingTable() {
             <div
               className={`flex justify-start items-baseline mt-6 space-x-2 ${plan?.name == "Enterprise" && "text-white"}`}
             >
-              <div className="text-[23px] md:text-[26px] font-pro font-medium">
+              <div className={`text-[23px] md:text-[26px] font-semibold text-[#000000] ${plan?.name == "Enterprise" ? "text-white" : "text-[#000000]"}`} >
                 {plan.price}
               </div>
               {plan?.name === "Pro" && (
@@ -167,7 +167,7 @@ export default function PricingTable() {
       <div
         ref={(el) => (sectionRefs.current[2] = el)}
         data-section="table"
-        className={`border rounded-2xl overflow-hidden transition-all duration-1000 delay-400 ${
+        className={`border border-[#A3AED0] border-opacity-20 rounded-2xl overflow-hidden transition-all duration-1000 delay-400 ${
           visibleSections.has("table")
             ? "opacity-100 scale-100"
             : "opacity-0 scale-90"
@@ -175,13 +175,13 @@ export default function PricingTable() {
       >
         {/* Header row */}
         <div className="grid grid-cols-4">
-          <div className="h-14 border-b px-4 py-4 font-medium text-black bg-[#F4F7FE]">
+          <div className="h-14 border-b border-[#A3AED0] border-opacity-20 px-4 py-4 font-medium text-black bg-[#F4F7FE] text-[16px]">
             {t("priceTitle2")}
           </div>
           {plans.map((plan) => (
             <div
               key={`${plan.name}-header`}
-              className="h-14 border-b bg-[#F4F7FE] border-[#A3AED066]"
+              className="h-14 border-b bg-[#F4F7FE] border-[#A3AED0] border-opacity-20"
             />
           ))}
         </div>
@@ -189,7 +189,7 @@ export default function PricingTable() {
         {/* Feature rows */}
         {features.map((f, rowIndex) => (
           <div key={rowIndex} className="grid grid-cols-4">
-            <div className="px-4 py-3 border-b text-sm font-pro font-normal text-black bg-[#FFFFFF] flex items-center gap-2">
+            <div className="px-4 py-3 border-b border-[#A3AED0] border-opacity-20 text-[16px] font-pro font-normal text-black bg-[#FFFFFF] flex items-center gap-2">
               <div>{f.label}</div>
               {f.sub && (
                 <div className="text-xs font-pro font-normal text-gray-500">
@@ -201,7 +201,7 @@ export default function PricingTable() {
             {plans.map((plan, colIndex) => (
               <div
                 key={`${plan.name}-${rowIndex}`}
-                className={`px-4 py-3 font-pro font-normal border-b border-[#A3AED066] flex justify-center items-center gap-2 text-sm ${plan.highlight ? "bg-[#608DFF] text-white" : "bg-[#FFFFFF] text-[#A3AED0]"} flex`}
+                className={`px-4 py-3 font-pro font-normal border-b border-[#A3AED0] border-opacity-20 flex justify-center items-center gap-2 text-sm ${plan.highlight ? "bg-[#608DFF] text-white" : "bg-[#FFFFFF] text-[#A3AED0]"} flex`}
               >
                 {f.values[colIndex] === true && (
                   <Check select={plan.highlight} />
@@ -211,7 +211,7 @@ export default function PricingTable() {
                 )}
                 {typeof f.values[colIndex] === "string" && (
                   <span
-                    className={plan.highlight ? "text-white" : "text-[#A3AED0]"}
+                    className={`text-[12px] ${plan.highlight ? "text-white" : "text-[#A3AED0]"}`}
                   >
                     {f.values[colIndex]}
                   </span>
@@ -221,6 +221,9 @@ export default function PricingTable() {
           </div>
         ))}
       </div>
+
+
+
       {showAddOnModal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
@@ -236,7 +239,7 @@ export default function PricingTable() {
             >
               ✕
             </button>
-            <h2 className="text-[22px] font-pro font-semibold text-[#031555] mb-2">
+            <h2 className="text-[22px] font-pro font-semibold text-[#000000] mb-2">
               {t("addOnTitle")}
             </h2>
             <p className="text-sm text-gray-500 mb-5">{t("addOnDesc")}</p>
@@ -258,7 +261,7 @@ export default function PricingTable() {
                         className={`w-5 h-5 flex-shrink-0 rounded-full border-2 flex items-center justify-center transition-all ${
                           isSelected
                             ? "border-[#608DFF] bg-[#608DFF]"
-                            : "border-gray-300"
+                            : "border-[#A3AED0] border-opacity-40"
                         }`}
                       >
                         {isSelected && (
@@ -267,12 +270,12 @@ export default function PricingTable() {
                           </span>
                         )}
                       </span>
-                      <span className="text-sm font-pro font-medium text-[#031555]">
+                      <span className="text-sm font-pro font-medium text-[#000000]">
                         {item.name}
                       </span>
                     </div>
                     <span
-                      className={`text-xs rounded-full px-3 py-1 whitespace-nowrap ${
+                      className={`text-xs rounded-full font-semibold px-3 py-1 whitespace-nowrap ${
                         isSelected
                           ? "bg-[#608DFF] text-white"
                           : "bg-[#EEF2FF] text-[#608DFF]"
@@ -292,7 +295,7 @@ export default function PricingTable() {
                   <span className="text-sm font-pro font-medium text-gray-500">
                     {t("addOnBase")}
                   </span>
-                  <span className="text-sm font-pro font-medium text-gray-700">
+                  <span className="text-sm font-semibold text-gray-700">
                     {plans.find((p) => p.name === "Pro")?.price}
                   </span>
                 </div>
@@ -300,15 +303,15 @@ export default function PricingTable() {
                   <span className="text-sm font-pro font-medium text-gray-500">
                     {t("addOnExtra")}
                   </span>
-                  <span className="text-sm font-pro font-medium text-[#608DFF]">
-                    {totalPrice > 0 ? `+ ${totalPrice.toLocaleString()}₮` : t("addOnNegotiate")}
+                  <span className="text-sm  font-semibold text-[#608DFF]">
+                    {totalPrice > 0 ? `+${totalPrice.toLocaleString()}₮` : t("addOnNegotiate")}
                   </span>
                 </div>
                 <div className="flex items-center justify-between border-t border-[#F4F7FE] pt-2">
-                  <span className="text-sm font-pro font-semibold text-[#031555]">
+                  <span className="text-sm font-pro font-semibold text-[#000000]">
                     {t("addOnTotal")}
                   </span>
-                  <span className="text-base font-pro font-bold text-[#608DFF]">
+                  <span className="text-base font-semibold text-[#000000]">
                     {totalPrice > 0
                       ? `${(300000 + totalPrice).toLocaleString()}₮`
                       : t("addOnNegotiate")}

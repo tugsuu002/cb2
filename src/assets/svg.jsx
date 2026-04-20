@@ -210,6 +210,129 @@ const TimelineBow = ({ className, color }) => {
 };
 
 
+const Rote = ({ className }) => (
+  <svg width="418" height="410" viewBox="0 0 418 410" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+<path d="M415.792 1.47949V39.1536C415.792 142.667 331.878 226.58 228.365 226.58H129.72C58.8951 226.58 1.48047 283.994 1.48047 354.82V407.604" stroke="url(#paint0_linear_3247_3694)" stroke-width="2.95937" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_3247_3694" x1="-127.745" y1="525.78" x2="384.212" y2="-46.0302" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A371F7"/>
+<stop offset="0.00733964" stop-color="#9E72D3"/>
+<stop offset="0.251918" stop-color="#6639BA" stop-opacity="0"/>
+<stop offset="0.325848" stop-color="#6639BA"/>
+<stop offset="0.945217" stop-color="#6639BA"/>
+<stop offset="1" stop-color="#6639BA" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+)
+
+const Star = ({ className }) => (
+  <svg
+    width="33"
+    height="35"
+    viewBox="0 0 33 35"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <g filter="url(#filter0_ddi_1506_3163)">
+      <path
+        d="M24.1384 11.6265C24.0523 11.6265 23.9791 11.6097 23.9188 11.5763C23.8586 11.5429 23.8112 11.4844 23.7768 11.4009L23.0277 9.69686L21.1421 8.89495C21.056 8.86153 20.9957 8.81559 20.9613 8.75712C20.9268 8.69865 20.9096 8.62764 20.9096 8.54411C20.9096 8.46058 20.9268 8.38958 20.9613 8.3311C20.9957 8.27263 21.056 8.22669 21.1421 8.19328L23.0277 7.41643L23.7768 5.78755C23.8112 5.70402 23.8586 5.64554 23.9188 5.61213C23.9791 5.57872 24.0523 5.56201 24.1384 5.56201C24.2245 5.56201 24.2977 5.57872 24.358 5.61213C24.4182 5.64554 24.4656 5.70402 24.5 5.78755L25.2491 7.41643L27.1347 8.19328C27.2208 8.22669 27.2811 8.27263 27.3155 8.3311C27.35 8.38958 27.3672 8.46058 27.3672 8.54411C27.3672 8.62764 27.35 8.69865 27.3155 8.75712C27.2811 8.81559 27.2208 8.86153 27.1347 8.89495L25.2491 9.69686L24.5 11.4009C24.4656 11.4844 24.4182 11.5429 24.358 11.5763C24.2977 11.6097 24.2245 11.6265 24.1384 11.6265ZM24.1384 26.562C24.0695 26.562 24.0006 26.5453 23.9318 26.5119C23.8629 26.4785 23.8112 26.42 23.7768 26.3365L23.0277 24.7076L21.1679 23.9307C21.0818 23.8973 21.0216 23.8514 20.9871 23.7929C20.9527 23.7344 20.9355 23.6634 20.9355 23.5799C20.9355 23.4964 20.9527 23.4254 20.9871 23.3669C21.0216 23.3084 21.0818 23.2625 21.1679 23.2291L23.0277 22.4522L23.7768 20.7231C23.8112 20.6396 23.8586 20.5811 23.9188 20.5477C23.9791 20.5143 24.0523 20.4976 24.1384 20.4976C24.2245 20.4976 24.2977 20.5143 24.358 20.5477C24.4182 20.5811 24.4656 20.6396 24.5 20.7231L25.2491 22.4522L27.1089 23.2291C27.195 23.2625 27.2553 23.3084 27.2897 23.3669C27.3241 23.4254 27.3414 23.4964 27.3414 23.5799C27.3414 23.6634 27.3241 23.7344 27.2897 23.7929C27.2553 23.8514 27.195 23.8973 27.1089 23.9307L25.2491 24.7076L24.5 26.3365C24.4656 26.42 24.4139 26.4785 24.345 26.5119C24.2762 26.5453 24.2073 26.562 24.1384 26.562ZM12.7989 22.2267C12.6612 22.2267 12.5277 22.1891 12.3986 22.1139C12.2694 22.0387 12.1704 21.9343 12.1015 21.8007L10.4225 18.3174L6.8063 16.7386C6.66854 16.6718 6.56091 16.5757 6.48342 16.4504C6.40593 16.3251 6.36719 16.1957 6.36719 16.062C6.36719 15.9284 6.40593 15.7989 6.48342 15.6736C6.56091 15.5483 6.66854 15.4522 6.8063 15.3854L10.4225 13.8066L12.1015 10.3484C12.1704 10.1981 12.2694 10.0853 12.3986 10.0101C12.5277 9.93492 12.6612 9.89733 12.7989 9.89733C12.9367 9.89733 13.0701 9.93492 13.1993 10.0101C13.3284 10.0853 13.4275 10.1897 13.4963 10.3233L15.2011 13.8066L18.7915 15.3854C18.9465 15.4522 19.0628 15.5483 19.1403 15.6736C19.2177 15.7989 19.2565 15.9284 19.2565 16.062C19.2565 16.1957 19.2177 16.3251 19.1403 16.4504C19.0628 16.5757 18.9465 16.6718 18.7915 16.7386L15.2011 18.3174L13.4963 21.8007C13.4275 21.951 13.3284 22.0596 13.1993 22.1265C13.0701 22.1933 12.9367 22.2267 12.7989 22.2267Z"
+        fill="url(#paint0_linear_1506_3163)"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_ddi_1506_3163"
+        x="0.000419617"
+        y="0.000237465"
+        width="33.0017"
+        height="34.0994"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="-1.31726" dy="2.48816" />
+        <feGaussianBlur stdDeviation="2.52475" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0.0506089 0 0 0 0 0.0159861 0 0 0 0 0.191833 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_1506_3163"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dx="1.24408" dy="-1.1709" />
+        <feGaussianBlur stdDeviation="2.19544" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="effect1_dropShadow_1506_3163"
+          result="effect2_dropShadow_1506_3163"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect2_dropShadow_1506_3163"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="3.07361" />
+        <feGaussianBlur stdDeviation="1.9393" />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect3_innerShadow_1506_3163"
+        />
+      </filter>
+      <linearGradient
+        id="paint0_linear_1506_3163"
+        x1="10.3672"
+        y1="-1.93799"
+        x2="39.3672"
+        y2="41.062"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0.13" stopColor="white" />
+        <stop offset="0.59" stopColor="#0057FF" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+const playIcon = ({ className }) => (
+  <svg width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="54.4982" cy="54.5001" r="54.5" transform="rotate(0.500767 54.4982 54.5001)" fill="white" fill-opacity="0.65"/>
+</svg>
+)
 const Icon = {
   fb_card1: FbCard1,
   fb_card2: FbCard2,
@@ -238,5 +361,7 @@ export {
   storeIcon,
   devlopIcon,
   TimelineBow,
+  Rote,
+  Star
 };
 export default Icon;

@@ -98,7 +98,7 @@ export default function LoginPage() {
 
             {/* Title + error */}
             <div className="flex items-start justify-between w-full">
-              <h2 className="text-xl md:text-2xl font-semibold">
+              <h2 className="text-xl md:text-[32px] font-semibold text-[#000000]">
                 {t("button.signin")} 👋
               </h2>
 
@@ -234,7 +234,7 @@ export default function LoginPage() {
                   {t("input.remember")}
                 </label>
 
-                <Link to="/restore" className="font-semibold hover:underline">
+                <Link to="/restore" className="font-medium hover:underline">
                   {t("input.forgot")}
                 </Link>
               </div>
@@ -266,9 +266,8 @@ export default function LoginPage() {
               </div>
 
               {/* Social login */}
-              <div className="flex justify-center gap-6 mt-4 text-2xl">
+              <div className="flex justify-center gap-6 mt-4 text-2xl border border-green-300 ml-6">
                 <a href={`${api}/facebook/connect`} aria-label="Facebook login">
-                  {/* {t("input.button")} */}
                   <img loading="lazy" src={fbLogin} alt="facebook login" className="w-8 h-8"/>
                 </a>
                 <a href={`${api}/google/connect`} aria-label="Google login">

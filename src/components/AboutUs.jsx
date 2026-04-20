@@ -1,10 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { TimelineBow } from "../assets/svg";
+import { TimelineBow, Rote } from "../assets/svg";
 import worlds from "../assets/about/world.png";
-// import cbicon from "../assets/stastic/BotIcon.svg";
-// import about1 from "../assets/about/about1.png";
-// import { divIcon, storeIcon, devlopIcon } from "../assets/svg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -21,7 +18,6 @@ const dotColors = [
   "#A371F7",
   "#56D364",
   "#2EA043",
-  // "#FF8A5B",
   "#FF8A5B",
   "#EC6547",
   "#0D1117",
@@ -63,22 +59,15 @@ function TimelineLine({ gradient }) {
 
 export default function AboutUs() {
   const { t } = useTranslation();
-  // const stastic = t("stastic", { returnObjects: true });
   const aboutSections = t("aboutSections", { returnObjects: true });
 
   return (
     <div className="min-h-screen bg-[#232323] px-3 pt-4 text-white md:px-6 md:pt-6 w-full bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.32)_0%,_rgba(11,17,40,0.94)_28%,_#040508_70%)]">
-      <div className="relative mx-auto max-w-[1300px] overflow-hidden mt-10 ">
-        {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03)_0%,transparent_14%,transparent_100%)]" /> */}
-        {/* <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(255,255,255,0.08)_0.6px,transparent_0.6px)] [background-size:8px_8px]" /> */}
-        {/* <div className="absolute  left-0 top-0 h-[2px] w-full bg-[linear-gradient(90deg,transparent_0%,#7c88ff_15%,#2563eb_50%,#7c88ff_85%,transparent_100%)]" /> */}
-        <div className="absolute left-[78px] top-[42px] h-[86px] w-[128px] rounded-br-[80px] border-b border-r border-[#8B5CF6]/60" />
-        <div className="absolute left-[30px] top-[108px] h-[150px] w-[118px] rounded-tr-[72px] border-l border-t border-[#8B5CF6]/45" />
-
-        <div className="relative mx-auto w-full  px-6 pb-20 pt-28 md:px-8 md:pt-36">
+      <div className="relative mx-auto max-w-[1300px] overflow-hidden mt-20">
+        <Rote className="w-[214px] h-[206px] absolute top-10 md:top-6 left-8 md:left-9"/>
+        <div className="relative mx-auto w-full px-6 pb-20 md:px-8 mt-44">
           <div className="flex flex-col">
             {aboutSections.map((item, idx) => {
-              console.log("🚀 ~ AboutUs ~ item:", item)
               return (
                 <div key={idx} className="flex gap-4 md:gap-6">
                   <div className="flex w-4 flex-col items-center flex-shrink-0">
@@ -105,7 +94,7 @@ export default function AboutUs() {
                           custom={1}
                           variants={fadeUp}
                         >
-                          <span className="inline-flex items-center gap-2 rounded-full border border-[#2a2a3e] bg-[#120f22] px-3 py-1 text-[12px] font-pro font-normal text-[#A3AED0] shadow-[0_0_16px_rgba(139,92,246,0.12)] md:text-[16px] ml-8">
+                          <span className="inline-flex items-center gap-2 rounded-full border border-[#2a2a3e] bg-[#120f22] px-3 py-3 text-[12px] font-pro font-normal text-[#A3AED0] shadow-[0_0_16px_rgba(139,92,246,0.12)] md:text-[16px] ml-8">
                             <span className="inline-flex h-6 w-6 flex-shrink-0 items-center justify-center [&>svg]:h-full [&>svg]:w-full">
                               <img
                                 src={item.icon}
@@ -185,7 +174,7 @@ export default function AboutUs() {
                             {item.title}
                           </span>
                         )}
-                        <p className="text-[16px] font-pro font-normal leading-relaxed text-[#FFFFFF] md:text-[29px] mt-10">
+                        <p className="text-[16px] font-pro font-normal leading-relaxed text-[#FFFFFF] md:text-[29px] mt-5">
                           {item?.desc}
                         </p>
                       </motion.div>
@@ -200,7 +189,7 @@ export default function AboutUs() {
                           viewport={{ once: false, amount: 0.3 }}
                           custom={0}
                           variants={fadeUp}
-                          className="space-y-3 absolute top-1/2 -translate-y-1/2 ml-[60px] -mt-10" 
+                          className="space-y-5 absolute top-1/2 -translate-y-1/2 ml-[60px] -mt-10" 
                         >
                           <span className="mb-3 inline-block rounded-full border px-3 py-1 text-[10px] font-pro font-normal md:text-[11px] border-[#939AFF] bg-gradient-to-b from-[#939AFF] to-[#B2B7FF] bg-clip-text text-transparent">
                             {item?.tag}
@@ -231,7 +220,7 @@ export default function AboutUs() {
                             {item.title}
                           </span>
                         )}
-                        <p className="text-[16px] font-pro font-normal leading-relaxed text-[#FFFFFF] md:text-[32px] mt-10">
+                        <p className="text-[16px] font-pro font-normal leading-relaxed text-[#FFFFFF] md:text-[32px] mt-5">
                           {item?.desc}
                         </p>
                       </motion.div>
@@ -271,10 +260,10 @@ export default function AboutUs() {
 
         {/* powered by AI */}
         <div className="justify-center items-center flex flex-col text-center relative max-h-[520px]" >
-          <h1 className="text-[24px] font-pro font-normal mb-6 md:text-[68px] bg-gradient-to-b from-[#FFFFFF] to-[#FFFFFF00] bg-clip-text text-transparent">
+          <h1 className="text-[24px] font-pro font-normal mb-6 md:text-[68px] bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF00] bg-clip-text text-transparent">
             {t("poweredByAI")}
           </h1>
-          <p className="font-pro font-normal text-[12px] md:text-[20px] text-[#FFFFFF] max-w-[540px]">
+          <p className="font-pro font-normal text-[12px] md:text-[18px] text-[#FFFFFF] max-w-[640px] mb-10">
             {t("poweredByAIDesc")}
           </p>
 

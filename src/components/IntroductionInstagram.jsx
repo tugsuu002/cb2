@@ -2,15 +2,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "./Home/Hero";
 import { useTranslation } from "react-i18next";
-import bg1 from "../assets/bg1.webp";
-import bg2 from "../assets/bg2.webp";
-import bg4 from "../assets/bg4.webp";
+import bg1 from "../assets/bannerDesktop/insta1.jpg";
+import bg2 from "../assets/bannerDesktop/insta2.jpg";
+// import bg4 from "../assets/bg4.webp";
 import HowItWorks from "./HowItWorks";
 import ChatbotSteps from "./ChatbotSteps";
-import oper from "../assets/t.webp";
-import mess from "../assets/p.webp";
-import cus from "../assets/supplier.webp";
-import like from "../assets/lik.webp";
+// import oper from "../assets/t.webp";
+// import mess from "../assets/p.webp";
+// import cus from "../assets/supplier.webp";
+// import like from "../assets/lik.webp";
 import SpotlightCard from "./SpotlightCard";
 import FeatureHighlights from "./FeatureHighlights";
 
@@ -20,19 +20,19 @@ export default function IntroductionInstagram() {
   const highlight = t("highlight", { returnObjects: true });
   return (
     <>
-      <Hero slides={[bg1, bg2, bg4,]} />
+      <Hero slides={[bg1, bg2]} />
       <section className="max-w-[1320px] mx-auto px-4 py-10 sm:py-16">
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-[40px] md:text-[70px] text-[#0D0D0D] font-pro font-normal text-center"
+          className="text-[40px] md:text-[70px] text-[#0D0D0D] font-pro font-semibold text-center"
         >
 
           {t("facebookIntroTitle")}
         </motion.p>
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
@@ -40,13 +40,13 @@ export default function IntroductionInstagram() {
           className="text-[18px] text-[#707082] font-pro font-normal text-center mb-8 sm:mb-12"
         >
           {t("facebookIntroSubtitle")}
-        </motion.p>
+        </motion.p> */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="bg-[#EDF2FB]/80 p-6 sm:p-[50px] lg:p-[75px] rounded-[20px] mb-20 shadow-inner"
+          className="bg-[#F4F7FE] p-6 sm:p-[50px] lg:p-[75px] rounded-[20px] mb-10"
         >
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[30px]">
             {instaCardList.map((item, index) => {
@@ -65,12 +65,12 @@ export default function IntroductionInstagram() {
                   >
                     <div key={index} className="px-4 py-5">
                       <div
-                        className="bg-gradient-to-br from-[#B6CCFE] to-[#EDF2FB] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] hover:text-[#0166FF] transition-colors duration-200 "
+                        className="bg-[#F4F7FE] rounded-full w-14 h-14 flex items-center justify-center mb-3 text-[#A3AED0] hover:text-[#0166FF] transition-colors duration-200 "
                       >
                          <Icon />
                       </div>
                       {/* Title */}
-                      <h3 className="font-pro font-medium text-sm sm:text-[18px] text-black mb-1">
+                      <h3 className="font-pro font-medium text-sm sm:text-[18px] text-black mb-3">
                         {item.title}
                       </h3>
                       {/* Description */}
@@ -88,7 +88,7 @@ export default function IntroductionInstagram() {
         <FeatureHighlights
           items={highlight}
         />
-        <HowItWorks />
+        <HowItWorks type="insta"/>
         <ChatbotSteps />
       </section>
     </>

@@ -8,6 +8,8 @@ import user from "../assets/human.svg";
 import key from "../assets/key.svg";
 import call from "../assets/call.svg";
 import logEmail from "../assets/log-mail.svg";
+import vnuhtsulPdf from "../assets/pdf/Үйлчилгээний нөхцөл.pdf";
+import privacyPdf from "../assets/pdf/Нууцлалын бодлого.pdf";
 
 export default function Signup() {
   const { t } = useTranslation();
@@ -173,26 +175,27 @@ export default function Signup() {
 
   return (
     <div className="w-full bg-white flex items-center justify-center">
-      <div className="w-full h-screen grid grid-cols-1 md:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="w-full h-screen grid grid-cols-1 md:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden ">
         {/* Left side */}
-        <div className="flex justify-center items-center p-6 md:p-10">
-          <div className="w-full max-w-[480px]">
-            <div className="flex items-center justify-start mb-10">
+        <div className="flex justify-center items-center p-6">
+          <div className="w-full max-w-[490px]">
+            <div className="flex items-center mb-10 justify-center">
               <a href="/">
-                <img loading="lazy" src={logo} alt="logo" className="w-[160px]" />
+                <img loading="lazy" src={logo} alt="logo" className="w-[150px] md:w-[180px] xl:w-[200px]" />
+                
               </a>
             </div>
 
-            <h2 className="text-xl md:text-2xl font-semibold mb-8">
+            <h2 className="text-xl md:text-[32px] font-pro font-semibold mb-8 text-[#000000]">
               {t("button.signup")}
             </h2>
             <form onSubmit={(e) => handleSubmit(e)}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label className="text-sm text-gray-600">
+                  <label className="text-sm text-[#a3aed0]">
                     {t("input.fName")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63] mt-1">
                     <img loading="lazy"
                       src={user}
                       alt="logo"
@@ -211,10 +214,10 @@ export default function Signup() {
                 </div>
 
                 <div>
-                  <label className="text-sm text-gray-600">
+                  <label className="text-sm text-[#a3aed0]">
                     {t("input.lName")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63] mt-1">
                     <img loading="lazy"
                       src={user}
                       alt="logo"
@@ -233,10 +236,10 @@ export default function Signup() {
                 </div>
 
                 <div>
-                  <label className="text-sm text-gray-600">
+                  <label className="text-sm text-[#a3aed0]">
                     {t("input.email")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63] mt-1">
                     <img loading="lazy"
                       src={logEmail}
                       alt="logo"
@@ -253,10 +256,10 @@ export default function Signup() {
                 </div>
 
                 <div>
-                  <label className="text-sm text-gray-600">
+                  <label className="text-sm text-[#a3aed0]">
                     {t("input.phone")}
                   </label>
-                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                  <div className="border rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63] mt-1">
                     <img loading="lazy"
                       src={call}
                       alt="logo"
@@ -283,7 +286,7 @@ export default function Signup() {
 
               {/* Password */}
               <div className="mt-5">
-                <label className="text-sm text-gray-600">
+                <label className="text-sm text-[#a3aed0]">
                   {t("input.pwd")}
                 </label>
                 <div className="relative mt-1 border rounded-xl flex items-center px-4 focus-within:ring-2 focus-within:ring-[#E91E63]">
@@ -347,7 +350,7 @@ export default function Signup() {
 
               {/* Confirm Password */}
               <div className="mt-4">
-                <label className="text-sm text-gray-600">
+                <label className="text-sm text-[#a3aed0]">
                   {t("input.pwdCheck")}
                 </label>
                 <div className="relative mt-1 border rounded-xl flex items-center px-4 focus-within:ring-2 focus-within:ring-[#E91E63]">
@@ -422,9 +425,9 @@ export default function Signup() {
                       handleChange(e);
                     }}
                   />
-                  <HashLink smooth to="/terms" className="underline">
+                  <a href={vnuhtsulPdf} target="_blank" className="underline">
                     {t("input.label8")}
-                  </HashLink>
+                  </a>
                 </label>
                 <WarningComment name="terms" />
                 <label className="flex items-center gap-2 text-gray-600">
@@ -436,9 +439,9 @@ export default function Signup() {
                       handleChange(e);
                     }}
                   />
-                  <HashLink smooth to="/privacy" className="underline">
+                  <a href={privacyPdf} target="_blank" className="underline">
                     {t("input.privacy")}
-                  </HashLink>
+                  </a>
                 </label>
                 <WarningComment name="privacy" />
               </div>
@@ -449,7 +452,7 @@ export default function Signup() {
               </button>
             </form>
             {/* Login redirect */}
-            <div className="text-center mt-4 text-sm text-gray-600">
+            <div className="text-center mt-4 text-sm text-[#a3aed0]">
               {t("input.signinif")}
               <Link
                 to="/signin"

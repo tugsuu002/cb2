@@ -6,8 +6,7 @@ import paper from "../../assets/paper.svg";
 import world from "../../assets/world.svg";
 import Search from "../../assets/Search.webp";
 import Orb from "../GradientBlinds";
-// import GradientBlinds from "../GradientBlinds";
-// import bs from "../../assets/BS.svg";
+import { Star } from "../../assets/svg";
 import { useTranslation } from "react-i18next";
 export default function AIHelp() {
   const { t } = useTranslation();
@@ -26,7 +25,7 @@ export default function AIHelp() {
   };
 
   return (
-    <section className="bg-black relative h-auto lg:h-[878px] mt-10 lg:mt-5">
+    <section className="bg-black relative h-auto lg:h-[878px] mt-10 lg:mt-16">
       <div className="relative max-w-[1320px] mx-auto px-0 py-20 -top-10 overflow-hidden rounded-[30px] h-[610px] lg:h-[878px] mx-41">
         {/* ai back image */}
 
@@ -62,8 +61,11 @@ export default function AIHelp() {
 
         {/* Content */}
         <div className="relative z-10 text-center justify-items-center px-1 mt-1 lg:mt-10">
-          <div className=" inline-block text-center font-pro font-semibold text-xl sm:text-[30px] leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-blue-600 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-5">
-            ✨ ChatAI in Action
+          <div className="text-center font-pro font-semibold text-xl sm:text-[30px] leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-blue-600 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] mb-5 flex items-center justify-center">
+            <Star className="mr-2"/> ChatAI in Action
+          </div>
+          <div>
+            
           </div>
           <h2 className="text-[25px] lg:text-[55px] font-pro font-semibold mb-8 text-[#FFFFFF]">
             {t("AiChatHelp")}
@@ -73,7 +75,7 @@ export default function AIHelp() {
               <p className="text-[#A3AED080] text-left text-[16px] font-pro font-normal">
                 Hi there, Goodmorning
               </p>
-              <div className="relative flex items-center gap-3 bg-[#1D1D1D]/80 rounded-full px-3 py-2 border border-white/6 w-full">
+              <div className="relative flex items-center gap-3 bg-[#1D1D1D]/80 rounded-full px-3 py-2 border border-[#423f3f80] w-full">
                 <img loading="lazy" src={Search} alt="search" className="w-5 h-5 opacity-80" />
 
                 <input
@@ -100,12 +102,12 @@ export default function AIHelp() {
           </div>
 
           {/* Suggestions */}
-          <div className="flex justify-center gap-3 flex-wrap mt-10">
+          <div className="flex justify-center gap-6 flex-wrap mt-10">
             <motion.button
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleSuggestion(`${t("AiSuggestions1")}`)}
-              className="inline-flex items-center gap-2 px-4 py-4 text-xs rounded-[10px] font-pro font-normal bg-black hover:bg-white/20 transition whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-4 py-4 text-xs rounded-full font-pro font-normal bg-black hover:bg-white/20 transition whitespace-nowrap border-[#423f3f80] border"
             >
               <img loading="lazy" src={paper} alt="paper" className="w-4 h-4" />
               <span className="text-white">{t("AiSuggestions1")}</span>
@@ -115,7 +117,7 @@ export default function AIHelp() {
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleSuggestion(`${t("AiSuggestions2")}`)}
-              className="inline-flex items-center gap-2 px-4 py-4 text-xs rounded-[10px] font-pro font-normal bg-black hover:bg-white/20 transition whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-4 py-4 text-xs rounded-full font-pro font-normal bg-black hover:bg-white/20 transition whitespace-nowrap border-[#423f3f80] border"
             >
               <img loading="lazy" src={world} alt="world" className="w-4 h-4" />
               <span className="text-white">{t("AiSuggestions2")}</span>
@@ -125,7 +127,7 @@ export default function AIHelp() {
               whileHover={{ y: -6 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => handleSuggestion(`${t("AiSuggestions3")}`)}
-              className="inline-flex items-center gap-2 px-4 py-4 text-xs font-pro font-normal rounded-[10px] bg-black hover:bg-white/20 transition whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-4 py-4 text-xs font-pro font-normal rounded-full bg-black hover:bg-white/20 transition whitespace-nowrap border-[#423f3f80] border"
             >
               <img loading="lazy" src={heart} alt="heart" className="w-4 h-4" />
               <span className="text-white">{t("AiSuggestions3")}</span>

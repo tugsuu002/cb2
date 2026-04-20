@@ -28,14 +28,14 @@ function Faq() {
 
       {/* Content on top */}
       <div className="relative z-10 justify-center justify-items-center">
-        <div className="flex justify-center mb-2 py-3 px-4 bg-[#171C1F] text-white w-[80px] rounded-[10px] space-x-3">
-          <img loading="lazy" src={asuult} alt="FAQ" className="h-5 w-5" />
-          <p>FAQS</p>
+        <div className="flex justify-center mb-2 py-2 px-4 bg-[#171C1F] text-white w-[70px] rounded-[10px] space-x-3">
+          <img loading="lazy" src={asuult} alt="FAQ" className="h-4 w-4" />
+          <p className="font-pro text-[12px]">FAQS</p>
         </div>
         <h2 className="font-pro font-semibold text-[30px] md:text-[50px] px-6 text-white justify-center flex">{t("faqHeader")}</h2>
       </div>
 
-      <div className="relative z-10 mt-20 justify-items-center">
+      <div className="relative z-10 mt-10 justify-items-center">
       {faq.map((e) => {
         return (
           <ul
@@ -61,7 +61,7 @@ function Faq() {
             </li>
             {checkedState[e.id] && (
               <div>
-                <hr className="mb-2 w-full border-t-1 border-gray-400" />
+                <hr className="mb-4 w-full border-t-1 border-[#2b2b2b]" />
                 <p className="px-6 pb-6 font-pro font-normal text-[14px] leading-[20px] [&+p]:mt-[14px]">{e.description}</p>
               </div>
             )}
@@ -69,9 +69,10 @@ function Faq() {
         );
       })}
       </div>
-      <div className="text-center text-gray-400 font-pro font-normal text-sm text-[16px] mt-28">
-        Contact us at <span className="text-white">info@chatbot.mn</span> via email!
-      </div>
+      {/* <div className="text-center bg-clip-text text-transparent bg-gradient-to-r from-[#D8ECF8] to-[#98C0EF]  font-pro font-normal text-sm text-[16px] mt-28">
+        Contact us at <span>info@chatbot.mn</span> via email!
+       
+      </div> */}
     </div>
   );
 }

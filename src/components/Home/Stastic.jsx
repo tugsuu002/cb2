@@ -35,7 +35,7 @@ export default function Stastic() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col justify-center h-auto px-1 sm:px-6 py-1 sm:py-6 text-center">
+            <div className="flex flex-col justify-center h-auto px-1 sm:px-6 py-1 sm:py-3 text-center">
               <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
                 <div className="flex items-center justify-center ">
                   {counter && (
@@ -44,7 +44,7 @@ export default function Stastic() {
                       redraw={true}
                       duration={1}
                       separator=','
-                      className="text-[20px] sm:text-[32px] lg:text-[48px] font-pro font-medium text-black leading-none"
+                      className="text-[20px] sm:text-[32px] lg:text-[48px] font-pro font-semibold text-black leading-none"
                     />
                   )}
 
@@ -52,12 +52,12 @@ export default function Stastic() {
                     <img loading="lazy"
                       src={item.plus}
                       alt="plus"
-                      className="w-[15px] sm:w-[20px] h-[30px] sm:h-[50px] ml-2 object-contain"
+                      className="w-[15px] sm:w-[20px] h-[30px] sm:h-[50px] object-contain"
                     />
                   )}
                 </div>
               </ScrollTrigger>
-              <div className="mt-3 text-[12px] sm:text-[14px] md:text-[16px] font-pro font-normal text-[#A3AED0]">
+              <div className="mt-3 text-[12px] sm:text-[14px] md:text-[16px] font-pro font-normal text-[#767d92]">
                 {item.type}
               </div>
             </div>

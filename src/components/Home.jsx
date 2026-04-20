@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import Hero from "./Home/Hero";
 import Stastic from "./Home/Stastic";
-import bg1 from "../assets/bg1.webp";
-import bg2 from "../assets/bg2.webp";
-import bg3 from "../assets/bg3.webp";
-import bg4 from "../assets/bg4.webp";
-import bg5 from "../assets/bg5.webp";
+import bg1 from "../assets/bannerDesktop/facebook.jpg";
+import bg2 from "../assets/bannerDesktop/insta1.jpg";
+import bg3 from "../assets/bannerDesktop/insta2.jpg";
+import bg4 from "../assets/bannerDesktop/you.jpg";
 import Customers from "./Home/Customers";
 import FeaturedSkills from "./Home/FeaturedSkills";
 import AIHelp from "./Home/AIHelp.jsx";
@@ -13,8 +12,7 @@ import AIHelp from "./Home/AIHelp.jsx";
 export default function Home() {
 
   const sections = [
-    { key: "hero", Element: () => <Hero slides={[bg1, bg2, bg3, bg4, bg5]} /> },
-    // { key: "stastic", Element: Stastic },
+    { key: "hero", Element: () => <Hero slides={[bg1, bg2, bg3, bg4]} /> },
     { key: "customers", Element: Customers },
     { key: "featured-skills", Element: FeaturedSkills },
     { key: "ai-help", Element: AIHelp },

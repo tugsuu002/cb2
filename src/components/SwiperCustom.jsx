@@ -2,8 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
-import banner1 from "../assets/banner/banner1.png";
-import banner2 from "../assets/banner/banner2.png";
+import banner1 from "../assets/banner/banner1.jpg";
+import banner2 from "../assets/banner/banner2.jpg";
 
 export default function SwiperCustom() {
   const bannerArray = [banner1, banner2];
