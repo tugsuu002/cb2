@@ -709,7 +709,7 @@ export const mn = {
   //     ],
   //   },
   // ],
-  // privacyTitle: "Нууцлалын бодлого",
+  privacyTitle: "Нууцлалын бодлого",
   // privacyList: [
   //   {
   //     header: "Ерөнхий болон Мэдээлэл цуглуулах",

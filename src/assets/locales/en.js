@@ -653,7 +653,7 @@ export const en = {
   //     ],
   //   },
   // ],
-  // privacyTitle: "Privacy Policy",
+  privacyTitle: "Privacy Policy",
   // privacyList: [
   //   {
   //     header: "General and Data Collection",
