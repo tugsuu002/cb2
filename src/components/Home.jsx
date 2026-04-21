@@ -4,7 +4,8 @@ import Stastic from "./Home/Stastic";
 import bg1 from "../assets/bannerDesktop/facebook.jpg";
 import bg2 from "../assets/bannerDesktop/insta1.jpg";
 import bg3 from "../assets/bannerDesktop/insta2.jpg";
-import bg4 from "../assets/bannerDesktop/you.jpg";
+import bg4 from "../assets/bannerDesktop/yout.jpg";
+
 import Customers from "./Home/Customers";
 import FeaturedSkills from "./Home/FeaturedSkills";
 import AIHelp from "./Home/AIHelp.jsx";

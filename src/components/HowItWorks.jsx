@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import utas from "../assets/Utas.webp";
 import Frame3 from "../assets/Frame3.webp";
 import Frame from "../assets/facebook/Phone.png";
-import video from "../assets/facebook/123.mp4";
+import video from "../assets/facebook/fbVideo.mp4";
+import video2 from "../assets/facebook/igVideo.mp4";
 
 export default function HowItWorks({ type }) {
 
@@ -26,17 +27,17 @@ export default function HowItWorks({ type }) {
               loading="lazy"
               src={Frame}
               alt="App preview"
-              className="w-[300px] md:w-[460px] lg:w-[600px] object-contain z-20"
+                 className="w-[220px] md:w-[340px] lg:w-[440px] object-contain z-20"
             />
             {/* Video overlay inside phone */}
             <video
-              src={type === "facebook" ? video : video}
+              src={type === "facebook" ? video : video2}
               title="App preview video"
               autoPlay
               muted
               loop
               playsInline
-              className="absolute  w-[74%] h-[90%] rounded-[16px] shadow-lg object-cover z-10"
+              className="absolute w-[73%] h-[89%] rounded-[16px] shadow-lg object-cover z-10"
               style={{background: '#000'}}
             ></video>
           </div>

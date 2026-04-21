@@ -105,6 +105,10 @@ export const mn = {
 
   facebookIntroTitle: "Үндсэн үйлчилгээ",
   facebookIntroSubtitle: "Бидний системийн боломжууд",
+  
+  more: "Дэлгэрэнгүй",
+  close: "Хаах",
+  
 
   featuresTitle: "Онцлох чавар",
   featuresHome: [
@@ -929,6 +933,9 @@ export const mn = {
     label9: "Нууц үг хамгийн багадаа 8 тэмдэгтээс бүрдэнэ",
     label10: "Нууцлалын бодлого-той уншиж танилцсан",
   },
+
+  titleHelp: "Видеогоор үзэж танилцаарай",
+  descHelp: "Манай чатботын цэс болон ашиглах зааврыг",
 
   helpCard: [
     {

@@ -35,7 +35,7 @@ function FeatureHighlights({ items = [] }) {
             <img loading="lazy"
               src={item.src}
               alt={item.alt || item.label || "feature icon"}
-              className="w-[32px] h-[29px]"
+              className="w-[29px] h-[29px]"
             />
             <p className="font-pro font-medium">{item.label}</p>
           </motion.div>

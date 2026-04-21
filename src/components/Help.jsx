@@ -37,13 +37,13 @@ function Help() {
       <div className="h-auto my-6 rounded-lg mt-20 mb-16">
         <div className="w-full flex justify-center items-center">
           <p className="font-pro font-normal text-[#000000] text-[16px] md:text-[22px]  text-center">
-            Манай чатботын цэс болон ашиглах зааврыг
+            {t("descHelp")}
           </p>
           {/* Explore our chatbot menu and learn how to use it by watching the video guide. */}
         </div>
         <div className="w-full flex justify-center items-center text-center">
           <p className="font-pro font-semibold text-[#000000] text-[40px] md:text-[65px] ">
-            Видеогоор үзэж танилцаарай
+            {t("titleHelp")}
           </p>
         </div>
       </div>

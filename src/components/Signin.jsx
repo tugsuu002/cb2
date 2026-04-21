@@ -132,15 +132,12 @@ export default function LoginPage() {
                 <input
                   type="email"
                   value={formData?.email}
-                  // onChange={(e) => setEmail(e.target.value)}
                   onChange={(e) =>
                     setFormData((prev) => ({ ...prev, email: e.target.value }))
                   }
                   placeholder={t("input.email")}
-                  required
-                    // className="w-full px-4 py-3  outline-none border-none focus:ring-0"
-                    className="w-full px-3 py-3 text-base outline-none border-none focus:ring-0"
-                  />
+                  className={`w-full px-3 py-3 text-base outline-none border-none focus:ring-0 ${alert?.state && alert?.bg === "bg-red-100" ? 'border-[#E91E63]' : ''}`}
+                />
                   </div>
               </div>
 
@@ -151,7 +148,7 @@ export default function LoginPage() {
                 </label>
 
 
-                <div className="border relative rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63]">
+                <div className={`border relative rounded-xl flex items-center px-3 focus-within:ring-2 focus-within:ring-[#E91E63] ${alert?.state && alert?.bg === "bg-red-100" ? 'border-[#E91E63]' : ''}`}>
                   <img loading="lazy" src={key} alt="logo" className="h-5 w-5 flex-shrink-0" />
                   <input
                     type={showPassword ? "text" : "password"}
@@ -163,8 +160,8 @@ export default function LoginPage() {
                       }))
                     }
                     placeholder={t("input.pwd")}
-                    required
-                    minLength={8}
+                    // required
+                    // minLength={8}
                     // className="w-full  px-4 py-3 pr-12 outline-none border-none focus:ring-0"
                     className="flex-1 px-3 py-3 pr-10 text-base outline-none border-none focus:ring-0"
                   />
@@ -218,9 +215,11 @@ export default function LoginPage() {
                   </button>
                 </div>
 
-                <p className="mt-1 text-xs text-[#FF0004]">
-                  {t("input.label9")}
-                </p>
+                {alert?.state && alert?.bg === "bg-red-100" && formData?.password.length < 8 && (
+                  <p className="mt-1 text-xs text-[#FF0004]">
+                    {t("input.label9")}
+                  </p>
+                )}
               </div>
 
               {/* Remember + Forgot */}

@@ -33,7 +33,7 @@ const ChatbotSteps = () => {
           whileTap={{ scale: 0.995 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: index * 0.15, type: "spring", stiffness: 160, damping: 16 }}
-          className={`relative w-full flex-shrink-0 cursor-pointer shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col justify-center border border-[#F4F7FE] rounded-[20px]`}
+          className={`relative w-full flex-shrink-0 cursor-pointer hover:shadow-md transition-shadow duration-300 flex flex-col justify-center border border-[#F4F7FE] rounded-[20px]`}
           style={{ zIndex: steps.length - index }}
         >
           {/* Bottom white card */}

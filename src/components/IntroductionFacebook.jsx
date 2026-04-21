@@ -95,7 +95,7 @@ export default function IntroductionFacebook() {
         hover:scale-105
       "
             >
-              {checkList ? "Хаах" : "Дэлгэрэнгүй"}
+              {checkList ? t("close") : t("more")}
               <img loading="lazy"
                 src={topArrow}
                 alt="arrow icon"

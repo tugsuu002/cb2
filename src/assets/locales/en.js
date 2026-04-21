@@ -67,9 +67,12 @@ export const en = {
     },
   ],
 
-  facebookIntroTitle: "CORE SERVICE",
+  facebookIntroTitle: "Core service",
   facebookIntroSubtitle: "Бидний системийн боломжууд",
 
+  more: "More",
+  close: "Close",
+  
   fb_card: [
     {
       title: "Content Management",
@@ -213,7 +216,7 @@ export const en = {
     { src: like, label: "User-friendly service" },
   ],
 
-  phoneScreen: "HOW THE SYSTEM WORKS?",
+  phoneScreen: "How the system works?",
   howChatbot: "How to start with a chatbot?",
 
   steps: [
@@ -267,7 +270,7 @@ export const en = {
     },
   ],
 
-  featuresTitle: "Key Feature",
+  featuresTitle: "Key feature",
 
   featuresHome: [
     {
@@ -286,7 +289,7 @@ export const en = {
       img: featuresHome8,
     },
     {
-      title: "Automatically reply to posts.",
+      title: "Automatically reply to posts",
       desc: "Automatically reply to comments on Facebook posts and send detailed information via chat.",
       img: featuresHome6,
     },
@@ -319,7 +322,7 @@ export const en = {
   AiSuggestions3: "How can we help you?",
 
   chatbotTest: "TRY CHATBOT",
-  chatbotText: "GET STARTED EASILY WITH YOUR CHATBOT IN YOUR NATIVE LANGUAGE!",
+  chatbotText: "Get started easily with your chatbot in your native language!",
 
   price: [
     {
@@ -327,7 +330,7 @@ export const en = {
       name: "Pro",
       price: "300,000₮",
       description:
-        "Customize your solution by selecting add-on menu options specific to your business operations.",
+        "Customize your solution with add-ons tailored to your business.",
       highlight: false,
     },
     {
@@ -341,7 +344,7 @@ export const en = {
     {
       id: 2,
       name: "VIP",
-      price: "Custom Pricing",
+      price: "Custom pricing",
       description: "Develop custom integrations with your operational systems",
       highlight: false,
     },
@@ -412,7 +415,7 @@ export const en = {
   priceCTA:
     "Contact our sales manager for personalized guidance on selecting the right plan for your industry, company, and needs.",
   priceComment: "An Overview of Our System’s",
-  faqHeader: "FREQUENTLY ASKED QUESTIONS",
+  faqHeader: "Frequently asked questions",
 
   faq: [
     {
@@ -855,6 +858,9 @@ export const en = {
   },
 
 
+  titleHelp: "Watching the video guide",
+  descHelp: "Explore our chatbot menu and learn how to use it by",
+
 helpCard: [
   {
     title: "Post Content",
@@ -869,7 +875,7 @@ helpCard: [
     img: featuresHome2,
   },
   {
-    title: "FAQ (Frequently Asked Questions)",
+    title: "FAQ",
     desc: "Chatbot features",
     link: "https://youtu.be/YxUOWzF2FuI?si=gyZWApJ7eC7kfdjh",
     img: featuresHome3,
