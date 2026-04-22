@@ -516,7 +516,6 @@ export const en = {
   },
   termTitle: "Terms of Service",
   Feedback: "Feedback",
-  privacyTitle: "Privacy Policy",
   // termList: [
   //   {
   //     header: "General conditions",
@@ -654,7 +653,7 @@ export const en = {
   //     ],
   //   },
   // ],
-
+  // privacyTitle: "Privacy Policy",
   // privacyList: [
   //   {
   //     header: "General and Data Collection",

@@ -88,53 +88,53 @@ export default function Signup() {
 
   const register = async () => {
     try {
-      // const result = await fetchWithTimeout("/auth/register", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
+      const result = await fetchWithTimeout("/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // if (result.result.code === 1000) {
-      //   switch (localStorage.getItem("newUser")) {
-      //     case "1":
-      //       //Ecommerce
-      //       window.location.href =
-      //         "https://www.messenger.com/t/105586168752112";
-      //       break;
-      //     case "2":
-      //       //Health
-      //       window.location.href =
-      //         "https://www.messenger.com/t/104653705897272";
-      //       break;
-      //     case "3":
-      //       //Restaurant
-      //       window.location.href =
-      //         "https://www.messenger.com/t/115249621509971";
-      //       break;
-      //     case "4":
-      //       //Real state
-      //       window.location.href =
-      //         "https://www.messenger.com/t/103318735627287";
-      //       break;
-      //     case "5":
-      //       //Education
-      //       window.location.href =
-      //         "https://www.messenger.com/t/104721671801417";
-      //       break;
-      //     default:
-      //       navigate("/signin");
-      //       break;
-      //   }
-      // } else
-      //   setAlert((prev) => ({
-      //     ...prev,
-      //     state: true,
-      //     message: result.result.message,
-      //     bg: "bg-red-100",
-      //     text: "text-red-700",
-      //   }));
+      if (result.result.code === 1000) {
+        // switch (localStorage.getItem("newUser")) {
+        //   case "1":
+        //     //Ecommerce
+        //     window.location.href =
+        //       "https://www.messenger.com/t/105586168752112";
+        //     break;
+        //   case "2":
+        //     //Health
+        //     window.location.href =
+        //       "https://www.messenger.com/t/104653705897272";
+        //     break;
+        //   case "3":
+        //     //Restaurant
+        //     window.location.href =
+        //       "https://www.messenger.com/t/115249621509971";
+        //     break;
+        //   case "4":
+        //     //Real state
+        //     window.location.href =
+        //       "https://www.messenger.com/t/103318735627287";
+        //     break;
+        //   case "5":
+        //     //Education
+        //     window.location.href =
+        //       "https://www.messenger.com/t/104721671801417";
+        //     break;
+        //   default:
+        //     navigate("/signin");
+        //     break;
+        // }
+      } else
+        setAlert((prev) => ({
+          ...prev,
+          state: true,
+          message: result.result.message,
+          bg: "bg-red-100",
+          text: "text-red-700",
+        }));
     } catch (err) {
     }
   };

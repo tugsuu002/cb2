@@ -22,6 +22,15 @@ module.exports = {
       screens: {
         xs: [{ min: "280px", max: "300px" }],
       },
+       keyframes: {
+      shimmer: {
+        '0%': { backgroundPosition: '-200% 0' },
+        '100%': { backgroundPosition: '200% 0' },
+      },
+    },
+    animation: {
+      shimmer: 'shimmer 1.5s linear infinite',
+    },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
