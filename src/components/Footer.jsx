@@ -11,8 +11,8 @@ import mail from "../assets/mail.svg";
 import phone from "../assets/phone.svg";
 import cbicon from "../assets/stastic/BotIcon.svg";
 import arrow from "../assets/arrow.webp";
-import vnuhtsulPdf from "../assets/pdf/Үйлчилгээний нөхцөл.pdf";
-import privacyPdf from "../assets/pdf/Нууцлалын бодлого.pdf";
+// import vnuhtsulPdf from "../assets/pdf/Үйлчилгээний нөхцөл.pdf";
+// import privacyPdf from "../assets/pdf/Нууцлалын бодлого.pdf";
 
 function Footer() {
   const { t } = useTranslation();
@@ -192,7 +192,8 @@ function Footer() {
             <div className="w-[400px] lg:w-[290px] md:justify-items-end">
               <div>
                 <a
-                  href={vnuhtsulPdf}
+                  // href={vnuhtsulPdf}
+                  href="https://chatbot.mn/uploads/old/%D2%AE%D0%B9%D0%BB%D1%87%D0%B8%D0%BB%D0%B3%D1%8D%D1%8D%D0%BD%D0%B8%D0%B9%20%D0%BD%D3%A9%D1%85%D1%86%D3%A9%D0%BB.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"
@@ -208,7 +209,8 @@ function Footer() {
               </div>
               <div className="mt-3">
                 <a
-                  href={privacyPdf}
+                  // href={privacyPdf}
+                  href="https://chatbot.mn/uploads/old/%D0%9D%D1%83%D1%83%D1%86%D0%BB%D0%B0%D0%BB%D1%8B%D0%BD%20%D0%B1%D0%BE%D0%B4%D0%BB%D0%BE%D0%B3%D0%BE.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-gray-200 text-[#FFFFFF] cursor-pointer font-pro font-semibold text-[12px] border border-[#171C1F] h-[42px] px-3 py-2 flex items-center justify-between w-[70%] md:w-[259px] rounded-[7px] transition shadow-none hover:shadow-[0_0_16px_rgba(255,255,255,0.35)]"

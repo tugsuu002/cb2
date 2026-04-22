@@ -89,7 +89,7 @@ export default function PricingTable() {
       <div
         ref={(el) => (sectionRefs.current[1] = el)}
         data-section="plans"
-        className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 w-[76%] ml-auto text-[#031555 transition-all duration-1000 delay-200 ${
+        className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 w-[76%] ml-auto text-[#031555 transition-all duration-1000 delay-200 ${
           visibleSections.has("plans")
             ? "opacity-100 scale-100"
             : "opacity-0 scale-90"
@@ -129,27 +129,16 @@ export default function PricingTable() {
                 {plan.price}
               </div>
               {plan?.name === "Pro" && (
-                <div className="flex items-centerteceenter gap-2">
-                  <p className="text-[#A3AED0]">/{t("priceMonth")}</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-[#A3AED0] text-[12px] md:text-[14px]">/{t("priceMonth")}</p>
                   <span className="relative inline-flex">
-                    {/* <span
-                      className="absolute inline-flex h-full w-full rounded-full bg-[#608DFF] opacity-30 animate-ping"
-                    /> */}
-                    {/* <span
-                      onClick={() => setShowAddOnModal(true)}
-                      className="relative text-[10px] bg-[#608DFF] rounded-full text-white px-2 py-1 whitespace-nowrap cursor-pointer hover:bg-[#4a6fd4] transition-colors  inline-block
-                      "
-                    >
-                       <div className="absolute inset-0 bg-[conic-gradient(from_0deg,#E91E63,#8B5CF6,#E91E63)] animate-[spin_6s_linear_infinite]" aria-hidden="true" />
-                      *{t("PriceAdd")}
-                    </span> */}
                     <div className="relative rounded-full p-[2px] overflow-hidden">
-                      <div
+                      {/* <div
                         className="absolute inset-0 bg-[conic-gradient(from_0deg,#608DFF,#93C5FD,#608DFF)] animate-[spin_6s_linear_infinite]"
                         aria-hidden="true"
-                      />
+                      /> */}
                       <div
-                        className="relative text-[10px] bg-[#608DFF] rounded-full text-white px-2 py-1 whitespace-nowrap cursor-pointer hover:bg-[#4a6fd4] transition-colors font-pro font-normal "
+                        className="relative text-[10px] bg-[#608DFF] rounded-full text-white px-2 py-1 whitespace-nowrap cursor-pointer hover:bg-[#4a6fd4] transition-colors font-pro font-normal animate-glowpulse"
                         onClick={() => setShowAddOnModal(true)}
                       >
                          *{t("PriceAdd")}

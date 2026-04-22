@@ -22,15 +22,33 @@ module.exports = {
       screens: {
         xs: [{ min: "280px", max: "300px" }],
       },
-       keyframes: {
-      shimmer: {
-        '0%': { backgroundPosition: '-200% 0' },
-        '100%': { backgroundPosition: '200% 0' },
+      keyframes: {
+        glowpulse: {
+          "0%": {
+            boxShadow: "0 0 0 0 rgba(96,141,255,0.7)",
+          },
+          "50%": {
+            boxShadow: "0 0 0 30px rgba(96,141,255,0.25)", // 🔼 өсгөсөн (20 → 30)
+          },
+          "100%": {
+            boxShadow: "0 0 0 50px rgba(96,141,255,0)", // 🔼 илүү том цацралт
+          },
+          "50%": {
+            boxShadow: "0 0 0 40px rgba(96,141,255,0.2)",
+          },
+          "100%": {
+            boxShadow: "0 0 0 70px rgba(96,141,255,0)",
+          },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
       },
-    },
-    animation: {
-      shimmer: 'shimmer 1.5s linear infinite',
-    },
+      animation: {
+        shimmer: "shimmer 1.5s linear infinite",
+        glowpulse: "glowpulse 1.5s infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
