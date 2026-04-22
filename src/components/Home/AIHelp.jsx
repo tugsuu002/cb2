@@ -32,7 +32,7 @@ export default function AIHelp() {
 
   const aiChat = async () => {
     if (!question.trim()) return;
-    console.info("question===>", question);
+    // console.info("question===>", question);
     setLoading(true);
     setMessage("");
     try {
@@ -42,6 +42,7 @@ export default function AIHelp() {
         message: question,
         channel: "web",
       });
+      setQuestion("");
       const response = await fetch(
         `https://dev.aichatbot.mn/api/v1/stream?${params.toString()}`,
         {
@@ -51,6 +52,7 @@ export default function AIHelp() {
           },
         },
       );
+      
       if (!response.ok || !response.body) {
         throw new Error("API error");
       }
