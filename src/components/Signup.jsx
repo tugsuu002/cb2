@@ -175,9 +175,9 @@ export default function Signup() {
 
   return (
     <div className="w-full bg-white flex items-center justify-center">
-      <div className="w-full h-screen grid grid-cols-1 md:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden ">
+      <div className="min-h-screen md:w-full md:h-screen grid grid-cols-1 md:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden ">
         {/* Left side */}
-        <div className="flex justify-center items-center p-6">
+        <div className="flex justify-center items-center p-6 max-w-5xl min-h-[80vh]">
           <div className="w-full max-w-[490px]">
             <div className="flex items-center mb-10 justify-center">
               <a href="/">

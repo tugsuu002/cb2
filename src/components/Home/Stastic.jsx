@@ -10,15 +10,13 @@ export default function Stastic() {
   const [counter, setCounter] = useState(false);
   const fetchStats = async () => {
     await fetch("https://chatbot.mn/api/stats")
-    .then((res) => res.json())
-    .then((data) => setStats(data));
+      .then((res) => res.json())
+      .then((data) => setStats(data));
   };
-  
+
   // useEffect(() => {
   //   // fetchStats();
   // }, []);
-  
-
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 w-[80%] px-4 sm:px-6 lg:px-0 z-10 ">
@@ -27,7 +25,8 @@ export default function Stastic() {
           <div className="relative w-full min-h-[100px] sm:min-h-[200px] rounded-2xl bg-gradient-to-br  overflow-hidden">
             {/* Icon */}
             <div className="p-2 sm:p-4 justify-center items-center flex">
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 src={item.icon}
                 alt="stat icon"
                 className="w-7 h-7 sm:w-8 sm:h-8"
@@ -36,20 +35,24 @@ export default function Stastic() {
 
             {/* Content */}
             <div className="flex flex-col justify-center h-auto px-1 sm:px-6 py-1 sm:py-3 text-center">
-              <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
+              <ScrollTrigger
+                onEnter={() => setCounter(true)}
+                onExit={() => setCounter(false)}
+              >
                 <div className="flex items-center justify-center ">
                   {counter && (
                     <CountUp
                       end={item?.count || 6676417}
                       redraw={true}
                       duration={1}
-                      separator=','
-                      className="text-[20px] sm:text-[32px] lg:text-[48px] font-pro font-semibold text-black leading-none"
+                      separator=","
+                      className="text-[20px] sm:text-[32px] lg:text-[38px] 2xl:text-[48px] font-pro font-semibold text-black leading-none"
                     />
                   )}
 
                   {item?.plus && (
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={item.plus}
                       alt="plus"
                       className="w-[15px] sm:w-[20px] h-[30px] sm:h-[50px] object-contain"
