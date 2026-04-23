@@ -265,7 +265,7 @@ export default function LoginPage() {
               </div>
 
               {/* Social login */}
-              <div className="flex justify-center gap-6 mt-4 text-2xl border border-green-300 ml-6">
+              <div className="flex justify-center gap-6 mt-4 text-2xl ml-6">
                 <a href={`${api}/facebook/connect`} aria-label="Facebook login">
                   <img loading="lazy" src={fbLogin} alt="facebook login" className="w-8 h-8"/>
                 </a>

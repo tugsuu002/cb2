@@ -176,39 +176,41 @@ export default function PricingTable() {
         </div>
 
         {/* Feature rows */}
-        {features.map((f, rowIndex) => (
-          <div key={rowIndex} className="grid grid-cols-4">
-            <div className="px-4 py-3 border-b border-[#A3AED0] border-opacity-20 text-[16px] font-pro font-normal text-black bg-[#FFFFFF] flex items-center gap-2">
-              <div>{f.label}</div>
-              {f.sub && (
-                <div className="text-xs font-pro font-normal text-gray-500">
-                  {f.sub}
-                </div>
-              )}
-            </div>
-
-            {plans.map((plan, colIndex) => (
-              <div
-                key={`${plan.name}-${rowIndex}`}
-                className={`px-4 py-3 font-pro font-normal border-b border-[#A3AED0] border-opacity-20 flex justify-center items-center gap-2 text-sm ${plan.highlight ? "bg-[#608DFF] text-white" : "bg-[#FFFFFF] text-[#A3AED0]"} flex`}
-              >
-                {f.values[colIndex] === true && (
-                  <Check select={plan.highlight} />
-                )}
-                {f.values[colIndex] === false && (
-                  <Minus select={plan.highlight} />
-                )}
-                {typeof f.values[colIndex] === "string" && (
-                  <span
-                    className={`text-[12px] ${plan.highlight ? "text-white" : "text-[#A3AED0]"}`}
-                  >
-                    {f.values[colIndex]}
-                  </span>
+        {features.map((f, rowIndex) => {
+          return (
+            <div key={rowIndex} className="grid grid-cols-4">
+              <div className="px-4 py-3 border-b border-[#A3AED0] border-opacity-20 text-[16px] font-pro font-normal text-black bg-[#FFFFFF] flex items-center gap-2">
+                <div>{f.label}</div>
+                {f.sub && (
+                  <div className="text-xs font-pro font-normal text-gray-500">
+                    {f.sub}
+                  </div>
                 )}
               </div>
-            ))}
-          </div>
-        ))}
+  
+              {plans.map((plan, colIndex) => (
+                <div
+                  key={`${plan.name}-${rowIndex}`}
+                  className={`px-4 py-3 font-pro font-normal border-b border-[#A3AED0] border-opacity-20 flex justify-center items-center gap-2 text-sm ${plan.highlight ? "bg-[#608DFF] text-white" : "bg-[#FFFFFF] text-[#A3AED0]"} flex`}
+                >
+                  {f.values[colIndex] === true && (
+                    <Check select={plan.highlight} />
+                  )}
+                  {f.values[colIndex] === false && (
+                    <Minus select={plan.highlight} />
+                  )}
+                  {typeof f.values[colIndex] === "string" && (
+                    <span
+                      className={`text-[12px] ${plan.highlight ? "text-white" : "text-[#A3AED0]"}`}
+                    >
+                      {f.values[colIndex]}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          );
+        })}
       </div>
 
 

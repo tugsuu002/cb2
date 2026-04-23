@@ -212,15 +212,15 @@ const TimelineBow = ({ className, color }) => {
 
 const Rote = ({ className }) => (
   <svg width="418" height="410" viewBox="0 0 418 410" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-<path d="M415.792 1.47949V39.1536C415.792 142.667 331.878 226.58 228.365 226.58H129.72C58.8951 226.58 1.48047 283.994 1.48047 354.82V407.604" stroke="url(#paint0_linear_3247_3694)" stroke-width="2.95937" stroke-linecap="round"/>
+<path d="M415.792 1.47949V39.1536C415.792 142.667 331.878 226.58 228.365 226.58H129.72C58.8951 226.58 1.48047 283.994 1.48047 354.82V407.604" stroke="url(#paint0_linear_3247_3694)" strokeWidth="2.95937" strokeLinecap="round"/>
 <defs>
 <linearGradient id="paint0_linear_3247_3694" x1="-127.745" y1="525.78" x2="384.212" y2="-46.0302" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A371F7"/>
-<stop offset="0.00733964" stop-color="#9E72D3"/>
-<stop offset="0.251918" stop-color="#6639BA" stop-opacity="0"/>
-<stop offset="0.325848" stop-color="#6639BA"/>
-<stop offset="0.945217" stop-color="#6639BA"/>
-<stop offset="1" stop-color="#6639BA" stop-opacity="0"/>
+<stop stopColor="#A371F7"/>
+<stop offset="0.00733964" stopColor="#9E72D3"/>
+<stop offset="0.251918" stopColor="#6639BA" stopOpacity="0"/>
+<stop offset="0.325848" stopColor="#6639BA"/>
+<stop offset="0.945217" stopColor="#6639BA"/>
+<stop offset="1" stopColor="#6639BA" stopOpacity="0"/>
 </linearGradient>
 </defs>
 </svg>

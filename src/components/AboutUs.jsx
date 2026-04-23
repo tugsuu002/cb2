@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { TimelineBow, Rote } from "../assets/svg";
 import worlds from "../assets/about/world.png";
+import LetterGlitch from "./LetterGlitch";
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -259,15 +261,23 @@ export default function AboutUs() {
         </div>
 
         {/* powered by AI */}
-        <div className="justify-center items-center flex flex-col text-center relative max-h-[520px]" >
-          <h1 className="text-[24px] font-pro font-normal mb-6 md:text-[68px] bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF00] bg-clip-text text-transparent">
-            {t("poweredByAI")}
-          </h1>
-          <p className="font-pro font-normal text-[12px] md:text-[18px] text-[#FFFFFF] max-w-[640px] mb-10">
-            {t("poweredByAIDesc")}
-          </p>
-
-          <img src={worlds} alt="worlds" className="mt-10 w-[90%] md:w-[80%]" />
+        <div className="justify-center items-center flex flex-col text-center relative max-h-[520px] min-h-[320px]">
+          <div className="absolute inset-0 w-full h-full rounded-[12px]">
+            <LetterGlitch
+              glitchSpeed={50}
+              centerVignette={true}
+              outerVignette={true}
+              smooth={true}
+            />
+          </div>
+          <div className="absolute w-full h-full flex flex-col justify-center items-center">
+            <h1 className="text-[24px] font-pro font-normal mb-6 md:text-[68px] bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF00] bg-clip-text text-transparent">
+              {t("poweredByAI")}
+            </h1>
+            <p className="font-pro font-normal text-[12px] md:text-[18px] text-[#FFFFFF] max-w-[640px] mb-10">
+              {t("poweredByAIDesc")}
+            </p>
+          </div>
         </div>
 
       </div>

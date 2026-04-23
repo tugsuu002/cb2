@@ -1,10 +1,17 @@
-import { useRef } from 'react';
-import '../index.css';
 
-const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 255, 255, 0.25)' }) => {
-  const divRef = useRef(null);
+import { useRef, ReactNode } from 'react';
 
-  const handleMouseMove = e => {
+type SpotlightCardProps = {
+  children: ReactNode;
+  className?: string;
+  spotlightColor?: string;
+};
+
+const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 255, 255, 0.25)' }: SpotlightCardProps) => {
+  const divRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!divRef.current) return;
     const rect = divRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;

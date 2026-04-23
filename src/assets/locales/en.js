@@ -72,7 +72,7 @@ export const en = {
 
   more: "More",
   close: "Close",
-  
+
   fb_card: [
     {
       title: "Content Management",
@@ -179,7 +179,7 @@ export const en = {
     },
     {
       title: "Webform",
-      desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system’s dashboard.",
+      desc: "Questionnaires are completed via pop-up forms, and responses can be monitored through the system's dashboard.",
       icon: FbCard10,
     },
     {
@@ -275,51 +275,51 @@ export const en = {
   featuresHome: [
     {
       title: "In-chatbot sales",
-      desc: "Sell products directly through the chatbot’s online shop, integrated with local payment systems like SocialPay, QPay, and MonPay.",
+      desc: "Sell products via chatbot with SocialPay, QPay, MonPay integration.",
       img: featuresHome1,
     },
     {
       title: "Access report",
-      desc: "Download user activity reports to Excel, filtered by date since the bot was connected to the Facebook page.",
+      desc: "Download user activity reports to Excel, filtered by date.",
       img: featuresHome2,
     },
     {
       title: "Calculation",
-      desc: "By integrating material calculation formulas into the chatbot, you save users’ time and provide the necessary information online.",
+      desc: "Apply calculation formulas in chatbot to provide info online.",
       img: featuresHome8,
     },
     {
       title: "Automatically reply to posts",
-      desc: "Automatically reply to comments on Facebook posts and send detailed information via chat.",
+      desc: "Auto-reply to post comments and send detailed info via chat.",
       img: featuresHome6,
     },
     {
       title: "Custom development services",
-      desc: "Integrate with the organization’s internal systems and develop custom solutions tailored to their operations.",
+      desc: "Integrate with internal systems and develop custom solutions.",
       img: featuresHome5,
     },
     {
-      title: "Remote Contract Signing",
-      desc: "Collect the necessary information from users and send it as a contract via email.",
+      title: "Scheduled Message",
+      desc: "Send follow-up messages to users after a certain time.",
       img: featuresHome4,
     },
     {
       title: "Web Form",
-      desc: "Create additional windows for users to fill out forms and view the responses from the system's dashboard.",
+      desc: "Create forms for users to fill and view responses from dashboard.",
       img: featuresHome7,
     },
     {
       title: "Online Contract",
-      desc: "Gather required contract information from users anywhere and email it to the organization.",
+      desc: "Collect contract info from users and send via email.",
       img: featuresHome3,
     },
   ],
 
-  AiChatHelp: "How can we help you?",
+  AiChatHelp: "How can help you?",
   AiQuasion: "Ask a anything",
   AiSuggestions1: "How do I sign the contract online?",
   AiSuggestions2: "How much does the AI chatbot service cost?",
-  AiSuggestions3: "How can we help you?",
+  AiSuggestions3: "How can help you?",
 
   chatbotTest: "TRY CHATBOT",
   chatbotText: "Get started easily with your chatbot in your native language!",
@@ -414,7 +414,7 @@ export const en = {
 
   priceCTA:
     "Contact our sales manager for personalized guidance on selecting the right plan for your industry, company, and needs.",
-  priceComment: "An Overview of Our System’s",
+  priceComment: "An Overview of Our System's",
   faqHeader: "Frequently asked questions",
 
   faq: [
@@ -448,9 +448,9 @@ export const en = {
   aboutStatAuto: "Automated chatbot systems",
   aboutTeamTitle: "Our Team",
 
-  poweredByAI: "Powered by AI",
+  poweredByAI: "Improved with AI",
   poweredByAIDesc: "AI-driven solutions tailored to your business needs and target audience, creating optimal interactions automatically.",
-  
+
 
  aboutSections: [
   {
@@ -495,13 +495,13 @@ export const en = {
     desc: "A comprehensive solution to manage all social channel communications in one place.",
   },
 ],
-  
+
   business: "BUSINESS FOCUSED",
   business1: "SMART PARTNER",
   businessDesc1:
     "The smart partner for every business. Simplify your customer flow, make data-driven decisions, and deliver",
   businessDescBold: "fast, reliable service",
-  businessDesc2: "to your customers — chatbot.mn makes it all possible.",
+  businessDesc2: "to your customers - chatbot.mn makes it all possible.",
 
   productHeader: "EXTRA FEATURES",
   productHeader2: "Advantages",
@@ -522,7 +522,7 @@ export const en = {
   //     header: "General conditions",
   //     desc: [
   //       {
-  //         d: "The Chatbot.mn customer answering system is an official service provided by “Chatbot” LLC, and the purpose of these terms of service is to regulate the rights and obligations of the parties when users use the system's services.",
+  //         d: "The Chatbot.mn customer answering system is an official service provided by "Chatbot" LLC, and the purpose of these terms of service is to regulate the rights and obligations of the parties when users use the system's services.",
   //         d1: [],
   //       },
   //       {
@@ -539,7 +539,7 @@ export const en = {
   //         d1: [],
   //       },
   //       {
-  //         d: "The information and conversations shared by the user through their self-created bot are considered private exchanges solely between the user and the messenger user. “Chatbot” LLC does not hold any legal responsibility for these interactions.",
+  //         d: "The information and conversations shared by the user through their self-created bot are considered private exchanges solely between the user and the messenger user. "Chatbot" LLC does not hold any legal responsibility for these interactions.",
   //         d1: [],
   //       },
   //       {
@@ -569,7 +569,7 @@ export const en = {
   //         d1: [],
   //       },
   //       {
-  //         d: "The user is responsible for protecting the login password of the Chatbot.mn system and the user information from others, and is responsible for preventing any risks that may arise from the non-fulfillment of this responsibility. “Chatbot” LLC will not be responsible for the loss caused by this.",
+  //         d: "The user is responsible for protecting the login password of the Chatbot.mn system and the user information from others, and is responsible for preventing any risks that may arise from the non-fulfillment of this responsibility. "Chatbot" LLC will not be responsible for the loss caused by this.",
   //         d1: [],
   //       },
   //       {
@@ -667,7 +667,7 @@ export const en = {
   //             d3: [],
   //           },
   //           {
-  //             d2: "A 'Chatbot User' refers to the end users who are connected with the auto-reply chatbot after clicking the “Send Message” button and other “Facebook Chat Plugin” on the User's connected Facebook page.",
+  //             d2: "A 'Chatbot User' refers to the end users who are connected with the auto-reply chatbot after clicking the "Send Message" button and other "Facebook Chat Plugin" on the User's connected Facebook page.",
   //             d3: [],
   //           },
   //           {
@@ -694,7 +694,7 @@ export const en = {
   //     header: "Terms of use of information",
   //     desc: [
   //       {
-  //         d: "All information entered into the user and chatbot user system is the individual property of each and “Chatbot” LLC will not use it in any form other than the agreed conditions without the consent of the User and Chatbot User.",
+  //         d: "All information entered into the user and chatbot user system is the individual property of each and "Chatbot" LLC will not use it in any form other than the agreed conditions without the consent of the User and Chatbot User.",
   //         d1: [
   //           {
   //             d2: "For the User:",
@@ -709,7 +709,7 @@ export const en = {
   //           {
   //             d2: "For the Chatbot User:",
   //             d3: [
-  //               "The system will send messages using the “Facebook PSID” of the chatbot user to communicate with the chatbot user",
+  //               "The system will send messages using the "Facebook PSID" of the chatbot user to communicate with the chatbot user",
   //               "The user will utilize their chatbot user information to share details about their business, send information about products and services (referred to as 'Message Broadcasting'), or send mass messages within the guidelines approved by Facebook.",
   //               "The user will use the system to provide customer service and other services to its chatbot users.",
   //             ],
@@ -791,7 +791,7 @@ export const en = {
   //         d: "",
   //         d1: [
   //           {
-  //             d2: "“Chatbot” LLC has the right to make changes to the Privacy Policy. In case changes are made to the Privacy Policy, it will be publicly published on the chatbot.mn website and the User has a responsibility to get acquainted.",
+  //             d2: ""Chatbot" LLC has the right to make changes to the Privacy Policy. In case changes are made to the Privacy Policy, it will be publicly published on the chatbot.mn website and the User has a responsibility to get acquainted.",
   //             d3: [],
   //           },
   //         ],

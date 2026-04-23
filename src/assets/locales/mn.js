@@ -9,6 +9,11 @@ import plus from "../plus.webp";
 import fb_card1 from "../fb_card1.webp";
 import about1 from "../about/about1.png";
 import {
+  FaRegArrowAltCircleLeft,
+  FaRegArrowAltCircleRight,
+} from "react-icons/fa";
+
+import {
   FbCard1,
   FbCard2,
   FbCard3,
@@ -113,47 +118,48 @@ export const mn = {
   featuresTitle: "Онцлох чавар",
   featuresHome: [
     {
-      title: "Чатботоор борлуулах",
-      desc: "Socialpay, Qpay, Monpay болох дотоодын төлбөрийн системүүдтэй холбогдсон бөгөөд бараа бүтээгдэхүүнээ онлайнаар борлуулна.",
+      title: "Чатботоор худалдаалах",
+      desc: "Socialpay, Qpay, Monpay-гаар дамжуулан бүтээгдхүүнээ онлайнаар худалдаалах.",
       img: featuresHome1,
     },
     {
       title: "Хандалтын тайлан",
-      desc: "Фэйсбүүк хуудастай бот холбогдсон өдрөөс хойшхи хэрэглэгчийн хандалтын тайланг огноогоор шүүж экселээр татна.",
+      desc: "Хэрэглэгчийн хандалтын тайланг огноогоор шүүж экселээр татна.",
       img: featuresHome2,
     },
     {
       title: "Тооцоолол",
-      desc: "Материалын тооцооллын томьёог чатботдоо оруулснаар хэрэглэгчдийнхээ цагийг хэмнэж хэрэгцээт мэдээллийг онлайнаар гаргаж өгнө.",
+      desc: "Тооцооллын томьёог оруулж хэрэгцээт мэдээллийг гаргаж өгнө.",
       img: featuresHome8,
     },
     {
       title: "Пост автоматжуулалт",
-      desc: "Фэйсбүүк хуудаст нийтлэгдсэн постны доор хэрэглэгчийн үлдээсэн сэтгэгдэлд автоматаар хариу бичиж, чатаар нь дэлгэрэнгүй мэдээлэл илгээнэ.",
+      desc: "Постны комментод автоматаар хариу бичиж, чатаар дэлгэрэнгүй мэдээлэл илгээнэ.",
       img: featuresHome6,
     },
     {
       title: "Нэмэлт хөгжүүлэлт",
-      desc: "Тухайн байгууллагын дотооддоо ашигладаг системтэй нэмэлт холболт хийж, үйл ажиллагаанд нийцүүлэн хөгжүүлнэ.",
+      desc: "Байгууллагын дотоод системтэй нэмэлт холболт хийж хөгжүүлнэ.",
       img: featuresHome5,
     },
     {
       title: "Сануулах зурвас",
-      desc: "Товч дээр дарж мэдээлэл авсан хэрэглэгч рүү тодорхой хугацааны дараа мэдээлэл илгээх боломжтой.",
+      desc: "Хэрэглэгч рүү тодорхой хугацааны дараа мэдээлэл илгээнэ.",
       img: featuresHome4,
     },
     {
       title: "Вэб фром",
-      desc: "Нэмэлт цонх үүсгэн асуумж бөглүүлж, хариултуудыг системийн хянах самбараас харна.",
+      desc: "Асуумж бөглүүлж, хариултуудыг хянах самбараас харна.",
       img: featuresHome7,
     },
     {
       title: "Зайнаас гэрээ хийх",
-      desc: "Гэрээнд тусгагдах хэрэгцээт мэдээллийг хэрэглэгчээс авч гэрээ болгон мэйлээр илгээнэ.",
+      desc: "Гэрээний мэдээллийг хэрэглэгчээс авч гэрээ болгон мэйлээр илгээнэ.",
       img: featuresHome3,
     },
   ],
 
+  
   AiChatHelp: "Би танд яаж туслах вэ?",
   AiQuasion: "Асуух зүйлээ асуугаарай",
   AiSuggestions1: "Онлайн гэрээ яаж хийх вэ?",
@@ -401,30 +407,34 @@ export const mn = {
   priceTitle2: "Суурь боломж",
 
   features: [
-    { label: "Мэдээлэл байршуулах", sub: null, values: [true, true, true] },
+    { label: "Мэдээлэл байршуулах",  sub: null, values: [true, true, true] },
     {
       label: "Xaрилцан яриа",
+      
       sub: null,
       values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
     },
-    { label: "Хэрэглэгчийн сегмент", sub: null, values: [true, true, true] },
-    { label: "Hubspot холболт", sub: null, values: [true, true, true] },
-    { label: "Хариуцсан менежер", sub: null, values: [true, true, true] },
-    { label: "Аналитикс харах", sub: null, values: [true, true, true] },
-    { label: "Мониторинг хийх", sub: null, values: [true, true, true] },
+    { label: "Хэрэглэгчийн сегмент",  sub: null, values: [true, true, true] },
+    { label: "Hubspot холболт",  sub: null, values: [true, true, true] },
+    { label: "Хариуцсан менежер",  sub: null, values: [true, true, true] },
+    { label: "Аналитикс харах",  sub: null, values: [true, true, true] },
+    { label: "Мониторинг хийх",  sub: null, values: [true, true, true] },
     {
       label: "Төлбөрийн холболт",
+      
       sub: "Qpay SocialPay Monpay",
       values: [true, true, true],
     },
     { label: "Масс мессеж", sub: null, values: [true, true, true] },
     {
       label: "Вэб форм",
+      
       sub: null,
       values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
     },
     {
       label: "Асуулгын форм",
+      
       sub: null,
       values: ["Хязгааргүй", "Хязгааргүй", "Хязгааргүй"],
     },
@@ -434,9 +444,9 @@ export const mn = {
     { label: "Коммент тохиргоо", sub: null, values: [false, true, true] },
     { label: "Live agent", sub: null, values: [false, true, true] },
     { label: "Онлайн гэрээ", sub: null, values: [false, true, true] },
-    { label: "Тооцоолуур", sub: null, values: [false, true, true] },
-    { label: "ДАН систем", sub: null, values: [false, true, true] },
-    { label: "Систем холболт", sub: null, values: [false, false, true] },
+    { label: "Тооцоолуур",  sub: null, values: [false, true, true] },
+    { label: "ДАН систем",  sub: null, values: [false, true, true] },
+    { label: "Систем холболт",  sub: null, values: [false, false, true] },
   ],
 
   priceCTA:
@@ -472,7 +482,7 @@ export const mn = {
   aboutStatAuto: "Автоматжуулсан чатбот системүүд",
   aboutTeamTitle: "Манай баг хамт олон",
 
-  poweredByAI: "Powered by AI",
+  poweredByAI: "Improved with AI",
   poweredByAIDesc:
     "Таны бизнесийн онцлог болон зорилтот хэрэглэгчид бүрт зориулсан оновчтой харилцааг AI-ийн тусламжтайгаар автоматаар үүсгэнэ.",
 
